@@ -1,0 +1,94 @@
+/* Navbar: logo, primary links, Sectors dropdown, "Connect" button, and the mobile hamburger menu. Loaded on every page. */
+
+.nav{position:fixed;inset:0 0 auto;z-index:50}
+/* The frosted bar is a pseudo-element on purpose: a backdrop-filter on .nav itself would make .nav the containing
+   block of the fixed mobile menu and squash the menu into the 76px bar. */
+.nav::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:rgba(7,10,36,.78);border-bottom:1px solid var(--rule);
+  backdrop-filter:blur(16px) saturate(140%);-webkit-backdrop-filter:blur(16px) saturate(140%);
+  opacity:0;transition:opacity .35s var(--ease)}
+.nav.scrolled::before{opacity:1}
+.nav .wrap{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;height:var(--nav-h);gap:16px}
+.nav .logo{position:relative;z-index:3}
+
+/* ---------- desktop ---------- */
+.nav-panel{display:flex;align-items:center;gap:28px}
+.nav-list{display:flex;align-items:center;gap:4px;list-style:none;font-size:15px}
+.nav-item{position:relative}
+.nav-link{position:relative;display:flex;align-items:center;gap:6px;min-height:44px;padding:0 12px;color:var(--mist);
+  font:inherit;background:none;border:0;cursor:pointer;transition:color .2s}
+.nav-link svg{width:10px;height:10px;transition:transform .25s var(--ease)}
+.nav-link:hover,.nav-item.is-open > .nav-link{color:var(--paper)}
+.nav-link[aria-current="page"],.nav-item.is-current > .nav-link{color:var(--paper)}
+/* Current-page marker: a short line under the link */
+.nav-link[aria-current="page"]::after,.nav-item.is-current > .nav-link::after{content:"";position:absolute;left:12px;right:12px;bottom:7px;height:1px;background:var(--ice)}
+.nav-item.is-current > .nav-link svg{margin-right:0}
+.nav-item.is-open .sub-trigger svg{transform:rotate(180deg)}
+.nav-cta{min-height:42px;padding:0 20px;font-size:14px}
+
+/* Sectors dropdown */
+.sub{position:absolute;top:100%;left:50%;width:min(560px,calc(100vw - 2 * var(--gutter)));padding-top:12px;
+  transform:translate(-50%,6px);opacity:0;visibility:hidden;
+  transition:opacity .2s var(--ease),transform .25s var(--ease),visibility 0s .25s}
+.nav-item.is-open > .sub{opacity:1;visibility:visible;transform:translate(-50%,0);transition-delay:0s}
+.sub-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:4px;padding:10px;
+  background:rgba(10,14,51,.96);border:1px solid var(--rule);border-radius:var(--r-tile);
+  backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);box-shadow:0 30px 60px -20px rgba(0,0,0,.7)}
+.sub-list a{display:block;padding:14px 16px;border-radius:14px;transition:background-color .2s}
+.sub-name{display:block;font-family:var(--font-display);font-weight:500;font-size:17px;letter-spacing:-.01em}
+.sub-blurb{display:block;margin-top:2px;color:var(--faint);font-size:14px;line-height:1.4}
+.sub-list a:hover,.sub-list a:focus-visible{background:rgba(59,75,245,.18)}
+.sub-list a[aria-current="page"]{background:rgba(59,75,245,.12)}
+.sub-list a[aria-current="page"] .sub-name{color:var(--ice)}
+
+/* Hamburger (shown only on small screens) */
+.nav-toggle{display:none;position:relative;z-index:3;width:44px;height:44px;border-radius:50%;
+  border:1px solid rgba(207,224,255,.32);background:rgba(7,10,36,.4);color:var(--paper);cursor:pointer;place-items:center;
+  transition:background-color .2s,border-color .2s}
+.nav-toggle .bars{position:relative;display:block;width:18px;height:10px}
+.nav-toggle .bars i{position:absolute;left:0;right:0;height:1.5px;border-radius:2px;background:currentColor;
+  transition:transform .3s var(--ease),top .3s var(--ease)}
+.nav-toggle .bars i:first-child{top:0}
+.nav-toggle .bars i:last-child{top:8.5px}
+.nav-open .nav-toggle .bars i:first-child{top:4.25px;transform:rotate(45deg)}
+.nav-open .nav-toggle .bars i:last-child{top:4.25px;transform:rotate(-45deg)}
+@media (hover:hover){.nav-toggle:hover{border-color:var(--ice);background:rgba(207,224,255,.12)}}
+
+/* ---------- mobile menu ---------- */
+@media (max-width:960px){
+  :root{--nav-h:64px}
+  .nav-toggle{display:grid}
+  .nav .logo svg{height:16px}
+  html.nav-open{overflow:hidden}
+
+  .nav-panel{position:fixed;inset:0;z-index:1;flex-direction:column;align-items:stretch;gap:0;
+    padding:calc(var(--nav-h) + 12px) var(--gutter) max(28px,env(safe-area-inset-bottom));
+    background:radial-gradient(80% 45% at 85% 0%,rgba(59,75,245,.32),transparent 70%),var(--ink);
+    overflow-y:auto;overscroll-behavior:contain;
+    opacity:0;visibility:hidden;transform:translateY(-8px);
+    transition:opacity .3s var(--ease),transform .35s var(--ease),visibility 0s .35s}
+  .nav-open .nav-panel{opacity:1;visibility:visible;transform:none;transition-delay:0s}
+
+  .nav-list{flex-direction:column;align-items:stretch;gap:0;margin-bottom:28px;font-size:inherit}
+  .nav-item{border-bottom:1px solid var(--rule)}
+  .nav-link{width:100%;justify-content:space-between;min-height:64px;padding:14px 0;color:var(--paper);
+    font-family:var(--font-display);font-weight:400;font-size:clamp(28px,8.5vw,40px);letter-spacing:-.03em;text-align:left;
+    opacity:0;transform:translateY(14px);transition:color .2s,opacity .25s var(--ease),transform .25s var(--ease)}
+  .nav-open .nav-link{opacity:1;transform:none;transition-delay:0s,calc(var(--i,0) * 45ms + 90ms),calc(var(--i,0) * 45ms + 90ms)}
+  .nav-link svg{width:16px;height:16px}
+  .nav-link[aria-current="page"]{color:var(--ice)}
+  .nav-link[aria-current="page"]::after,.nav-item.is-current > .nav-link::after{display:none}
+
+  /* Sectors becomes an accordion */
+  .sub{position:static;width:auto;padding:0;transform:none;opacity:1;visibility:visible;
+    display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s var(--ease)}
+  .nav-item.is-open > .sub{transform:none;grid-template-rows:1fr}
+  .sub-list{display:block;min-height:0;overflow:hidden;padding:0;background:none;border:0;border-radius:0;box-shadow:none;
+    backdrop-filter:none;-webkit-backdrop-filter:none;visibility:hidden;transition:visibility 0s .35s}
+  .nav-item.is-open .sub-list{visibility:visible;transition-delay:0s;padding-bottom:12px}
+  .sub-list a{min-height:56px;padding:10px 0 10px 4px;border-radius:0}
+  .sub-list a:hover,.sub-list a:focus-visible{background:none}
+  .sub-name{font-size:22px}
+
+  .nav-cta{margin-top:auto;min-height:56px;font-size:16px}
+}

@@ -1,0 +1,26 @@
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <a href="#top" class="logo" aria-label="VOW, back to top"><svg viewBox="0 0 156 32" aria-hidden="true"><use href="#vow-logo"/></svg></a>
+      <nav aria-label="Footer">
+        <ul class="foot-links">
+          {%- for l in nav.links %}
+          <li><a href="{{ l.url }}"{% if page.url == l.url %} aria-current="page"{% endif %}>{{ l.label }}</a></li>
+          {%- endfor %}
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <ul class="foot-sectors" aria-label="Sectors">
+      <li>Sectors</li>
+      {%- for s in sectors %}
+      <li><a href="/sectors/{{ s.slug }}/">{{ s.name }}</a></li>
+      {%- endfor %}
+    </ul>
+    <div class="foot-base">
+      <span>B2B2VIP. Real-time. End-to-end.</span>
+      <!-- TODO: point Privacy and Terms to the real policy pages -->
+      <div class="legal"><a href="#">Privacy</a><a href="#">Terms</a><span>© 2026 VOW</span></div>
+    </div>
+  </div>
+</footer>

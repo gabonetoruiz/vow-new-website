@@ -23,17 +23,27 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # Publish only the site files (no workflow, git or tooling files)
-      - name: Assemble site
-        run: |
-          mkdir _site
-          cp index.html _site/
-          cp -R css js assets _site/
-          printf 'User-agent: *\nDisallow: /\n' > _site/robots.txt
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
 
-      - uses: actions/configure-pages@v5
+      - name: Install dependencies
+        run: npm ci
+
+      # base_path is "/vow-new-website" on the github.io address and "" on a custom domain,
+      # so the same workflow keeps working after the site moves to its own domain.
+      - id: pages
+        uses: actions/configure-pages@v5
+
+      - name: Build site (Eleventy)
+        run: npx eleventy
+        env:
+          PATH_PREFIX: ${{ steps.pages.outputs.base_path }}/
+
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
+
       - id: deployment
         uses: actions/deploy-pages@v4

@@ -1,0 +1,34 @@
+---
+layout: layouts/base.njk
+title: Clients
+description: "The organizations that work with VOW."
+styles: [inner]
+scripts: [cards]
+motion: [reveal, hover]
+---
+{% set heroTitle = "Clients" %}
+{% set heroLede = "The organizations we work with." %}
+{% include "page-hero.njk" %}
+
+<section class="section tight flush-top" aria-label="Our clients">
+  <div class="wrap">
+    <ul class="clients-grid">
+      {%- for c in clients %}
+      <li class="client glow" style="--h:{{ c.scale }}" data-reveal>
+        <img src="{{ c.logo }}" alt="" width="{{ c.w }}" height="{{ c.h }}" loading="lazy" decoding="async">
+        <p>{{ c.name }}</p>
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section tight flush-top" aria-label="What a client says">
+  <div class="wrap">
+    <div class="testimonial" data-reveal>
+      {% include "testimonial.njk" %}
+    </div>
+  </div>
+</section>
+
+{% include "cta.njk" %}

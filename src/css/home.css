@@ -146,12 +146,6 @@
 /* proof */
 .proof{padding-top:0;overflow:hidden;isolation:isolate}
 .proof-inner{border-top:1px solid var(--rule);padding-top:clamp(72px,9vw,120px)}
-.quote{display:grid;grid-template-columns:repeat(12,1fr);column-gap:24px;align-items:end}
-.quote blockquote{grid-column:1/9;font-family:var(--font-display);font-weight:400;font-size:clamp(26px,3.2vw,44px);line-height:1.2;letter-spacing:-.025em;text-wrap:balance}
-.quote blockquote::before{content:"“";display:block;color:var(--champagne);font-size:1.8em;line-height:.6;margin-bottom:.15em}
-.quote figcaption{grid-column:9/13;color:var(--mist);font-size:15px;padding-bottom:.6em}
-.quote figcaption strong{display:block;color:var(--paper);font-weight:500;font-size:16px;margin-bottom:2px}
-.quote .sample{display:inline-block;margin-top:14px;padding:3px 10px;border-radius:999px;font-size:12px;color:var(--champagne);border:1px dashed rgba(233,207,168,.45)}
 /* Client logos: white marks, sized by aspect ratio (--h) so each carries similar visual weight */
 .logo-marquee{--k:.9;--gap:clamp(56px,6.5vw,96px);margin-top:clamp(64px,8vw,104px);padding-top:clamp(40px,5vw,56px);border-top:1px solid var(--rule)}
 /* Static fallback (no JS / reduced motion): one centred, wrapping row */
@@ -188,34 +182,6 @@
 .case .link{margin-top:14px;align-self:flex-start}
 .case.soon .field img{filter:saturate(.6) brightness(.7)}
 
-/* Spotlight cards (port of GlowCard): the cursor lights a glowing ring on nearby card edges
-   plus a soft fill inside. --mx/--my are the cursor position relative to each card (set by script),
-   --xp is the cursor's horizontal position across the viewport (0–1) and shifts hue royal → iris. */
-.prod,.tile,.case{--mx:-9999px;--my:-9999px;--spot:240px;--hue:calc(232 + var(--xp,.5) * 28)}
-.prod::before,.tile::before,.case::before,
-.prod::after,.tile::after,.case::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .45s var(--ease)}
-/* Edge ring: white core + coloured halo, masked to a thin band along the card edge */
-.prod::before,.tile::before,.case::before{z-index:3;padding:2px;
-  background:
-    radial-gradient(circle calc(var(--spot) * .45) at var(--mx) var(--my),hsl(0 0% 100% / .85),transparent 100%),
-    radial-gradient(circle calc(var(--spot) * .85) at var(--mx) var(--my),hsl(var(--hue) 100% 68%),transparent 100%);
-  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;
-          mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0)}
-/* Soft interior fill, painted beneath the card's content and images */
-.prod::after,.tile::after,.case::after{z-index:-1;
-  background:radial-gradient(circle var(--spot) at var(--mx) var(--my),hsl(var(--hue) 100% 70% / .11),transparent 72%)}
-.glow-on .prod::before,.glow-on .tile::before,.glow-on .case::before,
-.glow-on .prod::after,.glow-on .tile::after,.glow-on .case::after{opacity:1}
-
-/* final CTA */
-.cta{text-align:center;overflow:hidden;isolation:isolate}
-.cta::before{content:"";position:absolute;z-index:-1;left:50%;bottom:-55%;width:min(1400px,160vw);aspect-ratio:2/1;transform:translateX(-50%);border-radius:50%;
-     background:radial-gradient(closest-side,rgba(59,75,245,.55),rgba(139,125,255,.18) 55%,transparent 75%)}
-.cta::after{content:"";position:absolute;z-index:-1;left:50%;bottom:0;width:min(900px,100vw);height:1px;transform:translateX(-50%);background:linear-gradient(90deg,transparent,var(--ice),transparent);opacity:.5}
-.cta h2{max-width:16ch;margin:0 auto;font-size:clamp(44px,6.4vw,96px)}
-.cta .lede{margin:28px auto 0;text-align:center}
-.cta .btn{margin-top:44px;min-height:56px;padding:0 34px;font-size:16px}
-
 .arrows button:not(:disabled):active{transform:scale(.97)}
 
 /* ---------- responsive ---------- */
@@ -223,9 +189,8 @@
   .sector:hover::before{opacity:1}
 }
 @media (max-width:960px){
-  .persp h2,.persp .body,.sectors .intro,.sector-list,.services .head h2,.services .head p,.quote blockquote,.quote figcaption{grid-column:1/-1}
+  .persp h2,.persp .body,.sectors .intro,.sector-list,.services .head h2,.services .head p{grid-column:1/-1}
   .persp .body{padding-top:32px}
-  .quote figcaption{margin-top:24px}
   .services .head p{margin-top:20px}
   .sectors .intro{position:static;margin-bottom:40px}
   .prod-grid{grid-template-columns:1fr}

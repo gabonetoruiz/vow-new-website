@@ -1,0 +1,9 @@
+{
+  "_note": "PLACEHOLDER press items. Replace each entry with a real article (date as YYYY-MM-DD, url as the article link) and remove \"sample\": true.",
+  "items": [
+    { "sample": true, "date": "", "outlet": "[Publication name]", "title": "[Headline of the article goes here]", "url": "" },
+    { "sample": true, "date": "", "outlet": "[Publication name]", "title": "[Headline of the article goes here]", "url": "" },
+    { "sample": true, "date": "", "outlet": "[Publication name]", "title": "[Headline of the article goes here]", "url": "" },
+    { "sample": true, "date": "", "outlet": "[Publication name]", "title": "[Headline of the article goes here]", "url": "" }
+  ]
+}

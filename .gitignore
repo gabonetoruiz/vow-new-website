@@ -14,6 +14,10 @@ VOW — B2B2VIP Technology for Premium Events.png
 VOW Logo.svg
 
 # Unused assets (kept on disk, not published)
-assets/img/*.webp
-assets/img/hero-keyframe.jpg
-assets/video/
+src/assets/img/*.webp
+src/assets/img/hero-keyframe.jpg
+src/assets/video/
+
+# Dependencies and build output
+node_modules/
+_site/

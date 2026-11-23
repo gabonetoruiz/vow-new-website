@@ -1,0 +1,36 @@
+---
+layout: layouts/base.njk
+title: FAQs
+description: "Answers to common questions about VOW PRO, VOW GO and working with VOW."
+styles: [inner]
+scripts: [faq]
+motion: [reveal, hover]
+---
+{% set heroTitle = "FAQs" %}
+{% set heroLede = "Answers to the questions we hear most about VOW." %}
+{% include "page-hero.njk" %}
+
+<section class="section tight flush-top" aria-label="Frequently asked questions">
+  <div class="wrap faq-wrap">
+    <div class="faq-side">
+      <p class="lede" data-reveal>Can’t find what you’re looking for? <a class="link" href="#contact">Get in touch</a></p>
+    </div>
+    <div class="faq-main">
+      {%- for g in faqs %}
+      <section class="faq-group" aria-labelledby="faq-group-{{ loop.index }}">
+        <h2 id="faq-group-{{ loop.index }}" data-reveal>{{ g.group }}</h2>
+        {%- for f in g.items %}
+        <details class="faq-item" id="{{ f.id }}" data-reveal>
+          <summary>{{ f.q }}<span class="plus" aria-hidden="true"></span></summary>
+          <div class="faq-answer"><p>{{ f.a }}</p></div>
+        </details>
+        {%- endfor %}
+      </section>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">{{ faqSchema | json | safe }}</script>
+
+{% include "cta.njk" %}

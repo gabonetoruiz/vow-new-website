@@ -33,7 +33,7 @@
     });
 
     // Cards: lift, with a slow push-in on their image
-    gsap.utils.toArray('.prod, .tile, .case').forEach((card) => {
+    gsap.utils.toArray('.prod, .tile, .case, .glow').forEach((card) => {
       const img = card.querySelector('.field img, .prod-visual > img, :scope > img');
       on(card, 'mouseenter', () => {
         gsap.to(card, { y: -6, duration: 0.5, ease: 'power3.out', overwrite: 'auto' });

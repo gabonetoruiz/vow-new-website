@@ -1,39 +1,68 @@
 # VOW website
 
-Static site (plain HTML, CSS and JavaScript, no build step), published with GitHub Pages.
+Static site built with [Eleventy](https://www.11ty.dev/) (HTML, CSS and vanilla JavaScript, no framework) and published with GitHub Pages.
 
-Live review link: https://gabonetoruiz.github.io/vow-new-website/
+Review link: https://gabonetoruiz.github.io/vow-new-website/
+
+## Working on it
+
+```bash
+npm install          # once
+npm run build        # builds the site into _site/
+npm start            # dev server with live reload at http://localhost:4173
+```
+
+Pushing to `main` builds and deploys the site (`.github/workflows/pages.yml`). Nothing is deployed from any other branch.
 
 ## Structure
 
 ```
-index.html            page content only (one HTML file per page)
-css/
-  tokens.css          design tokens: colours, fonts, spacing, easing
-  base.css            reset, typography, buttons, navbar, footer, shared layout  (every page)
-  home.css            styles that belong to the home page only
-js/
-  nav.js              navbar scroll state                                         (every page)
-  cards.js            spotlight glow on cards
-  hero-gradient.js    home hero WebGL gradient
-  sectors.js          home sector image swap
-  reel.js             home case-study arrows
-  motion-core.js      registers GSAP + ScrollTrigger, shared matchMedia           (needed by all motion-*)
-  motion-hero.js      home hero entrance and title reveal
-  motion-reveal.js    scroll reveals (add `data-reveal` to any element to use it)
-  motion-hover.js     hover and press micro-interactions
-  motion-marquee.js   client logo marquee
-assets/               images and client logos
-.github/workflows/    deploys to GitHub Pages on every push to main
+eleventy.config.js        build config (path prefix, passthrough files, filters)
+src/
+  index.njk               home page
+  gallery.njk press.njk faq.njk clients.njk 404.njk
+  sectors/sector.njk      one template, generates /sectors/<slug>/ for every sector in _data/sectors.json
+  _data/                  content as data: nav, sectors, gallery, faqs, clients, press, testimonial, site
+  _includes/
+    layouts/base.njk      page shell: head, header, <main>, footer, scripts
+    header.njk footer.njk cta.njk page-hero.njk testimonial.njk sprite.njk
+  css/                    tokens, base, components, nav, home, inner, gallery
+  js/                     nav, cards, gallery, faq, hero-gradient, sectors, reel, motion-*
+  assets/                 images and client logos
+  robots.txt
 ```
+
+## Where to change things
+
+| To change | Edit |
+| --- | --- |
+| Navbar links, Connect button label | `src/_data/nav.json` |
+| A sector's text, image or the Sectors dropdown | `src/_data/sectors.json` (add a sector there and its page, menu entry and footer link appear) |
+| Gallery photos and captions | `src/_data/gallery.json` (images go in `src/assets/img/`) |
+| FAQs | `src/_data/faqs.json` (the page and its search-engine markup both come from it) |
+| Client logos | `src/_data/clients.json` (the home page marquee is still written by hand in `index.njk`) |
+| Press items | `src/_data/press.json` (remove `"sample": true` on real entries) |
+| The testimonial | `src/_data/testimonial.json` (used on the home and Clients pages) |
+| Colours, fonts, spacing | `src/css/tokens.css` |
 
 ## Rules for new pages
 
-- **Load order in the HTML:** `tokens.css`, `base.css`, then the page's own CSS. Scripts go at the end of `<body>`:
-  GSAP and ScrollTrigger from the CDN, then `motion-core.js`, then the `motion-*.js` files the page needs.
-- **Paths are relative** (`css/base.css`, `assets/img/x.jpg`), never root-absolute (`/css/...`), because the site is
-  served from a sub-path on GitHub Pages.
-- **Keep the inline `<script>`** in `<head>` that adds the `js` class: it prevents a flash of hidden content.
-- **Any new file** the site needs must also be copied by the "Assemble site" step in `.github/workflows/pages.yml`.
-- **Review phase:** every page carries `<meta name="robots" content="noindex, nofollow">`. Remove it (and `robots.txt` in
-  the workflow) at launch.
+- Each page sets its own front matter: `layout`, `title`, `description`, and the CSS and JS it needs
+  (`styles`, `scripts`, and `motion` for GSAP modules). See `src/gallery.njk` for an example.
+- **Write root-absolute URLs** (`/gallery/`, `/assets/img/x.jpg`, `/css/...`). The build adds the site's path prefix
+  (`/vow-new-website/` on GitHub Pages, nothing on a custom domain), so never hardcode it and never use `../`.
+- Any element you want revealed on scroll just needs the `data-reveal` attribute.
+- Cards that should get the cursor spotlight and hover lift need the `glow` class.
+- Pages that use GSAP motion get the inline `js` flag script from the layout; do not remove it.
+
+## Review phase
+
+Every page carries `<meta name="robots" content="noindex, nofollow">` (in `layouts/base.njk`) and the site ships a
+`robots.txt` that disallows everything (`src/robots.txt`). Remove both at launch.
+
+## Content still to replace
+
+- Press items are placeholders (marked "Placeholder" on the page).
+- Sector, FAQ and other page copy is draft text written from the existing site content.
+- Gallery photos are the AI-generated images used elsewhere on the site; swap in real event photography.
+- Privacy and Terms links in the footer, and the Team USA demo link.

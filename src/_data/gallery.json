@@ -1,0 +1,14 @@
+[
+  { "src": "/assets/img/case-team-usa.jpg", "w": 1920, "h": 1085, "sector": "sports", "alt": "Athletes and guests in a hospitality lounge overlooking a floodlit stadium", "caption": "Hospitality lounge above the stadium" },
+  { "src": "/assets/img/sector-entertainment.jpg", "w": 1920, "h": 1433, "sector": "entertainment", "alt": "Guests watching an arena concert from a VIP platform", "caption": "VIP platform at an arena concert" },
+  { "src": "/assets/img/case-entertainment.jpg", "w": 1920, "h": 1085, "sector": "entertainment", "alt": "A guest in a sculptural gown walks a premiere carpet past photographers", "caption": "Premiere arrival" },
+  { "src": "/assets/img/service-guest-app.jpg", "w": 1536, "h": 1920, "sector": "", "alt": "A guest holds a phone showing a digital access pass in a dim lounge", "caption": "A digital pass at hand" },
+  { "src": "/assets/img/sector-philanthropy.jpg", "w": 1920, "h": 1433, "sector": "philanthropy", "alt": "A guest placing a card into an envelope on a candlelit gala table", "caption": "Gala table detail" },
+  { "src": "/assets/img/sector-olympics.jpg", "w": 1920, "h": 1433, "sector": "olympics", "alt": "A ceremonial flame above a packed stadium at night", "caption": "Opening night" },
+  { "src": "/assets/img/case-media.jpg", "w": 1920, "h": 1085, "sector": "media", "alt": "An audience facing a presenter on a stage with a vast glowing screen", "caption": "Upfront presentation" },
+  { "src": "/assets/img/sector-sports.jpg", "w": 1920, "h": 1433, "sector": "sports", "alt": "A host serving guests in a stadium hospitality suite at night", "caption": "Matchday suite" },
+  { "src": "/assets/img/product-go.jpg", "w": 1920, "h": 1275, "sector": "entertainment", "alt": "A guest in an evening gown checks her phone as a host welcomes her at a venue entrance", "caption": "Welcome at the door" },
+  { "src": "/assets/img/case-philanthropy.jpg", "w": 1920, "h": 1085, "sector": "philanthropy", "alt": "Guests raising a toast at a candlelit gala dinner", "caption": "A toast at the gala" },
+  { "src": "/assets/img/sector-grandscale.jpg", "w": 1920, "h": 1433, "sector": "grandscale", "alt": "Aerial night view of an illuminated multi-venue event campus", "caption": "A multi-venue campus after dark" },
+  { "src": "/assets/img/sector-media.jpg", "w": 1920, "h": 1433, "sector": "media", "alt": "A broadcast camera operator at a press riser facing a lit stage", "caption": "On the press riser" }
+]

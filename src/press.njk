@@ -1,0 +1,46 @@
+---
+layout: layouts/base.njk
+title: Press
+description: "VOW in the press, and how to reach our team for media inquiries."
+styles: [inner]
+scripts: [cards]
+motion: [reveal, hover]
+---
+{% set heroTitle = "Press" %}
+{% set heroLede = "VOW in the news, and how to reach us for media inquiries." %}
+{% include "page-hero.njk" %}
+
+<section class="section tight flush-top" aria-label="Press coverage">
+  <div class="wrap">
+    <ul class="press-list">
+      {%- for item in press.items %}
+      <li class="press-row" data-reveal>
+        <p class="press-date">{% if item.sample %}[Date]{% else %}{{ item.date | dateLong }}{% endif %}</p>
+        <div>
+          <p class="press-outlet">{{ item.outlet }}</p>
+          <h2 class="press-title">{{ item.title }}</h2>
+        </div>
+        <div class="press-aside">
+          {%- if item.sample %}
+          <span class="badge-sample">Placeholder</span>
+          {%- else %}
+          <a class="link" href="{{ item.url }}" rel="noopener">Read article <svg aria-hidden="true"><use href="#arrow-ne"/></svg></a>
+          {%- endif %}
+        </div>
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section tight" aria-labelledby="inquiries-title">
+  <div class="wrap press-contact">
+    <div class="copy">
+      <h2 class="h2" id="inquiries-title" data-reveal>Media inquiries</h2>
+      <p class="lede" data-reveal>For interviews, images or information about VOW, get in touch with our team.</p>
+    </div>
+    <div class="act" data-reveal><a class="btn btn-primary" href="#contact">Contact the team</a></div>
+  </div>
+</section>
+
+{% include "cta.njk" %}

@@ -1,0 +1,11 @@
+[
+  { "name": "1199SEIU Funds", "logo": "/assets/clients_logos/1199%20logo.png", "w": 400, "h": 308, "scale": 54 },
+  { "name": "Alvin Ailey", "logo": "/assets/clients_logos/Alvin%20Ailey%20logo.png", "w": 400, "h": 88, "scale": 26 },
+  { "name": "Assembly", "logo": "/assets/clients_logos/Assembly%20logo.png", "w": 400, "h": 184, "scale": 38 },
+  { "name": "GLAAD", "logo": "/assets/clients_logos/IGlaad%20Media%20logo.png", "w": 400, "h": 224, "scale": 46 },
+  { "name": "KIND, Kids in Need of Defense", "logo": "/assets/clients_logos/Kind%20logo.png", "w": 400, "h": 168, "scale": 37 },
+  { "name": "NBC", "logo": "/assets/clients_logos/NBC%20logo.png", "w": 320, "h": 320, "scale": 56 },
+  { "name": "NYU", "logo": "/assets/clients_logos/NYU%20logo.png", "w": 400, "h": 148, "scale": 34 },
+  { "name": "PFL", "logo": "/assets/clients_logos/PFL%20logo.png", "w": 400, "h": 152, "scale": 34 },
+  { "name": "Tony Awards", "logo": "/assets/clients_logos/Tony%20logo.png", "w": 400, "h": 132, "scale": 32 }
+]

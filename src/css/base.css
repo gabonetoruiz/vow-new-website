@@ -44,22 +44,11 @@ p{text-wrap:pretty}
   .logo:hover{color:var(--ice)}
 }
 .logo{transition:color .2s} /* never transition opacity/transform here: GSAP owns those */
-
-/* ---------- navbar ---------- */
-/* ---------- nav ---------- */
-.nav{position:fixed;inset:0 0 auto;z-index:50;transition:background-color .35s var(--ease),border-color .35s;border-bottom:1px solid transparent}
-.nav.scrolled{background:rgba(7,10,36,.78);backdrop-filter:blur(16px) saturate(140%);-webkit-backdrop-filter:blur(16px) saturate(140%);border-color:var(--rule)}
-.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:var(--nav-h);gap:16px}
 .logo{display:flex;align-items:center;min-height:44px;color:var(--paper)}
 .logo svg{height:20px;width:auto}
-.nav-right{display:flex;align-items:center;gap:28px}
-.nav ul{display:flex;gap:8px;list-style:none;font-size:15px}
-.nav ul a{display:flex;align-items:center;min-height:44px;padding:0 10px;color:var(--mist);transition:color .2s}
-.nav ul a:hover{color:var(--paper)}
-.nav .btn{min-height:42px;padding:0 20px;font-size:14px}
 
 /* ---------- footer ---------- */
-/* footer */
+
 footer{border-top:1px solid var(--rule);padding:36px 0 28px;font-size:14px}
 .foot-top{display:flex;justify-content:space-between;align-items:center;gap:16px 24px;flex-wrap:wrap}
 .foot-top .logo svg{height:16px}
@@ -69,26 +58,14 @@ footer{border-top:1px solid var(--rule);padding:36px 0 28px;font-size:14px}
 .foot-base{display:flex;justify-content:space-between;align-items:center;gap:8px 24px;flex-wrap:wrap;margin-top:20px;padding-top:12px;border-top:1px solid var(--rule);color:var(--faint)}
 .legal{display:flex;align-items:center;gap:4px}
 .legal span{padding-left:10px}
+.foot-sectors{display:flex;flex-wrap:wrap;align-items:center;gap:0 4px;list-style:none;margin-top:12px;color:var(--faint)}
+.foot-sectors li:first-child{padding-right:10px;color:var(--mist)}
+.foot-sectors a{display:inline-flex;align-items:center;min-height:44px;padding:0 10px}
+.foot-sectors a:hover{color:var(--paper)}
 
 /* ---------- scroll reveals (generic): hidden until GSAP reveals them, so there is no flash ---------- */
 @media (prefers-reduced-motion:no-preference){
   .js [data-reveal]{visibility:hidden}
-}
-
-/* ---------- responsive (navbar) ---------- */
-@media (max-width:600px){
-  :root{--nav-h:64px}
-  .nav .wrap{gap:4px;padding:0 16px}
-  .nav-right{gap:2px}
-  .nav ul{gap:0;font-size:13px}
-  .nav ul a{padding:0 7px}
-  .nav .btn{min-height:40px;padding:0 12px;font-size:12.5px}
-  .logo svg{height:14px}
-}
-@media (max-width:360px){
-  .nav ul a{padding:0 5px;font-size:12.5px}
-  .nav .btn{padding:0 10px;font-size:12px}
-  .logo svg{height:12px}
 }
 
 /* ---------- reduced motion ---------- */

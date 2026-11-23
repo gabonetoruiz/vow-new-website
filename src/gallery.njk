@@ -1,0 +1,47 @@
+---
+layout: layouts/base.njk
+title: Gallery
+description: "Photos from the premium events VOW helps bring to life."
+styles: [inner, gallery]
+scripts: [gallery, cards]
+motion: [reveal, hover]
+---
+{% set heroTitle = "Gallery" %}
+{% set heroLede = "Moments from the events VOW helps bring to life." %}
+{% include "page-hero.njk" %}
+
+<section class="section tight flush-top" aria-label="Photo gallery">
+  <div class="wrap">
+    <div class="g-filters chips" role="group" aria-label="Filter photos by sector" data-reveal>
+      <button type="button" class="chip" data-filter="all" aria-pressed="true">All</button>
+      {%- for s in galleryFilters %}
+      <button type="button" class="chip" data-filter="{{ s.slug }}" aria-pressed="false">{{ s.name }}</button>
+      {%- endfor %}
+    </div>
+    <p class="sr-only" id="gStatus" role="status" aria-live="polite"></p>
+
+    <div class="g-grid" id="gGrid">
+      {%- for p in gallery %}
+      <button type="button" class="g-item glow" data-sector="{{ p.sector }}" data-caption="{{ p.caption }}" aria-label="View photo: {{ p.caption }}" data-reveal>
+        <img src="{{ p.src }}" alt="{{ p.alt }}" width="{{ p.w }}" height="{{ p.h }}" loading="lazy" decoding="async">
+        <span class="g-cap" aria-hidden="true">{{ p.caption }}</span>
+      </button>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<dialog class="lightbox" id="lightbox" aria-label="Photo viewer">
+  <div class="lb-stage">
+    <figure>
+      <img id="lbImg" src="" alt="">
+      <figcaption id="lbCap"></figcaption>
+    </figure>
+  </div>
+  <button type="button" class="lb-btn lb-close" aria-label="Close viewer"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
+  <button type="button" class="lb-btn lb-prev" aria-label="Previous photo"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3 5 8l5 5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
+  <button type="button" class="lb-btn lb-next" aria-label="Next photo"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
+  <p class="lb-count" id="lbCount" aria-live="polite"></p>
+</dialog>
+
+{% include "cta.njk" %}

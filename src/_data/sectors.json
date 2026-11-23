@@ -1,0 +1,99 @@
+[
+  {
+    "slug": "media",
+    "name": "Media",
+    "blurb": "Premieres and press events",
+    "short": "Premieres, upfronts and press events, with talent and press lists in sync.",
+    "intro": "Premieres, upfronts and press days run on lists that change by the hour. VOW keeps talent, press and partners in one live view, so the people running the room can focus on the room.",
+    "image": "/assets/img/sector-media.jpg",
+    "imageAlt": "A broadcast camera operator at a press riser facing a lit stage",
+    "imageW": 1920,
+    "imageH": 1433,
+    "points": [
+      { "title": "One list for talent, press and partners", "text": "Manage guests, groups and hosts together, with RSVPs and registrations feeding the same live record." },
+      { "title": "Credentials that update instantly", "text": "Issue digital passes and change access in real time, without reprinting or resending anything." },
+      { "title": "Changes reach everyone at once", "text": "Use the real-time communications hub and alerts to tell the right people the moment a schedule or arrival changes." }
+    ]
+  },
+  {
+    "slug": "entertainment",
+    "name": "Entertainment",
+    "blurb": "Awards, tours and festivals",
+    "short": "Award shows, tours and festivals, from artist hospitality to fan VIP.",
+    "intro": "Award shows, tours and festivals bring artists, crews, sponsors and VIP fans into the same building. VOW gives each group the right schedule and access, with one team coordinating all of them.",
+    "image": "/assets/img/sector-entertainment.jpg",
+    "imageAlt": "Guests watching an arena concert from a VIP platform",
+    "imageW": 1920,
+    "imageH": 1433,
+    "points": [
+      { "title": "Every group, one platform", "text": "Manage artists, crew, sponsors and VIP guests as separate groups, each with their own schedule and access." },
+      { "title": "A personal schedule for each guest", "text": "VOW GO puts each guest's details, passes and updates in their pocket, on web or mobile." },
+      { "title": "Support on the night", "text": "Dedicated help for your team before and during the event, and a concierge for guests when plans change." }
+    ]
+  },
+  {
+    "slug": "philanthropy",
+    "name": "Philanthropy",
+    "blurb": "Galas and donor events",
+    "short": "Galas, auctions and donor events where every guest is known by name.",
+    "intro": "A gala works when donors feel recognised. VOW helps your team know every guest, manage hosts and tables, and make arrival, seating and departure feel effortless.",
+    "image": "/assets/img/sector-philanthropy.jpg",
+    "imageAlt": "A guest placing a card into an envelope on a candlelit gala table",
+    "imageW": 1920,
+    "imageH": 1433,
+    "points": [
+      { "title": "Know every guest", "text": "Keep guest, group and host details together, from the first RSVP to the last goodbye." },
+      { "title": "Arrival, check-in and departure", "text": "Coordinate cars, doors and departures so every donor's arrival feels expected." },
+      { "title": "Payments in the same experience", "text": "Take payments and handle purchases inside the guest experience, not in a separate system." }
+    ]
+  },
+  {
+    "slug": "sports",
+    "name": "Sports",
+    "blurb": "Suites, sponsors, matchdays",
+    "short": "Suites, sponsor hospitality and matchdays across a full season.",
+    "intro": "Matchday hospitality repeats every week and changes every week. VOW keeps guest lists, suites and sponsor access organised across a whole season, and gives each guest a clear plan for the day.",
+    "image": "/assets/img/sector-sports.jpg",
+    "imageAlt": "A host serving guests in a stadium hospitality suite at night",
+    "imageW": 1920,
+    "imageH": 1433,
+    "points": [
+      { "title": "Hospitality that scales across a season", "text": "Reuse groups and hosts from event to event while keeping each matchday's list current." },
+      { "title": "Sponsors and partners in view", "text": "Manage sponsors, speakers and VIP groups in the same place as your general guest list." },
+      { "title": "Digital tickets and access", "text": "Issue and update tickets and access passes in real time, right up to the gate." }
+    ],
+    "related": { "label": "See the Team USA concept", "url": "/#cases" }
+  },
+  {
+    "slug": "olympics",
+    "name": "Olympics",
+    "blurb": "Delegations and partners",
+    "short": "Delegations, families and partners across weeks of competition.",
+    "intro": "The Olympics bring delegations, families, partners and press together for weeks, across many venues. VOW keeps every group informed and every credential current while the schedule moves.",
+    "image": "/assets/img/sector-olympics.jpg",
+    "imageAlt": "A ceremonial flame above a packed stadium at night",
+    "imageW": 1920,
+    "imageH": 1433,
+    "points": [
+      { "title": "Weeks-long programs, one record", "text": "Keep schedules, groups and guests organised across every day of competition." },
+      { "title": "Real-time updates across venues", "text": "Alerts and notifications reach the right people when plans shift, wherever they are." },
+      { "title": "A shared view for large teams", "text": "Give everyone running the program the same view of every guest and every detail." }
+    ]
+  },
+  {
+    "slug": "grandscale",
+    "name": "Grandscale",
+    "blurb": "Multi-venue productions",
+    "short": "Multi-day, multi-venue productions with thousands of moving parts.",
+    "intro": "Multi-day, multi-venue productions have thousands of moving parts and hundreds of people responsible for them. VOW puts those people on one real-time platform instead of a stack of spreadsheets.",
+    "image": "/assets/img/sector-grandscale.jpg",
+    "imageAlt": "Aerial night view of an illuminated multi-venue event campus",
+    "imageW": 1920,
+    "imageH": 1433,
+    "points": [
+      { "title": "Replace the spreadsheet stack", "text": "Streamline complex spreadsheets and connect work across the apps and legacy systems you already use." },
+      { "title": "Automate the repetitive work", "text": "Let the platform handle manual, repetitive tasks so your staff can focus on guests." },
+      { "title": "One guest experience across venues", "text": "Give each guest a single, connected schedule, pass and support line across every venue." }
+    ]
+  }
+]

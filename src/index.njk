@@ -1,0 +1,232 @@
+---
+layout: layouts/base.njk
+pageTitle: "VOW — Premium event & guest technology"
+description: "B2B2VIP technology connecting the teams behind extraordinary events with the guests at the heart of them."
+styles: [home]
+scripts: [hero-gradient, sectors, cards, reel]
+motion: [hero, reveal, hover, marquee]
+---
+
+<!-- Hero -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-media" aria-hidden="true">
+    <canvas id="heroCanvas"></canvas>
+  </div>
+  <div class="wrap hero-body">
+    <div class="stage">
+      <p class="eyebrow" data-hero="eyebrow">Premium event &amp; guest technology</p>
+      <h1 class="display" id="hero-title">
+        <span data-hero="line">High-touch experiences.</span>
+        <span data-hero="line">End-to-end.</span>
+      </h1>
+    </div>
+    <p class="lede" data-hero="sub">B2B2VIP technology: one platform connecting the teams behind extraordinary events with the VIP guests at the heart of them.</p>
+    <div class="ctas">
+      <a href="#platform" class="btn btn-primary" data-hero="cta">Meet the platform</a>
+      <a href="#cases" class="btn btn-ghost" data-hero="cta">See the Team USA concept</a>
+    </div>
+  </div>
+  <div class="hero-foot" data-hero="foot">
+    <a href="#perspective" class="cue"><span>In real time. In every detail.</span><b aria-hidden="true"></b></a>
+  </div>
+</section>
+
+<!-- Market segments -->
+<section class="segments" aria-label="Markets we serve">
+  <div class="wrap">
+    <ul>
+      <li>Media</li><li>Entertainment</li><li>Philanthropy</li><li>Sports</li><li>Olympics</li><li>Grandscale</li>
+    </ul>
+  </div>
+</section>
+
+<!-- The VOW perspective -->
+<section class="section persp" id="perspective" aria-labelledby="persp-title">
+  <div class="wrap grid">
+    <h2 class="h2" id="persp-title">Exceptional experiences. Connected teams.</h2>
+    <div class="body">
+      <p class="lede">Premium, VIP and high-stakes events call for care at every level. VOW brings key staff, external collaborators and stakeholders together in one real-time environment.</p>
+      <ul class="outcomes">
+        <li><strong>Retire the spreadsheets</strong><span>Guest lists, groups and logistics in one live source of truth.</span></li>
+        <li><strong>Automate the busywork</strong><span>Reminders, confirmations and follow-ups run on their own.</span></li>
+        <li><strong>Connect your systems</strong><span>Work across the apps and legacy tools you already use.</span></li>
+        <li><strong>Keep everyone aligned</strong><span>Fewer email chains and text threads to coordinate each detail.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Products -->
+<section class="section products" id="platform" aria-labelledby="platform-title">
+  <div class="wrap">
+    <div class="head">
+      <h2 class="h2" id="platform-title">Behind the scenes. At the heart of the experience.</h2>
+      <p class="lede">One platform, two perspectives: VOW PRO for the team running the event, VOW GO for every guest attending it.</p>
+    </div>
+    <div class="prod-grid">
+      <article class="prod pro" aria-labelledby="pro-title">
+        <div class="prod-visual">
+          <img src="/assets/img/product-pro.jpg" alt="" width="1920" height="1280" loading="lazy" decoding="async">
+          <!-- Illustrative UI with sample data -->
+          <div class="ui ui-pro" role="img" aria-label="VOW PRO dashboard: live check-in progress, guest statuses and arrivals for an evening gala">
+            <div class="ui-bar" aria-hidden="true"><i></i><i></i><i></i><strong>Spring Gala</strong><span class="ui-live">Live</span></div>
+            <div class="ui-main" aria-hidden="true">
+              <div class="ui-stats">
+                <div><b>412</b><span>Guests</span></div>
+                <div><b>286</b><span>Checked in</span></div>
+                <div><b>38</b><span>VIP arrivals</span></div>
+              </div>
+              <div class="ui-progress"><span></span></div>
+              <ul class="ui-rows">
+                <li><span class="ui-av">EP</span><span>Eleanor Price<small>Host · Table&nbsp;1</small></span><span class="chip ok">Checked in</span></li>
+                <li><span class="ui-av">MC</span><span>Marcus Chen<small>Sponsor · Table&nbsp;3</small></span><span class="chip move">Arriving · Gate&nbsp;B</span></li>
+                <li><span class="ui-av">SA</span><span>Sofia Alvarez<small>VIP · Table&nbsp;4</small></span><span class="chip move">En route</span></li>
+                <li><span class="ui-av">JO</span><span>James Okafor<small>Press · Riser</small></span><span class="chip wait">Awaiting</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <p class="for">For the people making it happen</p>
+        <h3 id="pro-title"><b>VOW</b> PRO</h3>
+        <p>Plan with precision. Coordinate teams, manage guests and run the event with a shared view of every detail.</p>
+        <ul class="features">
+          <li>Guest, group and host management</li>
+          <li>RSVP, signup and registration</li>
+          <li>Real-time communications hub</li>
+          <li>Alerts and notifications</li>
+          <li>Speakers, sponsors and more</li>
+        </ul>
+        <a href="#contact" class="link">Book a VOW PRO demo <svg aria-hidden="true"><use href="#arrow-ne"/></svg></a>
+      </article>
+
+      <article class="prod go" aria-labelledby="go-title">
+        <div class="prod-visual">
+          <img src="/assets/img/product-go.jpg" alt="" width="1920" height="1280" loading="lazy" decoding="async">
+          <!-- Illustrative UI with sample data -->
+          <div class="ui ui-go" role="img" aria-label="VOW GO app: a guest's digital pass and evening schedule">
+            <div aria-hidden="true">
+              <p class="go-hi">Good evening<strong>Amelia</strong></p>
+              <div class="go-pass">
+                <svg viewBox="0 0 9 9" shape-rendering="crispEdges"><path fill="#141a52" d="M0 0h3v3H0zM6 0h3v3H6zM0 6h3v3H0zM4 0h1v2H4zM4 3h2v1H4zM3 4h1v1H3zM5 5h1v2H5zM7 4h2v1H7zM6 6h1v1H6zM8 6h1v3H8zM4 7h1v2H4zM6 8h1v1H6zM1 4h1v1H1z"/><path fill="#fff" d="M1 1h1v1H1zM7 1h1v1H7zM1 7h1v1H1z"/></svg>
+                <div><strong>Spring Gala</strong><span>Table&nbsp;4 · Grand Hall</span></div>
+              </div>
+              <ul class="go-sched">
+                <li><time>7:00</time><span>Reception · Terrace</span></li>
+                <li class="now"><time>8:30</time><span>Dinner · Grand Hall</span></li>
+                <li><time>10:15</time><span>Car home · Gate&nbsp;B</span></li>
+              </ul>
+              <p class="go-help">Message concierge</p>
+            </div>
+          </div>
+        </div>
+        <p class="for">For the people experiencing it</p>
+        <h3 id="go-title"><b>VOW</b> GO</h3>
+        <p>Give each guest a considered, connected experience — with their event details, personal schedule, access and support close at hand.</p>
+        <ul class="features">
+          <li>Personal schedules</li>
+          <li>Digital passes</li>
+          <li>Live updates</li>
+          <li>Concierge</li>
+        </ul>
+        <a href="#contact" class="link">Book a VOW GO demo <svg aria-hidden="true"><use href="#arrow-ne"/></svg></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section class="section services" id="services" aria-labelledby="services-title">
+  <div class="wrap">
+    <div class="head">
+      <h2 class="h2" id="services-title">Every touchpoint, covered.</h2>
+      <p class="lede">From the first invitation to the ride home, VOW supports each moment of the guest journey — and the team behind it.</p>
+    </div>
+    <div class="tiles">
+      <div class="tile lead">
+        <img src="/assets/img/service-guest-app.jpg" alt="" width="1536" height="1920" loading="lazy" decoding="async">
+        <h3>Web and mobile guest experience app</h3>
+        <p>Each guest’s schedule, passes, updates and support in one place, on web or mobile.</p>
+      </div>
+      <div class="tile"><h3>Arrival, check-in and departure</h3><p>Coordinate cars, doors and departures so every arrival feels expected.</p></div>
+      <div class="tile"><h3>Digital tickets and access passes</h3><p>Issue, update and revoke credentials in real time.</p></div>
+      <div class="tile"><h3>White glove pro and guest support</h3><p>Dedicated help for your team before and during the event, and for guests on the night.</p></div>
+      <div class="tile"><h3>Transactions and payments</h3><p>Take payments and handle purchases inside the same guest experience.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Sectors -->
+<section class="section sectors" id="sectors" aria-labelledby="sectors-title">
+  <div class="wrap grid">
+    <div class="intro">
+      <h2 class="h2" id="sectors-title">Six sectors. Distinct needs. A premium standard.</h2>
+      <p class="lede">Different people, priorities and possibilities. Technology that supports the way your world works.</p>
+      <figure class="sector-frame" id="sectorFrame" aria-hidden="true">
+        <img class="on" data-key="media" src="/assets/img/sector-media.jpg" alt="" width="1920" height="1440" loading="lazy" decoding="async">
+        <img data-key="entertainment" src="/assets/img/sector-entertainment.jpg" alt="" width="1920" height="1440" loading="lazy" decoding="async">
+        <img data-key="philanthropy" src="/assets/img/sector-philanthropy.jpg" alt="" width="1920" height="1440" loading="lazy" decoding="async">
+        <img data-key="sports" src="/assets/img/sector-sports.jpg" alt="" width="1920" height="1440" loading="lazy" decoding="async">
+        <img data-key="olympics" src="/assets/img/sector-olympics.jpg" alt="" width="1920" height="1440" loading="lazy" decoding="async">
+        <img data-key="grandscale" src="/assets/img/sector-grandscale.jpg" alt="" width="1920" height="1440" loading="lazy" decoding="async">
+      </figure>
+    </div>
+    <ul class="sector-list">
+      <li class="sector on" data-key="media"><img class="thumb" src="/assets/img/sector-media.jpg" alt="" width="128" height="128" loading="lazy" decoding="async"><span class="name">Media</span><span class="desc">Premieres, upfronts and press events, with talent and press lists in sync.</span></li>
+      <li class="sector" data-key="entertainment"><img class="thumb" src="/assets/img/sector-entertainment.jpg" alt="" width="128" height="128" loading="lazy" decoding="async"><span class="name">Entertainment</span><span class="desc">Award shows, tours and festivals, from artist hospitality to fan VIP.</span></li>
+      <li class="sector" data-key="philanthropy"><img class="thumb" src="/assets/img/sector-philanthropy.jpg" alt="" width="128" height="128" loading="lazy" decoding="async"><span class="name">Philanthropy</span><span class="desc">Galas, auctions and donor events where every guest is known by name.</span></li>
+      <li class="sector" data-key="sports"><img class="thumb" src="/assets/img/sector-sports.jpg" alt="" width="128" height="128" loading="lazy" decoding="async"><span class="name">Sports</span><span class="desc">Suites, sponsor hospitality and matchday guests across a full season.</span></li>
+      <li class="sector" data-key="olympics"><img class="thumb" src="/assets/img/sector-olympics.jpg" alt="" width="128" height="128" loading="lazy" decoding="async"><span class="name">Olympics</span><span class="desc">Delegations, families and partners across weeks of competition.</span></li>
+      <li class="sector" data-key="grandscale"><img class="thumb" src="/assets/img/sector-grandscale.jpg" alt="" width="128" height="128" loading="lazy" decoding="async"><span class="name">Grandscale</span><span class="desc">Multi-day, multi-venue productions with thousands of moving parts.</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- Proof -->
+<section class="section proof" aria-labelledby="proof-title">
+  <div class="wrap proof-inner">
+    <h2 class="sr-only" id="proof-title">What clients say</h2>
+    {% include "testimonial.njk" %}
+    <div class="logo-marquee" id="logoMarquee">
+    <ul class="logos" aria-label="Clients">
+      <li style="--h:54"><img src="/assets/clients_logos/1199%20logo.png" alt="1199SEIU Funds" width="400" height="308" loading="lazy" decoding="async"></li>
+      <li style="--h:26"><img src="/assets/clients_logos/Alvin%20Ailey%20logo.png" alt="Alvin Ailey" width="400" height="88" loading="lazy" decoding="async"></li>
+      <li style="--h:38"><img src="/assets/clients_logos/Assembly%20logo.png" alt="Assembly" width="400" height="184" loading="lazy" decoding="async"></li>
+      <li style="--h:46"><img src="/assets/clients_logos/IGlaad%20Media%20logo.png" alt="GLAAD" width="400" height="224" loading="lazy" decoding="async"></li>
+      <li style="--h:37"><img src="/assets/clients_logos/Kind%20logo.png" alt="KIND, Kids in Need of Defense" width="400" height="168" loading="lazy" decoding="async"></li>
+      <li style="--h:56"><img src="/assets/clients_logos/NBC%20logo.png" alt="NBC" width="320" height="320" loading="lazy" decoding="async"></li>
+      <li style="--h:34"><img src="/assets/clients_logos/NYU%20logo.png" alt="NYU" width="400" height="148" loading="lazy" decoding="async"></li>
+      <li style="--h:34"><img src="/assets/clients_logos/PFL%20logo.png" alt="PFL" width="400" height="152" loading="lazy" decoding="async"></li>
+      <li style="--h:32"><img src="/assets/clients_logos/Tony%20logo.png" alt="Tony Awards" width="400" height="132" loading="lazy" decoding="async"></li>
+    </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Case studies reel -->
+<section class="section cases" id="cases" aria-labelledby="cases-title" style="padding-top:0">
+  <div class="wrap head">
+    <h2 class="h2" id="cases-title">Case studies</h2>
+    <div class="arrows">
+      <button type="button" aria-label="Previous case study" data-dir="-1" aria-controls="reel"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3 5 8l5 5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></button>
+      <button type="button" aria-label="Next case study" data-dir="1" aria-controls="reel"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></button>
+    </div>
+  </div>
+  <div class="reel" id="reel" role="region" tabindex="0" aria-label="Case studies, scrollable">
+    <article class="case feature">
+      <div class="field"><img src="/assets/img/case-team-usa.jpg" alt="" width="1920" height="1080" loading="lazy" decoding="async"></div>
+      <div class="info">
+        <h3>Team USA × VOW</h3>
+        <p>An interactive concept for event operations and guest experiences.</p>
+        <!-- TODO: replace with the live demo URL -->
+        <a href="#contact" class="link">Request the demo <svg aria-hidden="true"><use href="#arrow-ne"/></svg></a>
+      </div>
+    </article>
+    <article class="case soon"><div class="field"><img src="/assets/img/case-entertainment.jpg" alt="" width="1920" height="1080" loading="lazy" decoding="async"><span class="badge">Coming soon</span></div><div class="info"><h3>Entertainment</h3><p>A case study from the world of premieres and award shows.</p></div></article>
+    <article class="case soon"><div class="field"><img src="/assets/img/case-philanthropy.jpg" alt="" width="1920" height="1080" loading="lazy" decoding="async"><span class="badge">Coming soon</span></div><div class="info"><h3>Philanthropy</h3><p>A case study from the world of galas and donor events.</p></div></article>
+    <article class="case soon"><div class="field"><img src="/assets/img/case-media.jpg" alt="" width="1920" height="1080" loading="lazy" decoding="async"><span class="badge">Coming soon</span></div><div class="info"><h3>Media</h3><p>A case study from the world of upfronts and press events.</p></div></article>
+  </div>
+</section>
+
+<!-- Final CTA -->
+
+{% include "cta.njk" %}

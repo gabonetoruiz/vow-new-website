@@ -3,7 +3,7 @@
 (() => {
   if(matchMedia('(hover: hover) and (pointer: fine)').matches){
     const root=document.documentElement;
-    const glowCards=[...document.querySelectorAll('.prod, .tile, .case')];
+    const glowCards=[...document.querySelectorAll('.prod, .tile, .case, .glow')];
     let px=-9999,py=-9999,queued=false;
     const update=()=>{
       queued=false;
