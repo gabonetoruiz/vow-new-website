@@ -34,8 +34,10 @@
     loop.totalTime(loop.duration() * 200);
 
     // Entrance: logos rise and settle one after another the first time the row appears
+    // (inside the hero the row is already in view on load, so it waits for the headline reveal to get going)
     gsap.from(track.querySelectorAll('li'), {
       autoAlpha: 0, y: 28, scale: 0.92, duration: 1.1, ease: 'power3.out',
+      delay: wrap.closest('.hero') ? 1.3 : 0,
       stagger: { each: 0.045, from: 'start' },
       scrollTrigger: { trigger: wrap, start: 'top 92%', once: true }
     });

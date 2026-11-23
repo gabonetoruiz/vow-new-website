@@ -15,7 +15,8 @@
     radial-gradient(50% 42% at 50% 46%,rgba(7,10,36,.38),rgba(7,10,36,0) 75%),
     linear-gradient(180deg,rgba(7,10,36,.55) 0%,rgba(7,10,36,0) 22%,rgba(7,10,36,0) 70%,var(--ink) 100%)}
 
-.hero-body{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:150px 0 40px}
+/* Padding scales with the screen height so the logo strip below stays inside the first viewport on short laptops */
+.hero-body{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:clamp(96px,14vh,150px) 0 clamp(8px,2vh,24px)}
 .eyebrow{font-size:15px;color:var(--ice);margin-bottom:30px;display:inline-flex;align-items:center;gap:12px}
 .eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--ice);box-shadow:0 0 12px 2px rgba(207,224,255,.8)}
 .hero h1 span{display:block}
@@ -146,8 +147,9 @@
 /* proof */
 .proof{padding-top:0;overflow:hidden;isolation:isolate}
 .proof-inner{border-top:1px solid var(--rule);padding-top:clamp(72px,9vw,120px)}
-/* Client logos: white marks, sized by aspect ratio (--h) so each carries similar visual weight */
-.logo-marquee{--k:.9;--gap:clamp(56px,6.5vw,96px);margin-top:clamp(64px,8vw,104px);padding-top:clamp(40px,5vw,56px);border-top:1px solid var(--rule)}
+/* Client logos (inside the hero): white marks, sized by aspect ratio (--h) so each carries similar visual weight.
+   No background: the hero gradient shows straight through. */
+.logo-marquee{--k:.9;--gap:clamp(48px,6vw,96px);position:relative;width:100%;margin:clamp(16px,3vh,40px) 0 clamp(20px,3.5vh,36px);padding:0 var(--gutter)}
 /* Static fallback (no JS / reduced motion): one centred, wrapping row */
 .logos{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:36px var(--gap)}
 .logos li{flex:none;display:flex;align-items:center}
