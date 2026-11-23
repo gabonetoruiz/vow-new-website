@@ -199,23 +199,24 @@
     }, 16);
   };
 
+  // Largest size that fits the stage with room for the caption below
   const fitSize = (p) => {
-    const maxH = Math.max(160, sh - 190), maxW = Math.max(180, sw - 40);
-    let w = Math.min(maxW, Math.max(W * 1.5, Math.min(640, sw * 0.6)));
-    let h = w * p.h / p.w;
+    const maxH = Math.max(140, sh - 220), maxW = Math.max(180, Math.min(sw - 40, 980));
+    let w = maxW, h = w * p.h / p.w;
     if (h > maxH) { h = maxH; w = h * p.w / p.h; }
     return { w: Math.round(w), h: Math.round(h) };
   };
 
   const openCard = (card) => {
     if (open) return;
-    const p = card._p, from = card.getBoundingClientRect(), sr0 = stage.getBoundingClientRect();
+    const p = card._p, from = card.getBoundingClientRect();
+    focusImg.getAnimations().forEach((a) => a.cancel());
     open = { card, p, opener: document.activeElement };
     vx = vy = 0; zoomTarget = 1;
     stage.classList.add('is-open');
     focusImg.src = p.src; focusImg.alt = p.alt;
     const { w, h } = fitSize(p);
-    focusImg.style.width = w + 'px'; focusImg.style.height = h + 'px';
+    focusImg.style.width = w + 'px'; focusImg.style.height = h + 'px'; tilt.style.width = w + 'px';
     sr.textContent = `${p.title}. ${p.meta}. ${p.desc}`;
     focusEl.setAttribute('aria-label', p.title);
     focusEl.hidden = false;
@@ -245,6 +246,7 @@
       card.classList.remove('is-hidden');
       stage.classList.remove('is-open');
       tilt.style.transform = '';
+      if (flip) flip.cancel();   // drop the fill-forwards close animation so the next photo starts clean
       open = null; flip = null;
       (opener && opener.focus ? opener : stage).focus({ preventScroll: true });
       schedule();
