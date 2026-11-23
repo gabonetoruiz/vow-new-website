@@ -38,7 +38,7 @@ src/
 | --- | --- |
 | Navbar links, Connect button label | `src/_data/nav.json` |
 | A sector's text, image or the Sectors dropdown | `src/_data/sectors.json` (add a sector there and its page, menu entry and footer link appear) |
-| Gallery photos and captions | `src/_data/gallery.json` (images go in `src/assets/img/`) |
+| Gallery photos and captions | `src/_data/gallery.json` (images go in `src/assets/img/gallery/`; each entry has `title`, `meta`, `desc`, `alt` and an optional `sector` tag) |
 | FAQs | `src/_data/faqs.json` (the page and its search-engine markup both come from it) |
 | Client logos | `src/_data/clients.json` (the home page marquee is still written by hand in `index.njk`) |
 | Press items | `src/_data/press.json` (remove `"sample": true` on real entries) |
@@ -64,5 +64,5 @@ Every page carries `<meta name="robots" content="noindex, nofollow">` (in `layou
 
 - Press items are placeholders (marked "Placeholder" on the page).
 - Sector, FAQ and other page copy is draft text written from the existing site content.
-- Gallery photos are the AI-generated images used elsewhere on the site; swap in real event photography.
+- Gallery photos are real event photos supplied by the client (an infinite draggable canvas, `src/js/gallery.js`). Captions come only from visible signage; sector tags are editable in `gallery.json`. Confirm usage rights before the repo or site goes public beyond review.
 - Privacy and Terms links in the footer, and the Team USA demo link.

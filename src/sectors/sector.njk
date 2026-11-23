@@ -39,7 +39,9 @@ motion: [reveal, hover]
       {%- endfor %}
     </div>
     <div class="sector-links" data-reveal>
+      {%- if galleryBySector[sector.slug] %}
       <a class="link" href="/gallery/#{{ sector.slug }}">See {{ sector.name }} photos <svg aria-hidden="true"><use href="#arrow-ne"/></svg></a>
+      {%- endif %}
       {%- if sector.related %}
       <a class="link" href="{{ sector.related.url }}">{{ sector.related.label }} <svg aria-hidden="true"><use href="#arrow-ne"/></svg></a>
       {%- endif %}
