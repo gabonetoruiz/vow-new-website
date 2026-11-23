@@ -1,18 +1,18 @@
 /* Design tokens: the single source of truth for colour, type, spacing and motion. */
 :root{
   color-scheme:dark;
-  --ink:#070A24;
-  --midnight:#10164A;
-  --royal:#3B4BF5;
-  --royal-hi:#5565FF;
-  --iris:#8B7DFF;
+  --ink:#0F0A4E;
+  --midnight:#151767;
+  --royal:#2D4CD7;
+  --royal-hi:#4C66F0;
+  --iris:#95A4FF;
   --ice:#CFE0FF;
   --champagne:#E9CFA8;
   --paper:#F5F5F8;
   --mist:rgba(245,245,248,.7);
   --faint:rgba(245,245,248,.58);   /* ≥ 4.5:1 on --ink */
   --rule:rgba(207,224,255,.12);
-  --surface:rgba(16,22,74,.55);
+  --surface:rgba(21,23,103,.55);
 
   --gutter:clamp(20px,4.5vw,64px);
   --max:1240px;

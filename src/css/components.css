@@ -34,7 +34,7 @@
 /* final CTA */
 .cta{text-align:center;overflow:hidden;isolation:isolate}
 .cta::before{content:"";position:absolute;z-index:-1;left:50%;bottom:-55%;width:min(1400px,160vw);aspect-ratio:2/1;transform:translateX(-50%);border-radius:50%;
-     background:radial-gradient(closest-side,rgba(59,75,245,.55),rgba(139,125,255,.18) 55%,transparent 75%)}
+     background:radial-gradient(closest-side,rgba(45,76,215,.55),rgba(149,164,255,.18) 55%,transparent 75%)}
 .cta::after{content:"";position:absolute;z-index:-1;left:50%;bottom:0;width:min(900px,100vw);height:1px;transform:translateX(-50%);background:linear-gradient(90deg,transparent,var(--ice),transparent);opacity:.5}
 .cta h2{max-width:16ch;margin:0 auto;font-size:clamp(44px,6.4vw,96px)}
 .cta .lede{margin:28px auto 0;text-align:center}

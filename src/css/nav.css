@@ -4,7 +4,7 @@
 /* The frosted bar is a pseudo-element on purpose: a backdrop-filter on .nav itself would make .nav the containing
    block of the fixed mobile menu and squash the menu into the 76px bar. */
 .nav::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
-  background:rgba(7,10,36,.78);border-bottom:1px solid var(--rule);
+  background:rgba(15,10,78,.78);border-bottom:1px solid var(--rule);
   backdrop-filter:blur(16px) saturate(140%);-webkit-backdrop-filter:blur(16px) saturate(140%);
   opacity:0;transition:opacity .35s var(--ease)}
 .nav.scrolled::before{opacity:1}
@@ -37,13 +37,13 @@
 .sub-list a{display:block;padding:14px 16px;border-radius:14px;transition:background-color .2s}
 .sub-name{display:block;font-family:var(--font-display);font-weight:500;font-size:17px;letter-spacing:-.01em}
 .sub-blurb{display:block;margin-top:2px;color:var(--faint);font-size:14px;line-height:1.4}
-.sub-list a:hover,.sub-list a:focus-visible{background:rgba(59,75,245,.18)}
-.sub-list a[aria-current="page"]{background:rgba(59,75,245,.12)}
+.sub-list a:hover,.sub-list a:focus-visible{background:rgba(45,76,215,.18)}
+.sub-list a[aria-current="page"]{background:rgba(45,76,215,.12)}
 .sub-list a[aria-current="page"] .sub-name{color:var(--ice)}
 
 /* Hamburger (shown only on small screens) */
 .nav-toggle{display:none;position:relative;z-index:3;width:44px;height:44px;border-radius:50%;
-  border:1px solid rgba(207,224,255,.32);background:rgba(7,10,36,.4);color:var(--paper);cursor:pointer;place-items:center;
+  border:1px solid rgba(207,224,255,.32);background:rgba(15,10,78,.4);color:var(--paper);cursor:pointer;place-items:center;
   transition:background-color .2s,border-color .2s}
 .nav-toggle .bars{position:relative;display:block;width:18px;height:10px}
 .nav-toggle .bars i{position:absolute;left:0;right:0;height:1.5px;border-radius:2px;background:currentColor;
@@ -63,7 +63,7 @@
 
   .nav-panel{position:fixed;inset:0;z-index:1;flex-direction:column;align-items:stretch;gap:0;
     padding:calc(var(--nav-h) + 12px) var(--gutter) max(28px,env(safe-area-inset-bottom));
-    background:radial-gradient(80% 45% at 85% 0%,rgba(59,75,245,.32),transparent 70%),var(--ink);
+    background:radial-gradient(80% 45% at 85% 0%,rgba(45,76,215,.32),transparent 70%),var(--ink);
     overflow-y:auto;overscroll-behavior:contain;
     opacity:0;visibility:hidden;transform:translateY(-8px);
     transition:opacity .3s var(--ease),transform .35s var(--ease),visibility 0s .35s}

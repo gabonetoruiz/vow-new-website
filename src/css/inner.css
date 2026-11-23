@@ -6,8 +6,8 @@
 /* Quiet cousin of the home hero: the same palette as soft light, no WebGL */
 .page-hero::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
   background:
-    radial-gradient(48% 70% at 80% 0%,rgba(59,75,245,.34),transparent 70%),
-    radial-gradient(38% 50% at 10% 25%,rgba(139,125,255,.14),transparent 70%)}
+    radial-gradient(48% 70% at 80% 0%,rgba(45,76,215,.34),transparent 70%),
+    radial-gradient(38% 50% at 10% 25%,rgba(149,164,255,.14),transparent 70%)}
 .page-title{font-weight:400;font-size:clamp(44px,7vw,104px);line-height:1;letter-spacing:-.045em;max-width:16ch}
 .page-hero .lede{margin-top:28px;max-width:56ch}
 .crumb{margin-bottom:18px;color:var(--iris);font-size:15px}
@@ -23,19 +23,19 @@
 .chip{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:999px;font:500 15px/1 var(--font-body);
   color:var(--mist);background:none;border:1px solid rgba(207,224,255,.24);cursor:pointer;
   transition:color .2s,border-color .2s,background-color .2s}
-.chip[aria-pressed="true"],.chip[aria-current="page"]{color:var(--paper);border-color:var(--royal);background:rgba(59,75,245,.22)}
+.chip[aria-pressed="true"],.chip[aria-current="page"]{color:var(--paper);border-color:var(--royal);background:rgba(45,76,215,.22)}
 @media (hover:hover){.chip:hover{color:var(--paper);border-color:var(--ice)}}
 
 /* ---------- sector pages ---------- */
 .sector-banner{position:relative;margin:0;border-radius:var(--r-panel);overflow:hidden;border:1px solid var(--rule);background:var(--midnight)}
 .sector-banner img{width:100%;height:auto;aspect-ratio:16/8;object-fit:cover;display:block}
-.sector-banner::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,transparent 55%,rgba(7,10,36,.55))}
+.sector-banner::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,transparent 55%,rgba(15,10,78,.55))}
 .section-head{max-width:760px;margin-bottom:clamp(36px,5vw,64px)}
 .section-head .h2{max-width:20ch}
 .points{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .point{position:relative;isolation:isolate;display:flex;flex-direction:column;gap:12px;min-height:240px;padding:32px;
   border-radius:var(--r-tile);border:1px solid var(--rule);
-  background:linear-gradient(180deg,rgba(16,22,74,.35),rgba(16,22,74,.12))}
+  background:linear-gradient(180deg,rgba(21,23,103,.35),rgba(21,23,103,.12))}
 .point h3{font-weight:500;font-size:22px;line-height:1.25;letter-spacing:-.02em}
 .point p{color:var(--mist);font-size:16px;max-width:38ch}
 .sector-links{display:flex;flex-wrap:wrap;align-items:center;gap:18px 32px;margin-top:clamp(32px,4vw,48px)}
@@ -67,7 +67,7 @@
 .faq-item summary .plus{position:relative;flex:none;width:32px;height:32px;border-radius:50%;border:1px solid rgba(207,224,255,.28);transition:border-color .2s,background-color .2s}
 .faq-item summary .plus::before,.faq-item summary .plus::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:1.5px;margin:-.75px 0 0 -6px;background:currentColor;border-radius:2px;transition:transform .3s var(--ease)}
 .faq-item summary .plus::after{transform:rotate(90deg)}
-.faq-item[open] summary .plus{border-color:var(--royal);background:rgba(59,75,245,.22)}
+.faq-item[open] summary .plus{border-color:var(--royal);background:rgba(45,76,215,.22)}
 .faq-item[open] summary .plus::after{transform:rotate(0)}
 @media (hover:hover){.faq-item summary:hover .plus{border-color:var(--ice)}}
 .faq-answer{padding:0 56px 28px 0;color:var(--mist);max-width:62ch}
@@ -78,7 +78,7 @@
 .clients-grid{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .client{position:relative;isolation:isolate;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;min-height:220px;padding:32px 24px;
   border-radius:var(--r-tile);border:1px solid var(--rule);text-align:center;
-  background:linear-gradient(180deg,rgba(16,22,74,.35),rgba(16,22,74,.12))}
+  background:linear-gradient(180deg,rgba(21,23,103,.35),rgba(21,23,103,.12))}
 .client img{height:calc(var(--h) * 1.25px);width:auto;max-width:78%;object-fit:contain;opacity:.9}
 .client p{color:var(--faint);font-size:14px}
 .testimonial{padding-top:clamp(64px,8vw,104px);border-top:1px solid var(--rule)}

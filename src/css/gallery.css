@@ -11,7 +11,7 @@
 .g-stage.is-open{cursor:default}
 /* Cursor spotlight + edge vignette */
 .g-stage::before{content:"";position:absolute;inset:0;z-index:3;pointer-events:none;
-  background:radial-gradient(520px circle at var(--sx,50%) var(--sy,50%),rgba(139,125,255,.16),transparent 70%)}
+  background:radial-gradient(520px circle at var(--sx,50%) var(--sy,50%),rgba(149,164,255,.16),transparent 70%)}
 .g-stage::after{content:"";position:absolute;inset:0;z-index:3;pointer-events:none;
   box-shadow:inset 0 0 120px 40px var(--ink)}
 .g-world{position:absolute;inset:0;transform-style:preserve-3d}
@@ -24,7 +24,7 @@
 .g-card.is-hidden{visibility:hidden}
 
 .g-hint{position:absolute;left:20px;bottom:18px;z-index:4;display:flex;align-items:center;gap:10px;margin:0;
-  padding:9px 14px;border-radius:999px;border:1px solid var(--rule);background:rgba(7,10,36,.7);
+  padding:9px 14px;border-radius:999px;border:1px solid var(--rule);background:rgba(15,10,78,.7);
   font:500 12px/1 var(--font-body);letter-spacing:.04em;color:var(--mist);
   pointer-events:none;transition:opacity .5s var(--ease)}
 .g-hint-dot{width:6px;height:6px;border-radius:50%;background:var(--iris)}
@@ -32,11 +32,11 @@
 
 /* ---------- focused photo ---------- */
 .g-focus{position:absolute;inset:0;z-index:6;display:grid;place-items:center;padding:20px;cursor:zoom-out;
-  background:rgba(5,8,28,.84);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);opacity:0;transition:opacity .35s var(--ease)}
+  background:rgba(11,7,60,.84);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);opacity:0;transition:opacity .35s var(--ease)}
 .g-focus[hidden]{display:none}
 .g-focus.is-in{opacity:1}
 .g-focus-close{position:absolute;top:16px;right:16px;display:grid;place-items:center;width:44px;height:44px;border-radius:50%;
-  border:1px solid rgba(207,224,255,.32);background:rgba(7,10,36,.6);color:var(--paper);cursor:pointer}
+  border:1px solid rgba(207,224,255,.32);background:rgba(15,10,78,.6);color:var(--paper);cursor:pointer}
 .g-focus-close svg{width:16px;height:16px}
 @media (hover:hover){.g-focus-close:hover{border-color:var(--ice);background:rgba(207,224,255,.14)}}
 .g-focus-tilt{display:flex;flex-direction:column;align-items:stretch;gap:16px;transform-style:preserve-3d;will-change:transform;

@@ -7,8 +7,8 @@
   const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   const CONFIG={
-    bg:'#070A24',                                   // --ink
-    colors:['#2633B8','#3B4BF5','#080B2A','#8B7DFF'], // royal-deep, --royal, near-ink shadow (adds depth), --iris highlights
+    bg:'#0F0A4E',                                   // --ink
+    colors:['#1C166C','#2D4CD7','#110C56','#95A4FF'], // royal-deep, --royal, deep-blue shadow (adds depth), --iris highlights
     speed:4.5,                                      // clearly flowing, still smooth (component default is 2.0)
     grain:.35
   };
