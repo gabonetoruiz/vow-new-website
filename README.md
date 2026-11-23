@@ -66,3 +66,7 @@ Every page carries `<meta name="robots" content="noindex, nofollow">` (in `layou
 - Sector, FAQ and other page copy is draft text written from the existing site content.
 - Gallery photos are real event photos supplied by the client (an infinite draggable canvas, `src/js/gallery.js`). Captions come only from visible signage; sector tags are editable in `gallery.json`. Confirm usage rights before the repo or site goes public beyond review.
 - Privacy and Terms links in the footer, and the Team USA demo link.
+
+## Link previews and icons
+- Share image: `src/assets/img/og-image.jpg` (1200×630). Icons: `src/assets/favicon-48.png`, `icon-192.png`, `apple-touch-icon.png`. All are wired in `layouts/base.njk`.
+- `url` in `src/_data/site.json` builds the absolute share-image and page URLs. Change it when the site moves to its real domain.
