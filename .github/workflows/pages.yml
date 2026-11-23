@@ -28,7 +28,7 @@ jobs:
         run: |
           mkdir _site
           cp index.html _site/
-          cp -R assets _site/
+          cp -R css js assets _site/
           printf 'User-agent: *\nDisallow: /\n' > _site/robots.txt
 
       - uses: actions/configure-pages@v5
