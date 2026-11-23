@@ -1,0 +1,19 @@
+# macOS / editor
+.DS_Store
+
+# Tooling and local settings
+.claude/
+.netlify/
+
+# Old Netlify upload folder (the GitHub workflow builds its own)
+dist/
+
+# Working files that are not part of the site
+wireframe.html
+VOW — B2B2VIP Technology for Premium Events.png
+VOW Logo.svg
+
+# Unused assets (kept on disk, not published)
+assets/img/*.webp
+assets/img/hero-keyframe.jpg
+assets/video/
