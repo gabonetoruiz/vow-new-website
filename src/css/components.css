@@ -6,7 +6,6 @@
 .quote blockquote::before{content:"“";display:block;color:var(--champagne);font-size:1.8em;line-height:.6;margin-bottom:.15em}
 .quote figcaption{grid-column:9/13;color:var(--mist);font-size:15px;padding-bottom:.6em}
 .quote figcaption strong{display:block;color:var(--paper);font-weight:500;font-size:16px;margin-bottom:2px}
-.quote .sample{display:inline-block;margin-top:14px;padding:3px 10px;border-radius:999px;font-size:12px;color:var(--champagne);border:1px dashed rgba(233,207,168,.45)}
 @media (max-width:960px){
   .quote blockquote,.quote figcaption{grid-column:1/-1}
   .quote figcaption{margin-top:24px}

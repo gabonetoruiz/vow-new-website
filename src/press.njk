@@ -21,9 +21,7 @@ motion: [reveal, hover, cta]
           <h2 class="press-title">{{ item.title }}</h2>
         </div>
         <div class="press-aside">
-          {%- if item.sample %}
-          <span class="badge-sample">Placeholder</span>
-          {%- else %}
+          {%- if item.url %}
           <a class="link" href="{{ item.url }}" rel="noopener">Read article <svg aria-hidden="true"><use href="#arrow-ne"/></svg></a>
           {%- endif %}
         </div>

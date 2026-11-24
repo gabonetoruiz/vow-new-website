@@ -65,15 +65,15 @@
       const bg = frame.querySelector('img.bg'), fg = frame.querySelector('img.fg');
       if (bg && fg) {
         // Product stage: photo and screen move at different speeds, so the two layers read as separate
-        gsap.fromTo(bg, { scale: 1.24, yPercent: -4 }, { scale: 1.14, yPercent: 4, ease: 'none',
+        gsap.fromTo(bg, { scale: 1.2, yPercent: -4 }, { scale: 1.04, yPercent: 4, ease: 'none',
           scrollTrigger: { trigger: frame, start: 'top bottom', end: 'bottom top', scrub: 0.6 } });
         gsap.fromTo(fg, { yPercent: isDesktop ? 7 : 3 }, { yPercent: isDesktop ? -7 : -3, ease: 'none',
           scrollTrigger: { trigger: frame, start: 'top bottom', end: 'bottom top', scrub: 0.6 } });
       } else if (isDesktop) {
-        gsap.fromTo(imgs, { scale: 1.2, yPercent: -4 }, { scale: 1.12, yPercent: 4, ease: 'none',
+        gsap.fromTo(imgs, { scale: 1.14, yPercent: -4 }, { scale: 1.02, yPercent: 4, ease: 'none',
           scrollTrigger: { trigger: frame, start: 'top bottom', end: 'bottom top', scrub: 0.6 } });
       } else {
-        gsap.fromTo(imgs, { scale: 1.2 }, { scale: 1.06, duration: 1.4, ease: 'power2.out',
+        gsap.fromTo(imgs, { scale: 1.1 }, { scale: 1, duration: 1.4, ease: 'power2.out',
           scrollTrigger: { trigger: frame, start: 'top 85%', once: true } });
       }
     });

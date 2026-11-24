@@ -14,9 +14,6 @@
 .section.tight{padding:clamp(44px,6vw,88px) 0}
 .section.flush-top{padding-top:0}
 
-/* "Placeholder" marker: content that still needs real material (same look as the earlier testimonial label) */
-.badge-sample{display:inline-flex;align-items:center;padding:3px 10px;border-radius:999px;font-size:12px;line-height:1.5;
-  color:var(--champagne);border:1px dashed rgba(233,207,168,.45)}
 
 /* ---------- chips (links or buttons shaped as pills) ---------- */
 .chips{display:flex;flex-wrap:wrap;gap:10px;list-style:none}
