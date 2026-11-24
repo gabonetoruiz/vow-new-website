@@ -1,0 +1,56 @@
+[
+  {
+    "slug": "team-usa",
+    "title": "Team USA × VOW",
+    "kicker": "Case study",
+    "draft": true,
+    "lede": "An interactive concept for event operations and guest experiences across a multi-venue sporting event.",
+    "client": "Team USA",
+    "year": "2026",
+    "sector": "Sports",
+    "platform": "VOW PRO · VOW GO",
+    "cover": { "src": "/assets/img/case-team-usa.jpg", "w": 1920, "h": 1085, "alt": "Athletes and guests in a hospitality lounge overlooking a floodlit stadium" },
+    "statement": "Every guest, every arrival and every moment, in one live view.",
+    "note": "This case study is an interactive concept. It shows how VOW could run hospitality for a national team across several venues, with one view of every guest.",
+    "sections": [
+      {
+        "id": "challenge",
+        "title": "The challenge",
+        "text": [
+          "Hospitality around a national team is shared by many groups at once: athlete families, sponsors, partners and VIP guests. Each group has its own lists, its own tickets and its own arrival times.",
+          "Those details usually sit in separate spreadsheets and message threads. The team in charge has to piece the picture together by hand, while the event is already under way."
+        ]
+      },
+      {
+        "id": "solution",
+        "title": "The solution",
+        "text": [
+          "VOW PRO gives the operations team one live view: every guest, every group, every seat. Venue maps, check-in and communications sit in the same place.",
+          "VOW GO gives each guest a digital pass, a personal schedule and a concierge, on web or mobile. The guest always knows where to go, and the team always knows where the guest is."
+        ]
+      }
+    ],
+    "metrics": [
+      { "value": 12000, "suffix": "+", "label": "Guests in one live view" },
+      { "value": 3, "suffix": "", "label": "Venues, one shared plan" },
+      { "value": 4, "suffix": "", "label": "Guest groups, each with its own access" },
+      { "value": 1, "suffix": "", "label": "Place for every update" }
+    ],
+    "metricsNote": "Illustrative figures for the concept.",
+    "media": [
+      { "type": "full", "src": "/assets/img/sector-sports.jpg", "w": 1920, "h": 1433, "alt": "A host serving guests in a stadium hospitality suite at night", "caption": "Matchday hospitality, planned in one place." },
+      { "type": "device", "bg": "/assets/img/case-team-usa.jpg", "bgW": 1920, "bgH": 1085, "src": "/assets/img/product/team-usa-arena", "w": 1300, "h": 763, "alt": "VOW PRO on a laptop showing an arena seating map, with a VIP Pass on a phone", "caption": "VOW PRO plans the venue. VOW GO puts the pass in the guest's hand." },
+      { "type": "pair", "images": [
+        { "src": "/assets/img/sector-olympics.jpg", "w": 1920, "h": 1433, "alt": "A ceremonial flame above a packed stadium at night" },
+        { "src": "/assets/img/sector-grandscale.jpg", "w": 1920, "h": 1433, "alt": "Aerial night view of an illuminated multi-venue event campus" }
+      ], "caption": "From opening night to a campus of venues." }
+    ],
+    "results": {
+      "title": "What the concept shows",
+      "text": [
+        "One shared picture replaces many separate ones. Guests arrive to a pass that is ready, the team sees every change as it happens, and nobody has to ask who is where.",
+        "The same approach carries over to any event of this size, from a single night to a full programme."
+      ]
+    }
+  }
+]

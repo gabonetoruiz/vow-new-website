@@ -10,22 +10,66 @@ eleventyComputed:
   description: "{{ sector.intro }}"
 styles: [inner]
 scripts: [cards]
-motion: [reveal, hover, cta]
+motion: [reveal, hover, sector]
 ---
-{% set heroKicker = "Sectors" %}
-{% set heroTitle = sector.name %}
-{% set heroLede = sector.intro %}
-{% include "page-hero.njk" %}
+<section class="sector-hero" aria-labelledby="sector-title">
+  <div class="wrap sector-hero-grid">
+    <div class="sector-copy">
+      <p class="eyebrow">{{ sector.kicker }}</p>
+      <h1 class="display" id="sector-title">
+        {%- for line in sector.headline %}
+        <span>{{ line }}</span>
+        {%- endfor %}
+      </h1>
+      <p class="lede">{{ sector.intro }}</p>
+      <div class="ctas">
+        <a href="{{ site.connectUrl }}" class="btn btn-primary">Connect with VOW <svg aria-hidden="true"><use href="#arrow-ne"/></svg></a>
+        <a href="/gallery/#{{ sector.slug }}" class="btn btn-ghost">See {{ sector.name }} photos</a>
+      </div>
+    </div>
 
-<section class="section tight flush-top" aria-label="{{ sector.name }} at a glance">
-  <div class="wrap">
-    <figure class="sector-banner" data-reveal>
-      <img src="{{ sector.image }}" alt="{{ sector.imageAlt }}" width="{{ sector.imageW }}" height="{{ sector.imageH }}" decoding="async" fetchpriority="high">
-    </figure>
+    <div class="sector-visual">
+      <figure class="sector-frame">
+        <img src="{{ sector.image }}" alt="{{ sector.imageAlt }}" width="{{ sector.imageW }}" height="{{ sector.imageH }}" decoding="async" fetchpriority="high">
+      </figure>
+      <aside class="live-card" aria-label="{{ sector.scene.title }}">
+        <p class="live-kicker"><span class="live-dot" aria-hidden="true"></span>{{ sector.scene.label }}</p>
+        <p class="live-title">{{ sector.scene.title }}</p>
+        <ul class="live-rows">
+          {%- for row in sector.scene.rows %}
+          <li>
+            <span class="live-label">{{ row.label }}</span>
+            <span class="live-bar" aria-hidden="true"><i style="--fill:{{ row.fill }}"></i></span>
+            <span class="live-value">{{ row.value }}</span>
+          </li>
+          {%- endfor %}
+        </ul>
+      </aside>
+    </div>
   </div>
 </section>
 
-<section class="section tight" aria-labelledby="help-title">
+<section class="section sector-statement" aria-labelledby="statement-title">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>{{ sector.blurb }}</p>
+    <h2 class="h2" id="statement-title" data-reveal>{{ sector.statement }}</h2>
+  </div>
+</section>
+
+<section class="sector-figures" aria-label="One {{ sector.name }} event, in the platform">
+  <div class="wrap">
+    <ul class="figures">
+      {%- for f in sector.figures %}
+      <li data-reveal>
+        <p class="figure-num" data-count="{{ f.value }}" data-suffix="{{ f.suffix }}">{{ f.value }}{{ f.suffix }}</p>
+        <p>{{ f.label }}</p>
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section sector-help" aria-labelledby="help-title">
   <div class="wrap">
     <div class="section-head">
       <h2 class="h2" id="help-title" data-reveal>How VOW helps in {{ sector.name }}</h2>
@@ -39,9 +83,6 @@ motion: [reveal, hover, cta]
       {%- endfor %}
     </div>
     <div class="sector-links" data-reveal>
-      {%- if galleryBySector[sector.slug] %}
-      <a class="link" href="/gallery/#{{ sector.slug }}">See {{ sector.name }} photos <svg aria-hidden="true"><use href="#arrow-ne"/></svg></a>
-      {%- endif %}
       {%- if sector.related %}
       <a class="link" href="{{ sector.related.url }}">{{ sector.related.label }} <svg aria-hidden="true"><use href="#arrow-ne"/></svg></a>
       {%- endif %}
@@ -51,7 +92,7 @@ motion: [reveal, hover, cta]
 
 <section class="section tight others" aria-labelledby="others-title">
   <div class="wrap">
-    <h2 id="others-title" data-reveal>Explore other sectors</h2>
+    <h2 id="others-title" data-reveal>Other sectors</h2>
     <ul class="chips" data-reveal>
       {%- for s in sectors %}{% if s.slug != sector.slug %}
       <li><a class="chip" href="/sectors/{{ s.slug }}/">{{ s.name }}</a></li>

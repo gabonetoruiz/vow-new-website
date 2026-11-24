@@ -70,3 +70,8 @@ Every page carries `<meta name="robots" content="noindex, nofollow">` (in `layou
 ## Link previews and icons
 - Share image: `src/assets/img/og-image.jpg` (1200×630). Icons: `src/assets/favicon-48.png`, `icon-192.png`, `apple-touch-icon.png`. All are wired in `layouts/base.njk`.
 - `url` in `src/_data/site.json` builds the absolute share-image and page URLs. Change it when the site moves to its real domain.
+
+## Case studies
+One template for every case study: `src/case-studies/case-study.njk`, styled by `src/css/case.css` and animated by `src/js/motion-case.js`.
+To add a case, add an entry to `src/_data/caseStudies.json` (see `team-usa` for every field). A page appears at `/case-studies/<slug>/`.
+Media blocks are `full` (one photo), `device` (product screen over a tinted photo) and `pair` (two photos). Entries marked `"draft": true` show a Draft badge; figures are labelled as samples until they are real.
