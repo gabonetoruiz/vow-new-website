@@ -2,9 +2,13 @@
 
 .cs{position:relative;isolation:isolate;overflow-x:clip}
 
-/* A thin line threaded down the page, drawn as you scroll (see motion-case.js) */
-.cs-line{position:absolute;inset:0;z-index:-1;width:100%;height:100%;pointer-events:none;overflow:visible}
-.cs-line path{stroke:rgba(149,164,255,.3);stroke-width:1.5;vector-effect:non-scaling-stroke;stroke-dasharray:1;stroke-dashoffset:0}
+/* Soft light that drifts behind the page: big blurred gradients that move with the scroll (see motion-case.js) */
+.cs-glows{position:absolute;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+.cs-glows .g{position:absolute;display:block;border-radius:50%;will-change:transform}
+.cs-glows .g1{top:22%;left:-18%;width:min(900px,90vw);aspect-ratio:1;background:radial-gradient(closest-side,rgba(45,76,215,.32),transparent 72%)}
+.cs-glows .g2{top:44%;right:-22%;width:min(980px,100vw);aspect-ratio:1;background:radial-gradient(closest-side,rgba(149,164,255,.16),transparent 72%)}
+.cs-glows .g3{top:66%;left:-12%;width:min(860px,90vw);aspect-ratio:1;background:radial-gradient(closest-side,rgba(45,76,215,.28),transparent 72%)}
+.cs-glows .g4{top:84%;right:-16%;width:min(760px,85vw);aspect-ratio:1;background:radial-gradient(closest-side,rgba(149,164,255,.14),transparent 72%)}
 
 /* ---------- header ---------- */
 .cs-hero{position:relative;padding:calc(var(--nav-h) + clamp(56px,9vw,128px)) 0 clamp(40px,6vw,88px)}
@@ -13,7 +17,6 @@
     radial-gradient(48% 70% at 80% 0%,rgba(45,76,215,.34),transparent 70%),
     radial-gradient(38% 50% at 10% 25%,rgba(149,164,255,.14),transparent 70%)}
 .crumb a{border-bottom:1px solid rgba(149,164,255,.4)}
-.crumb .badge-sample{margin-left:10px;vertical-align:1px}
 .cs-title{font-weight:400;font-size:clamp(52px,9.4vw,152px);line-height:.98;letter-spacing:-.05em;max-width:12ch}
 .cs-title .m{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.08em;margin-bottom:-.08em}
 .cs-title .m > span{display:inline-block;will-change:transform}
@@ -26,7 +29,7 @@
 .cs-cover-wrap{margin-top:clamp(36px,5vw,64px)}
 .cs-cover{position:relative;margin:0;border-radius:var(--r-panel);overflow:hidden;border:1px solid var(--rule);background:var(--midnight);
   aspect-ratio:16/9;max-height:86vh}
-.cs-cover img{display:block;width:100%;height:100%;object-fit:cover;will-change:transform}
+.cs-cover img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;will-change:transform}
 
 /* ---------- two-column rows (statement | note, heading | text) ---------- */
 .cs-split{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;row-gap:28px}
@@ -80,5 +83,4 @@
 @media (max-width:600px){
   .cs-pair{grid-template-columns:1fr}
   .cs-pair .cs-frame:nth-child(2){margin-top:0}
-  .cs-line{opacity:.5}
 }

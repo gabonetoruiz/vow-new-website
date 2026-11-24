@@ -14,13 +14,11 @@ motion: [reveal, hover, case, cta]
 ---
 {#- One template for every case study: add an entry to src/_data/caseStudies.json and a page appears. -#}
 <article class="cs">
-  <svg class="cs-line" aria-hidden="true" focusable="false" preserveAspectRatio="none" viewBox="0 0 100 1000">
-    <path d="M 6 0 C 6 120, 94 160, 94 300 S 6 460, 6 620 S 94 800, 94 1000" pathLength="1" fill="none"/>
-  </svg>
+  <div class="cs-glows" aria-hidden="true"><i class="g g1"></i><i class="g g2"></i><i class="g g3"></i><i class="g g4"></i></div>
 
   <header class="cs-hero" aria-labelledby="cs-title">
     <div class="wrap">
-      <p class="crumb" data-cs="in"><a href="/#cases">Case studies</a>{% if cs.draft %} <span class="badge-sample">Draft</span>{% endif %}</p>
+      <p class="crumb" data-cs="in"><a href="/#cases">Case studies</a></p>
       <h1 class="cs-title" id="cs-title" data-cs="title">{{ cs.title }}</h1>
       <p class="lede cs-lede" data-cs="in">{{ cs.lede }}</p>
       <dl class="cs-meta" data-cs="meta">
@@ -68,7 +66,7 @@ motion: [reveal, hover, case, cta]
         </li>
         {%- endfor %}
       </ul>
-      {%- if cs.metricsNote %}<p class="cs-fine" data-reveal><span class="badge-sample">Sample</span> {{ cs.metricsNote }}</p>{% endif %}
+      {%- if cs.metricsNote %}<p class="cs-fine" data-reveal>{{ cs.metricsNote }}</p>{% endif %}
     </div>
   </section>
   {%- endif %}
