@@ -151,7 +151,8 @@
 .case .info{padding:26px 28px 30px;display:flex;flex-direction:column;gap:8px;flex:1}
 .case h3{font-weight:500;font-size:24px;letter-spacing:-.02em}
 .case p{color:var(--mist);font-size:16px}
-.case .link{margin-top:14px;align-self:flex-start}
+.case .link{align-self:flex-start}
+.case-links{display:flex;flex-wrap:wrap;gap:4px 28px;margin-top:14px}
 .case.soon .field img{filter:saturate(.6) brightness(.7)}
 
 .arrows button:not(:disabled):active{transform:scale(.97)}
