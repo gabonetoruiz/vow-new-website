@@ -52,8 +52,11 @@
 
 {% include "footer.njk" %}
 
+{% include "consent.njk" %}
+
 <!-- Scripts: classic scripts in dependency order (the 'js' flag above stays inline so first paint is never flashed) -->
 <script src="/js/nav.js"></script>
+<script src="/js/consent.js"></script>
 {%- for name in scripts %}
 <script src="/js/{{ name }}.js"></script>
 {%- endfor %}

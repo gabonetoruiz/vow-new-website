@@ -50,8 +50,13 @@ src/
 form settings are in `src/_data/contact.json`. The demo form posts to the existing HubSpot form (portal and form ID in that file),
 so its field names and options must stay in step with HubSpot. Every "Connect", "Contact" and demo link points here.
 
+## Cookies and lead tracking
+`src/js/consent.js` and `src/_includes/consent.njk`: HubSpot's tracking code (portal ID from `src/_data/contact.json`) loads only after a visitor
+accepts. If you add another tool that sets cookies, load it from the same place and describe it in the Privacy Policy.
+
 ## Legal pages
 `src/privacy-policy.html` and `src/terms-of-service-vow.html` hold the wording copied from the vow.app pages (same addresses, so existing links keep working).
+Since then the Privacy Policy has gained a "Cookies and Website Tracking" section (drafted for this site; it needs legal review).
 Edit the text there and update `updated` in the front matter. Each `<h2 id="...">` appears in the "On this page" list.
 
 ## Rules for new pages

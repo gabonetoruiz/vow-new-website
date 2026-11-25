@@ -72,12 +72,17 @@
     data.push({ objectTypeId: boxes[0].dataset.object, name: boxes[0].name,
       value: boxes.filter((b) => b.checked).map((b) => b.value).join(';') });
 
+    // With cookie consent, HubSpot's visitor ID connects the earlier visits to this request
+    const context = { pageUri: location.href, pageName: document.title };
+    const visitor = window.vowConsent?.visitorId();
+    if (visitor) context.hutk = visitor;
+
     button.disabled = true;
     try {
       const response = await fetch(`https://api.hsforms.com/submissions/v3/integration/submit/${form.dataset.portal}/${form.dataset.form}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ fields: data, context: { pageUri: location.href, pageName: document.title } })
+        body: JSON.stringify({ fields: data, context })
       });
       if (response.ok) { showThanks(); return; }
       const result = await response.json().catch(() => ({}));

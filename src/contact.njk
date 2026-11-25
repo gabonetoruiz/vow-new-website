@@ -42,7 +42,7 @@ motion: [reveal, hover, contact]
         <p class="lede" data-reveal>Tell us about the event and the guests you’re planning for. Then pick a time to see VOW with our CEO.</p>
       </div>
       <div class="ct-side" data-reveal>
-        <form class="ct-form" id="demoForm" novalidate
+        <form class="ct-form" id="demoForm" novalidate data-hs-do-not-collect="true"
               data-portal="{{ contact.hubspot.portalId }}" data-form="{{ contact.hubspot.formId }}">
           <p class="ct-required">All fields are required.</p>
           <div class="field"><label for="f-first">First name</label><input id="f-first" name="firstname" data-object="0-1" autocomplete="given-name" required></div>
@@ -65,7 +65,7 @@ motion: [reveal, hover, contact]
           <div class="trap" aria-hidden="true"><label>Leave this empty<input name="website" tabindex="-1" autocomplete="off"></label></div>
           <div class="wide ct-submit">
             <button type="submit" class="btn btn-primary">Request a demo <svg aria-hidden="true"><use href="#arrow-ne"/></svg></button>
-            <p class="ct-privacy">We use these details to arrange your demo. See our <a href="/privacy-policy/">Privacy Policy</a>.</p>
+            <p class="ct-privacy">We use these details to arrange your demo, and HubSpot processes them for us. If you accepted cookies, your visits to this site are linked to your request. See our <a href="/privacy-policy/">Privacy Policy</a>.</p>
           </div>
           <p class="wide ct-status" id="formStatus" role="alert"></p>
         </form>
