@@ -23,7 +23,6 @@
 .hero h1 .word{display:inline-block}
 .hero .lede{margin:30px auto 0;max-width:48ch;text-align:center}
 .hero .ctas{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:40px}
-.hero-more{margin-top:18px;font-size:15px}
 .motion-toggle{position:absolute;z-index:2;right:max(16px,env(safe-area-inset-right));bottom:24px;display:grid;place-items:center;width:44px;height:44px;border-radius:50%;
   border:1px solid rgba(207,224,255,.32);background:rgba(15,10,78,.4);color:var(--paper);cursor:pointer;transition:background-color .2s,border-color .2s}
 .motion-toggle[hidden]{display:none}
