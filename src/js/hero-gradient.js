@@ -88,7 +88,7 @@ gl_FragColor=vec4(col,1.0);
   let raf=0,visible=true,last=0;
   const frameMs=1000/60; // capped at 60fps: smooth for this flow, and half the GPU work of a 120Hz display
   const loop=now=>{raf=requestAnimationFrame(loop);if(now-last<frameMs-1)return;last=now;draw(now-start);};
-  const run=()=>{if(!raf&&visible&&!document.hidden&&!reduce)raf=requestAnimationFrame(loop);};
+  const run=()=>{if(!raf&&visible&&!document.hidden&&!reduce&&!window.vowAmbient?.paused)raf=requestAnimationFrame(loop);};
   const halt=()=>{cancelAnimationFrame(raf);raf=0;};
 
   new ResizeObserver(()=>{resize();if(!raf)draw(performance.now()-start);}).observe(host);
@@ -97,6 +97,7 @@ gl_FragColor=vec4(col,1.0);
   if(reduce)return; // reduced motion: one still frame, no loop
   new IntersectionObserver(([e])=>{visible=e.isIntersecting;visible?run():halt();}).observe(host);
   document.addEventListener('visibilitychange',()=>document.hidden?halt():run());
+  window.vowAmbient?.onChange(p=>p?halt():run());
   canvas.addEventListener('webglcontextlost',e=>{e.preventDefault();halt();canvas.remove();});
 
   run();

@@ -27,9 +27,12 @@
         .to(g1, { opacity: 0.8, duration: 5 }, 0)
         .to(g2, { scale: 1.18, xPercent: -14, duration: 6 }, 0)
         .to(g2, { opacity: 0.35, duration: 4.5 }, 0);
+    let onScreen = false;
+    const playOrPause = () => (onScreen && !window.vowAmbient?.paused ? idle.play() : idle.pause());
+    window.vowAmbient?.onChange(playOrPause);
     ScrollTrigger.create({
       trigger: section, start: 'top bottom', end: 'bottom top',
-      onToggle: (self) => (self.isActive ? idle.play() : idle.pause())
+      onToggle: (self) => { onScreen = self.isActive; playOrPause(); }
     });
 
     // Pointer: the glow leans toward the cursor (a separate property, so it never fights the idle drift)

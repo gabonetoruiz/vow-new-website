@@ -25,7 +25,18 @@
   }, (ctx) => {
     const { isDesktop } = ctx.conditions;
     const items = gsap.utils.toArray(REVEAL);
-    gsap.set(items, { autoAlpha: 0, y: isDesktop ? 40 : 20 });
+    // Opacity only, never visibility: hidden elements cannot receive focus, so Tab would skip everything not yet revealed
+    gsap.set(items, { opacity: 0, y: isDesktop ? 40 : 20 });
+
+    // Keyboard focus can land on a block before the scroll has revealed it: reveal it right then
+    const revealFocused = (e) => {
+      for (let el = e.target; el && el !== document.body; el = el.parentElement) {
+        if (items.includes(el) && Number(gsap.getProperty(el, 'opacity')) < 1) {
+          gsap.to(el, { opacity: 1, y: 0, duration: isDesktop ? 0.9 : 0.6, ease: 'power3.out', overwrite: true });
+        }
+      }
+    };
+    document.addEventListener('focusin', revealFocused);
 
     ScrollTrigger.batch(items, {
       start: 'top 88%',
@@ -33,7 +44,7 @@
       interval: 0.1,
       batchMax: isDesktop ? 6 : 3,
       onEnter: (batch) => gsap.to(batch, {
-        autoAlpha: 1, y: 0,
+        opacity: 1, y: 0,
         duration: isDesktop ? 0.9 : 0.6,
         stagger: isDesktop ? 0.08 : 0.05,
         ease: 'power3.out',
@@ -57,5 +68,7 @@
         });
       });
     }
+
+    return () => document.removeEventListener('focusin', revealFocused);
   });
 })();

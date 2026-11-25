@@ -21,7 +21,7 @@ motion: [reveal, hover, cta]
       {%- for item in articles %}
       <li class="press-row" data-reveal>
         <div class="press-thumb">
-          {%- if item.image %}<img src="{{ item.image }}" alt="" width="496" height="446" loading="lazy" decoding="async">{% endif -%}
+          {%- if item.image %}<img src="{{ item.image }}" alt="" width="496" height="446" {% if loop.index > 2 %}loading="lazy" {% endif %}decoding="async">{% endif -%}
         </div>
         <div>
           <p class="press-meta"><span class="press-outlet">{{ item.outlet }}</span> <time datetime="{{ item.date }}">{{ item.date | dateLong }}</time></p>

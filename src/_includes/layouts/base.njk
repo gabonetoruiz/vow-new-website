@@ -24,6 +24,9 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+{%- if motion %}
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+{%- endif %}
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <script>
   // Mark JS as available so GSAP can own first paint; never leave content hidden if GSAP fails to start.
@@ -56,6 +59,7 @@
 
 <!-- Scripts: classic scripts in dependency order (the 'js' flag above stays inline so first paint is never flashed) -->
 <script src="/js/nav.js"></script>
+<script src="/js/ambient.js"></script>
 <script src="/js/consent.js"></script>
 {%- for name in scripts %}
 <script src="/js/{{ name }}.js"></script>

@@ -44,7 +44,21 @@
   fields.forEach((i) => i.addEventListener('input', () => { if (i.closest('.invalid')) check(i); }));
   industries.addEventListener('change', () => { if (industries.classList.contains('invalid')) checkIndustries(); });
 
+  // Warn before leaving with details typed but not sent
+  let dirty = false;
+  form.addEventListener('input', () => { dirty = true; });
+  addEventListener('beforeunload', (e) => { if (dirty) e.preventDefault(); });
+
+  const label = button.querySelector('.ct-label');
+  const setSending = (sending) => {
+    button.disabled = sending;
+    button.classList.toggle('is-sending', sending);
+    button.setAttribute('aria-busy', String(sending));
+    label.textContent = sending ? 'Sending…' : 'Request a demo';
+  };
+
   const showThanks = () => {
+    dirty = false;
     form.hidden = true;
     thanks.hidden = false;
     thanks.focus();
@@ -77,7 +91,7 @@
     const visitor = window.vowConsent?.visitorId();
     if (visitor) context.hutk = visitor;
 
-    button.disabled = true;
+    setSending(true);
     try {
       const response = await fetch(`https://api.hsforms.com/submissions/v3/integration/submit/${form.dataset.portal}/${form.dataset.form}`, {
         method: 'POST',
@@ -95,7 +109,7 @@
       console.error('Demo form:', error);
       status.textContent = 'We couldn’t send your request. Please try again, or email us at the address above.';
     } finally {
-      button.disabled = false;
+      setSending(false);
     }
   });
 })();

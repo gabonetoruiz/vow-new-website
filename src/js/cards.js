@@ -8,12 +8,13 @@
     const update=()=>{
       queued=false;
       root.style.setProperty('--xp',(px/innerWidth).toFixed(3));
-      for(const c of glowCards){
-        const r=c.getBoundingClientRect();
-        if(r.bottom<-300||r.top>innerHeight+300||r.right<-300||r.left>innerWidth+300)continue; // skip far-off cards
+      const rects=glowCards.map(c=>c.getBoundingClientRect()); // read everything first, then write
+      glowCards.forEach((c,i)=>{
+        const r=rects[i];
+        if(r.bottom<-300||r.top>innerHeight+300||r.right<-300||r.left>innerWidth+300)return; // skip far-off cards
         c.style.setProperty('--mx',(px-r.left).toFixed(1)+'px');
         c.style.setProperty('--my',(py-r.top).toFixed(1)+'px');
-      }
+      });
     };
     const queue=()=>{if(!queued){queued=true;requestAnimationFrame(update);}};
     addEventListener('pointermove',e=>{px=e.clientX;py=e.clientY;root.classList.add('glow-on');queue();},{passive:true});

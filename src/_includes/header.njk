@@ -1,7 +1,7 @@
 {%- set onSector = page.url.startsWith("/sectors/") -%}
 <header class="nav" id="nav">
   <div class="wrap">
-    <a href="/" class="logo" aria-label="VOW, home"{% if page.url == "/" %} aria-current="page"{% endif %} data-hero="nav"><svg viewBox="0 0 156 32" aria-hidden="true"><use href="#vow-logo"/></svg></a>
+    <a href="/" translate="no" class="logo" aria-label="VOW, home"{% if page.url == "/" %} aria-current="page"{% endif %} data-hero="nav"><svg viewBox="0 0 156 32" aria-hidden="true"><use href="#vow-logo"/></svg></a>
 
     {#- Small screens only: the demo stays one tap away while the menu is closed #}
     <a href="{{ site.connectUrl }}#demo" class="btn btn-primary nav-demo" data-hero="nav">Book a demo</a>

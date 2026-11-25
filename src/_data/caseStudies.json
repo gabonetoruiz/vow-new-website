@@ -38,7 +38,7 @@
     "metricsNote": "Illustrative figures for the concept.",
     "media": [
       { "type": "full", "src": "/assets/img/sector-sports.jpg", "w": 1920, "h": 1433, "alt": "A host serving guests in a stadium hospitality suite at night", "caption": "Matchday hospitality, planned in one place." },
-      { "type": "device", "bg": "/assets/img/case-team-usa.jpg", "bgW": 1920, "bgH": 1085, "src": "/assets/img/product/team-usa-arena", "w": 1300, "h": 763, "alt": "VOW PRO on a laptop showing an arena seating map, with a VIP Pass on a phone", "caption": "VOW PRO plans the venue. VOW GO puts the pass in the guest's hand." },
+      { "type": "device", "bg": "/assets/img/case-team-usa.jpg", "bgW": 1920, "bgH": 1085, "src": "/assets/img/product/team-usa-arena", "w": 1300, "h": 763, "alt": "VOW PRO on a laptop showing an arena seating map, with a VIP Pass on a phone", "caption": "VOW PRO plans the venue. VOW GO puts the pass in the guest’s hand." },
       { "type": "pair", "images": [
         { "src": "/assets/img/sector-olympics.jpg", "focus": "76% 50%", "w": 1920, "h": 1433, "alt": "A ceremonial flame above a packed stadium at night" },
         { "src": "/assets/img/sector-grandscale.jpg", "w": 1920, "h": 1433, "alt": "Aerial night view of an illuminated multi-venue event campus" }

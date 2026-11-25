@@ -40,7 +40,7 @@
 .field input{width:100%;min-width:0;min-height:52px;padding:0 2px;background:transparent;border:0;border-bottom:1px solid rgba(207,224,255,.32);border-radius:0;
   color:var(--paper);font:400 17px/1.4 var(--font-body);color-scheme:dark;transition:border-color .25s,box-shadow .25s}
 .field input[type="date"]{-webkit-appearance:none;appearance:none}
-.field input:focus{outline:none;border-bottom-color:var(--ice);box-shadow:0 1px 0 var(--ice)}
+.field input:focus{outline:2px solid transparent;border-bottom-color:var(--ice);box-shadow:0 1px 0 var(--ice)}
 .ct-form fieldset{border:0;min-width:0}
 .ct-form legend{margin-bottom:14px}
 .choices{display:flex;flex-wrap:wrap;gap:10px}
@@ -58,6 +58,12 @@
 .ct-submit{display:flex;flex-wrap:wrap;align-items:center;gap:16px 28px;margin-top:8px}
 .ct-submit .btn{min-height:56px;padding:0 34px;font-size:16px;border:0}
 .ct-submit .btn[disabled]{opacity:.6;cursor:progress}
+.ct-spinner{display:none;width:16px;height:16px;border-radius:50%;border:2px solid rgba(245,245,248,.35);border-top-color:var(--paper)}
+.btn.is-sending .ct-spinner{display:block;animation:ct-spin .8s linear infinite}
+.btn.is-sending svg{display:none}
+@keyframes ct-spin{to{transform:rotate(360deg)}}
+.choice{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.ct-privacy a:hover,.ct-status a:hover{color:var(--paper)}
 .ct-privacy{color:var(--faint);font-size:14px;max-width:36ch}
 .ct-privacy a,.ct-status a{color:var(--iris);text-decoration:underline;text-underline-offset:3px}
 .ct-status{color:#ffb3c1;font-size:15px}

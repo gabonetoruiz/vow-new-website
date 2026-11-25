@@ -1,7 +1,7 @@
 /* Privacy Policy and Terms of Service: readable text column with a sticky list of sections. */
 .legal-wrap{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;align-items:start}
 .legal-body{grid-column:1 / 8;grid-row:1;max-width:72ch}
-.legal-toc{grid-column:9 / 13;grid-row:1;position:sticky;top:calc(var(--nav-h) + 24px);max-height:calc(100vh - var(--nav-h) - 48px);overflow-y:auto;
+.legal-toc{grid-column:9 / 13;grid-row:1;position:sticky;top:calc(var(--nav-h) + 24px);max-height:calc(100vh - var(--nav-h) - 48px);overflow-y:auto;overscroll-behavior:contain;
   padding:24px;border:1px solid var(--rule);border-radius:var(--r-tile);background:rgba(21,23,103,.35)}
 .legal-toc-title{margin-bottom:10px;color:var(--iris);font-family:var(--font-display);font-weight:500;font-size:16px}
 .legal-toc ol{list-style:none}

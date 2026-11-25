@@ -12,6 +12,7 @@
   const gpc = navigator.globalPrivacyControl === true;
   const note = document.getElementById('consentNote');
   let choice = null; // 'granted' | 'denied' | null (not asked yet)
+  let opener = null; // the "Cookie settings" button, when the notice was opened from it
 
   try {
     const saved = JSON.parse(localStorage.getItem(KEY));
@@ -55,6 +56,7 @@
     choice = next;
     try { localStorage.setItem(KEY, JSON.stringify({ choice, at: Date.now() })); } catch { /* storage blocked */ }
     banner.hidden = true;
+    opener?.focus({ preventScroll: true });
     if (choice === 'granted') { loadTracking(); return; }
     removeTracking();
     if (withdrawing) location.reload();
@@ -66,7 +68,7 @@
   });
   document.querySelectorAll('[data-cookie-settings]').forEach((b) => {
     b.hidden = false;
-    b.addEventListener('click', () => { show(); banner.focus(); });
+    b.addEventListener('click', () => { opener = b; show(); banner.focus(); });
   });
 
   // The demo form passes HubSpot's visitor ID along, only with consent

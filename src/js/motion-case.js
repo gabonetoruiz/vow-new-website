@@ -116,7 +116,9 @@
         yPercent: -18 * dir, xPercent: 8 * dir, ease: 'none',
         scrollTrigger: { trigger: '.cs', start: 'top bottom', end: 'bottom top', scrub: 1 }
       });
-      gsap.to(g, { scale: 1.12, opacity: 0.7, duration: 7 + i * 1.5, ease: 'sine.inOut', yoyo: true, repeat: -1 });
+      const breathe = gsap.to(g, { scale: 1.12, opacity: 0.7, duration: 7 + i * 1.5, ease: 'sine.inOut', yoyo: true, repeat: -1,
+        paused: Boolean(window.vowAmbient?.paused) });
+      window.vowAmbient?.onChange((p) => breathe.paused(p));
     });
   });
 })();

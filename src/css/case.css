@@ -16,7 +16,8 @@
   background:
     radial-gradient(48% 70% at 80% 0%,rgba(45,76,215,.34),transparent 70%),
     radial-gradient(38% 50% at 10% 25%,rgba(149,164,255,.14),transparent 70%)}
-.crumb a{border-bottom:1px solid rgba(149,164,255,.4)}
+.crumb a{border-bottom:1px solid rgba(149,164,255,.4);transition:color .2s,border-color .2s}
+.crumb a:hover{color:var(--paper);border-bottom-color:var(--ice)}
 .cs-title{font-weight:400;font-size:clamp(52px,9.4vw,152px);line-height:.98;letter-spacing:-.05em;max-width:12ch}
 /* Each word sits in a mask for the rise animation. The mask is padded (and pulled back by the same amount) because the
    tight letter-spacing makes the box narrower than the letters, which would shave the last one. */

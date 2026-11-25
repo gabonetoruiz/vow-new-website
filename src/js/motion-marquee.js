@@ -44,6 +44,10 @@
 
     // Speed + skew driven by scroll velocity
     let dir = 1, hover = 1, settle;
+    const ambient = window.vowAmbient;
+    let onScreen = false;
+    const playOrPause = () => (onScreen && !ambient?.paused ? loop.play() : loop.pause());
+    ambient?.onChange(playOrPause);
     const speedTo = (ts, d) => gsap.to(loop, { timeScale: ts, duration: d, ease: 'power2.out', overwrite: true });
     const skewTo = gsap.quickTo(track, 'skewX', { duration: 0.6, ease: 'power3.out' });
     const clampBoost = gsap.utils.clamp(1, 6);
@@ -51,12 +55,12 @@
 
     ScrollTrigger.create({
       trigger: wrap, start: 'top bottom', end: 'bottom top',
-      onToggle: (self) => (self.isActive ? loop.play() : loop.pause()),
+      onToggle: (self) => { onScreen = self.isActive; playOrPause(); },
       onUpdate: (self) => {
         const v = self.getVelocity();
         if (isDesktop && Math.abs(v) > 40) dir = v < 0 ? -1 : 1;
         speedTo(dir * hover * clampBoost(1 + Math.abs(v) / 350), 0.25);
-        if (isDesktop) skewTo(clampSkew(-v / 260));
+        if (isDesktop && !ambient?.paused) skewTo(clampSkew(-v / 260));
         clearTimeout(settle);
         settle = setTimeout(() => { speedTo(dir * hover, 1.6); skewTo(0); }, 140);
       }

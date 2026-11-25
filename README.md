@@ -50,6 +50,9 @@ src/
 form settings are in `src/_data/contact.json`. The demo form posts to the existing HubSpot form (portal and form ID in that file),
 so its field names and options must stay in step with HubSpot. Every "Connect", "Contact" and demo link points here.
 
+## Motion control
+`src/js/ambient.js` powers "Pause motion" (hero and footer). A new animation that loops on its own should read `window.vowAmbient`.
+
 ## Cookies and lead tracking
 `src/js/consent.js` and `src/_includes/consent.njk`: HubSpot's tracking code (portal ID from `src/_data/contact.json`) loads only after a visitor
 accepts. If you add another tool that sets cookies, load it from the same place and describe it in the Privacy Policy.

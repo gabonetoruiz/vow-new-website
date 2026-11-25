@@ -24,13 +24,15 @@
         transformOrigin: 'left center'
       }, 0.85);
 
-    gsap.to('.live-dot', {
+    const blink = gsap.to('.live-dot', {
       autoAlpha: 0.35,
       duration: 0.9,
       repeat: -1,
       yoyo: true,
-      ease: 'sine.inOut'
+      ease: 'sine.inOut',
+      paused: Boolean(window.vowAmbient?.paused)
     });
+    window.vowAmbient?.onChange((p) => blink.paused(p));
 
     gsap.utils.toArray('[data-count]').forEach((el) => {
       const target = Number(el.dataset.count);

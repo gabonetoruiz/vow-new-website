@@ -48,11 +48,11 @@
   transition:background-color .2s,border-color .2s}
 .nav-toggle .bars{position:relative;display:block;width:18px;height:10px}
 .nav-toggle .bars i{position:absolute;left:0;right:0;height:1.5px;border-radius:2px;background:currentColor;
-  transition:transform .3s var(--ease),top .3s var(--ease)}
+  transition:transform .3s var(--ease)}
 .nav-toggle .bars i:first-child{top:0}
 .nav-toggle .bars i:last-child{top:8.5px}
-.nav-open .nav-toggle .bars i:first-child{top:4.25px;transform:rotate(45deg)}
-.nav-open .nav-toggle .bars i:last-child{top:4.25px;transform:rotate(-45deg)}
+.nav-open .nav-toggle .bars i:first-child{transform:translateY(4.25px) rotate(45deg)}
+.nav-open .nav-toggle .bars i:last-child{transform:translateY(-4.25px) rotate(-45deg)}
 @media (hover:hover){.nav-toggle:hover{border-color:var(--ice);background:rgba(207,224,255,.12)}}
 
 /* ---------- mobile menu ---------- */

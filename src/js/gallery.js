@@ -55,7 +55,8 @@
     el.className = 'g-card';
     el.setAttribute('aria-hidden', 'true');
     el.style.width = W + 'px';
-    el.style.height = Math.round(W * ratioOf(p)) + 'px';
+    el._h = Math.round(W * ratioOf(p));
+    el.style.height = el._h + 'px';
     const img = new Image();
     img.src = p.src; img.alt = ''; img.decoding = 'async'; img.draggable = false;
     el.append(img);
@@ -79,7 +80,7 @@
         const key = i + ',' + j; seen.add(key);
         let el = cards.get(key);
         if (!el) { el = make(i, j); cards.set(key, el); }
-        const ch = el.offsetHeight || Math.round(W * ratioOf(el._p));
+        const ch = el._h;   // known from creation: no layout read between style writes
         const wxc = i * PX + W / 2, wyc = j * PY + off + PY / 2 - GAP / 2;
         const px = (wxc + ox - cx) * z + cx, py = (wyc + oy - cy) * z + cy;
         const nx = (px - cx) / (sw / 2), ny = (py - cy) / (sh / 2);
