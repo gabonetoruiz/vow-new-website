@@ -25,6 +25,7 @@
 .nav-item.is-current > .nav-link svg{margin-right:0}
 .nav-item.is-open .sub-trigger svg{transform:rotate(180deg)}
 .nav-cta{min-height:42px;padding:0 20px;font-size:14px}
+.nav-demo{display:none}
 
 /* Sectors dropdown */
 .sub{position:absolute;top:100%;left:50%;width:min(560px,calc(100vw - 2 * var(--gutter)));padding-top:12px;
@@ -58,6 +59,9 @@
 @media (max-width:960px){
   :root{--nav-h:64px}
   .nav-toggle{display:grid}
+  .nav-demo{display:inline-flex;position:relative;z-index:3;margin-left:auto;min-height:44px;padding:0 18px;font-size:14px}
+  .nav-open .nav-demo{display:none}                 /* the open menu has its own button */
+  .nav-open .nav-toggle{margin-left:auto}
   .nav .logo svg{height:16px}
   html.nav-open{overflow:hidden}
 

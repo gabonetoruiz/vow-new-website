@@ -23,6 +23,7 @@
 .hero h1 .word{display:inline-block}
 .hero .lede{margin:30px auto 0;max-width:48ch;text-align:center}
 .hero .ctas{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:40px}
+.hero-more{margin-top:18px;font-size:15px}
 .hero-foot{position:relative;display:flex;justify-content:center;padding:0 var(--gutter) 32px}
 .cue{display:inline-flex;flex-direction:column;align-items:center;gap:14px;font-size:14px;color:var(--faint)}
 .cue b{display:block;width:1px;height:44px;background:linear-gradient(var(--ice),transparent)}
@@ -182,6 +183,13 @@
 @media (max-width:600px){
   .hero .ctas{width:100%;max-width:340px;margin-left:auto;margin-right:auto}
   .hero .ctas .btn{width:100%}
+  /* tighter product cards on phones */
+  .products .head{margin-bottom:36px}
+  .prod{--pad:24px}
+  .prod-visual{aspect-ratio:16/11;margin-bottom:4px}
+  .prod h3{font-size:42px;margin:10px 0 14px}
+  .features{margin:20px 0 16px}
+  .features li{padding:8px 0;font-size:15px}
   .outcomes{grid-template-columns:1fr}
   .outcomes li:nth-child(n){padding:22px 0;border-right:0}
   .tiles{grid-template-columns:1fr}
@@ -191,4 +199,11 @@
   .segments li:nth-child(n){border-left:0;border-top:0}
   .segments li:nth-child(even){border-left:1px solid var(--rule)}
   .segments li:nth-child(n+3){border-top:1px solid var(--rule)}
+}
+/* Short phones: pull the hero up so the demo button clears the cookie notice on a first visit */
+@media (max-width:600px) and (max-height:700px){
+  .hero-body{padding-top:84px}
+  .eyebrow{margin-bottom:16px}
+  .hero .lede{margin-top:18px;font-size:15px;line-height:1.55}
+  .hero .ctas{margin-top:22px}
 }
