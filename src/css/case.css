@@ -30,7 +30,7 @@
 
 .cs-cover-wrap{margin-top:clamp(36px,5vw,64px)}
 .cs-cover{position:relative;margin:0;border-radius:var(--r-panel);overflow:hidden;border:1px solid var(--rule);background:var(--midnight);
-  aspect-ratio:16/9;max-height:86vh}
+  aspect-ratio:16/9;max-height:92vh;will-change:transform}
 .cs-cover img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;will-change:transform}
 
 /* ---------- two-column rows (statement | note, heading | text) ---------- */
@@ -52,12 +52,16 @@
 .cs-media{padding:clamp(20px,3vw,44px) 0}
 .cs-frame{position:relative;margin:0;border-radius:var(--r-panel);overflow:hidden;border:1px solid var(--rule);background:var(--midnight)}
 .cs-frame img{display:block;width:100%;height:auto;will-change:transform}
-.cs-full .cs-frame img{aspect-ratio:16/9;object-fit:cover}
-.cs-duo{display:grid;grid-template-columns:1fr 1fr;gap:clamp(14px,2vw,24px);align-items:start}
+.cs-full .cs-frame img{aspect-ratio:16/9;max-height:92vh;object-fit:cover}
+/* Large photos break out of the text column and run almost edge to edge */
+.cs-cover-wrap,.cs-full .wrap,.cs-device .wrap{max-width:none;padding-left:clamp(10px,1.6vw,28px);padding-right:clamp(10px,1.6vw,28px)}
+.cs-full .cs-caption,.cs-device .cs-caption{padding:0 calc(var(--gutter) - clamp(10px,1.6vw,28px))}
+.cs-duo{display:grid;grid-template-columns:1fr 1fr;gap:clamp(14px,2vw,24px);align-items:start;
+  padding-bottom:clamp(0px,6vw,100px)}   /* room for the two photos to travel at different speeds */
 .cs-duo .cs-frame:nth-child(2){margin-top:clamp(40px,8vw,120px)}
 .cs-duo .cs-frame img{aspect-ratio:4/5;object-fit:cover}
 /* Product stage: tinted photo with the real screen on top */
-.cs-stage{aspect-ratio:16/9;isolation:isolate}
+.cs-stage{aspect-ratio:16/9;max-height:92vh;width:100%;isolation:isolate}
 .cs-stage img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.5) saturate(.9)}
 .cs-stage::before{content:"";position:absolute;inset:0;z-index:1;mix-blend-mode:soft-light;opacity:.6;background:var(--royal)}
 .cs-stage picture{display:contents}
@@ -83,6 +87,8 @@
   .cs-stage img.fg{max-width:92%}
 }
 @media (max-width:600px){
-  .cs-duo{grid-template-columns:1fr}
+  .cs-duo{grid-template-columns:1fr;padding-bottom:0}
+  .cs-cover{aspect-ratio:4/5}
+  .cs-full .cs-frame img{aspect-ratio:4/5}
   .cs-duo .cs-frame:nth-child(2){margin-top:0}
 }

@@ -74,4 +74,5 @@ Every page carries `<meta name="robots" content="noindex, nofollow">` (in `layou
 ## Case studies
 One template for every case study: `src/case-studies/case-study.njk`, styled by `src/css/case.css` and animated by `src/js/motion-case.js`.
 To add a case, add an entry to `src/_data/caseStudies.json` (see `team-usa` for every field). A page appears at `/case-studies/<slug>/`.
-Media blocks are `full` (one photo), `device` (product screen over a tinted photo) and `pair` (two photos). Replace the draft copy and the illustrative figures with real ones before launch.
+Media blocks are `full` (one photo), `device` (product screen over a tinted photo) and `pair` (two photos).
+The photos zoom and travel with the scroll, so their edges are cropped; set `"focus": "76% 50%"` on a `pair` photo to keep its subject in view. Replace the draft copy and the illustrative figures with real ones before launch.

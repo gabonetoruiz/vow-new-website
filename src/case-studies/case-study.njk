@@ -87,7 +87,7 @@ motion: [reveal, hover, case, cta]
       <div class="cs-duo">
         {%- for im in m.images %}
         <figure class="cs-frame" data-cs="frame">
-          <img src="{{ im.src }}" alt="{{ im.alt }}" width="{{ im.w }}" height="{{ im.h }}" loading="lazy" decoding="async">
+          <img src="{{ im.src }}"{% if im.focus %} style="object-position:{{ im.focus }}"{% endif %} alt="{{ im.alt }}" width="{{ im.w }}" height="{{ im.h }}" loading="lazy" decoding="async">
         </figure>
         {%- endfor %}
       </div>
