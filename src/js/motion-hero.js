@@ -42,17 +42,17 @@
       .from('.hero-media', { autoAlpha: 0, scale: 1.08, duration: 2.6, ease: 'power2.out' }, 0)
       .from('[data-hero="nav"]', { autoAlpha: 0, y: -14, duration: 0.7, stagger: 0.06 }, 0.15)
       .from('[data-hero="eyebrow"]', { autoAlpha: 0, y: 16 * s, duration: 0.7 }, 0.2)
-      .set(lines, { autoAlpha: 1 }, 0.15)
-      // Blur reveal: each word sharpens and rises in turn. Kept short so the headline is readable within about 1.5s.
+      .set(lines, { autoAlpha: 1 }, 0.3)
+      // Slow, deliberate blur reveal: each word visibly sharpens and rises, one after another
       .from(words, {
-        autoAlpha: 0, y: 40 * s, scale: 0.94, filter: `blur(${small ? 10 : 16}px)`,
+        autoAlpha: 0, y: 70 * s, scale: 0.88, filter: `blur(${small ? 18 : 28}px)`,
         transformOrigin: '50% 100%',
-        duration: 0.9, stagger: 0.08, ease: 'power2.out',
+        duration: 1.8, stagger: 0.2, ease: 'power2.out',
         clearProps: 'filter' // drop the filter once sharp, so no lingering compositing cost
-      }, 0.15)
-      .from('[data-hero="sub"]', { autoAlpha: 0, y: 24 * s, duration: 0.7 }, 0.45)
-      .from('[data-hero="cta"]', { autoAlpha: 0, y: 20 * s, duration: 0.6, stagger: 0.08 }, 0.6)
-      .from('[data-hero="foot"]', { autoAlpha: 0, duration: 0.7 }, 0.85);
+      }, 0.3)
+      .from('[data-hero="sub"]', { autoAlpha: 0, y: 24 * s, duration: 0.8 }, 0.75)
+      .from('[data-hero="cta"]', { autoAlpha: 0, y: 20 * s, duration: 0.7, stagger: 0.08 }, 0.9)
+      .from('[data-hero="foot"]', { autoAlpha: 0, duration: 0.9 }, 1.15);
 
     return () => { h1.innerHTML = original; }; // restore the unsplit headline on teardown
   });
