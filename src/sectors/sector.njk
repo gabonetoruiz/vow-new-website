@@ -24,7 +24,9 @@ motion: [reveal, hover, sector]
       <p class="lede">{{ sector.intro }}</p>
       <div class="ctas">
         <a href="{{ site.connectUrl }}" class="btn btn-primary">Connect with VOW <svg aria-hidden="true"><use href="#arrow-ne"/></svg></a>
+        {%- if galleryBySector[sector.slug] %}
         <a href="/gallery/#{{ sector.slug }}" class="btn btn-ghost">See {{ sector.name }} photos</a>
+        {%- endif %}
       </div>
     </div>
 
