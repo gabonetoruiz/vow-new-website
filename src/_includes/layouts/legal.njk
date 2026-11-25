@@ -1,0 +1,27 @@
+---
+layout: layouts/base.njk
+styles: [inner, legal]
+motion: [reveal, cta]
+---
+{#- Shell for the legal pages. The wording lives in the page file; each <h2 id="..."> becomes an "On this page" link. #}
+{% set heroTitle = title %}
+{% set heroLede = updated %}
+{% include "page-hero.njk" %}
+
+<section class="section tight flush-top">
+  <div class="wrap legal-wrap">
+    <nav class="legal-toc" aria-labelledby="toc-title">
+      <p class="legal-toc-title" id="toc-title">On this page</p>
+      <ol>
+        {%- for h in content | headings %}
+        <li><a href="#{{ h.id }}">{{ h.text | safe }}</a></li>
+        {%- endfor %}
+      </ol>
+    </nav>
+    <div class="legal-body">
+{{ content | safe }}
+    </div>
+  </div>
+</section>
+
+{% include "cta.njk" %}

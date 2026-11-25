@@ -24,6 +24,11 @@ export default function (eleventyConfig) {
   // {{ items | json }} for inline structured data
   eleventyConfig.addFilter("json", (value) => JSON.stringify(value));
 
+  // Section headings of a page (<h2 id="...">), for the "On this page" list on the legal pages
+  eleventyConfig.addFilter("headings", (html) =>
+    [...String(html).matchAll(/<h2 id="([^"]+)">(.*?)<\/h2>/gs)].map(([, id, text]) => ({ id, text }))
+  );
+
   return {
     dir: { input: "src", includes: "_includes", data: "_data", output: "_site" },
     pathPrefix: process.env.PATH_PREFIX || "/",

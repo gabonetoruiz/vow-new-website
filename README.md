@@ -45,6 +45,10 @@ src/
 | The testimonial | `src/_data/testimonial.json` (used on the home and Clients pages) |
 | Colours, fonts, spacing | `src/css/tokens.css` |
 
+## Legal pages
+`src/privacy-policy.html` and `src/terms-of-service-vow.html` hold the wording copied from the vow.app pages (same addresses, so existing links keep working).
+Edit the text there and update `updated` in the front matter. Each `<h2 id="...">` appears in the "On this page" list.
+
 ## Rules for new pages
 
 - Each page sets its own front matter: `layout`, `title`, `description`, and the CSS and JS it needs
@@ -66,7 +70,6 @@ Every page carries `<meta name="robots" content="noindex, nofollow">` (in `layou
 - Sector, FAQ and other page copy is draft text written from the existing site content.
 - Gallery photos are real event photos supplied by the client (an infinite draggable canvas, `src/js/gallery.js`). Captions come only from visible signage; sector tags are editable in `gallery.json`. Confirm usage rights before the repo or site goes public beyond review.
 - The Team USA demo link.
-- The footer Privacy Policy and Terms of Service links point to the current vow.app pages (`privacyUrl` and `termsUrl` in `src/_data/site.json`). If this site takes over that domain, bring those two pages over first.
 
 ## Link previews and icons
 - Share image: `src/assets/img/og-image.jpg` (1200×630). Icons: `src/assets/favicon-48.png`, `icon-192.png`, `apple-touch-icon.png`. All are wired in `layouts/base.njk`.
