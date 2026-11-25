@@ -1,9 +1,89 @@
 {
-  "_note": "PLACEHOLDER press items. Replace each entry with a real article (date as YYYY-MM-DD, url as the article link) and remove \"sample\": true.",
+  "_note": "Articles from https://www.vow.app/press, newest first. date is YYYY-MM-DD, url the article link, image a 496x446 thumbnail. Entries marked \"sample\": true are not shown.",
   "items": [
-    { "sample": true, "date": "", "outlet": "[Publication name]", "title": "[Headline of the article goes here]", "url": "" },
-    { "sample": true, "date": "", "outlet": "[Publication name]", "title": "[Headline of the article goes here]", "url": "" },
-    { "sample": true, "date": "", "outlet": "[Publication name]", "title": "[Headline of the article goes here]", "url": "" },
-    { "sample": true, "date": "", "outlet": "[Publication name]", "title": "[Headline of the article goes here]", "url": "" }
+    {
+      "date": "2025-12-11",
+      "outlet": "MSN",
+      "title": "How Jennifer Brisman is rewiring the future of real-time events",
+      "url": "https://www.msn.com/en-us/news/technology/how-jennifer-brisman-is-rewiring-the-future-of-real-time-events/ar-AA1RZKK3",
+      "image": "/assets/img/press/2025-12-11-msn.webp"
+    },
+    {
+      "date": "2025-12-10",
+      "outlet": "Modern Restaurant Management",
+      "title": "Why The Fourth Place Should be Top of Mind for All Restaurants",
+      "url": "https://modernrestaurantmanagement.com/why-the-fourth-place-should-be-top-of-mind-for-all-restaurants/",
+      "image": "/assets/img/press/2025-12-10-modern-restaurant-management.webp"
+    },
+    {
+      "date": "2025-12-09",
+      "outlet": "Biz Women",
+      "title": "Jennifer Brisman's VOW uses AI to revolutionize live events - Bizwomen",
+      "url": "https://www.bizjournals.com/dallas/bizwomen/news/profiles-strategies/2025/12/jennifer-brisman-is-real-time-events.html",
+      "image": "/assets/img/press/2025-12-09-biz-women.webp"
+    },
+    {
+      "date": "2025-12-09",
+      "outlet": "Business Journals",
+      "title": "How Jennifer Brisman is rewiring the future of real-time events - The Business Journals",
+      "url": "https://www.bizjournals.com/bizwomen/news/profiles-strategies/2025/12/jennifer-brisman-is-real-time-events.html",
+      "image": "/assets/img/press/2025-12-09-business-journals.webp"
+    },
+    {
+      "date": "2025-12-04",
+      "outlet": "SBJ (Unpacks)",
+      "title": "SBJ Unpacks: President Trump pardons Tim Leiweke",
+      "url": "https://www.sportsbusinessjournal.com/sb-blogs/sbj-unpacks/2025/12/03/",
+      "image": "/assets/img/press/2025-12-04-sbj-unpacks.webp"
+    },
+    {
+      "date": "2025-12-04",
+      "outlet": "SBJ",
+      "title": "Sports organizations can leverage tech to streamline the live fan experience",
+      "url": "https://www.sportsbusinessjournal.com/Articles/2025/12/03/sports-organizations-can-leverage-tech-to-streamline-the-live-fan-experience/",
+      "image": "/assets/img/press/2025-12-04-sbj.webp"
+    },
+    {
+      "date": "2025-12-03",
+      "outlet": "Forbes",
+      "title": "Why VIP Sports Experiences Need A Brain, Not Just A Better Seat",
+      "url": "https://www.forbes.com/sites/jefffromm/2025/12/03/why-vip-sports-experiences-need-a-brain-not-just-a-better-seat/",
+      "image": "/assets/img/press/2025-12-03-forbes.webp"
+    },
+    {
+      "date": "2025-11-21",
+      "outlet": "The Manual",
+      "title": "Inside the Las Vegas Grand Prix Logistics: How the City Becomes a Racetrack",
+      "url": "https://www.themanual.com/auto/las-vegas-grand-prix-event-expert-interview/",
+      "image": "/assets/img/press/2025-11-21-the-manual.webp"
+    },
+    {
+      "date": "2025-11-17",
+      "outlet": "Trade Show Executive",
+      "title": "Exploring Multi-Venue Event Experiences with VOW CEO Jennifer Brisman",
+      "url": "https://tradeshowexecutive.com/exploring-multi-venue-event-experiences-with-vow-ceo-jennifer-brisman/",
+      "image": "/assets/img/press/2025-11-17-trade-show-executive.webp"
+    },
+    {
+      "date": "2025-11-06",
+      "outlet": "Modern Restaurant Management",
+      "title": "Blending Cuisine with Choreography: Restaurants Borrow from Live-Event Playbooks",
+      "url": "https://modernrestaurantmanagement.com/blending-cuisine-with-choreography-how-restaurants-are-adopting-live-event-playbooks/",
+      "image": "/assets/img/press/2025-11-06-modern-restaurant-management.webp"
+    },
+    {
+      "date": "2025-10-30",
+      "outlet": "SEScoops",
+      "title": "Live Event Management Executive Talks WWE's VIP Package & Sponsor Coordination Approach",
+      "url": "https://www.sescoops.com/interviews/live-event-management-executive-talks-wwes-vip-package-sponsor-coordination-approach/",
+      "image": "/assets/img/press/2025-10-30-sescoops.webp"
+    },
+    {
+      "date": "2025-09-25",
+      "outlet": "Forbes",
+      "title": "Ryder Cup Logistics Were Already Human Tetris. Now Add A Trump Visit.",
+      "url": "https://www.forbes.com/sites/mikedojc/2025/09/25/ryder-cup-logistics-were-already-human-tetris-now-add-a-trump-visit/",
+      "image": "/assets/img/press/2025-09-25-forbes.webp"
+    }
   ]
 }

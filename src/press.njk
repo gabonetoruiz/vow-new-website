@@ -1,15 +1,17 @@
 ---
 layout: layouts/base.njk
 title: Press
-description: "How to reach the VOW team for media inquiries."
+description: "Latest news and insights from VOW, and how to reach our team for media inquiries."
 styles: [inner]
 scripts: [cards]
 motion: [reveal, hover, cta]
 ---
-{% set heroTitle = "Press" %}
+{#- Heading and intro as on the current vow.app press page -#}
 {#- Entries marked "sample" in press.json are never shown. With no real entries the page holds only the media contact. #}
 {%- set articles = press.items | rejectattr("sample") %}
-{%- set heroLede = "VOW in the news, and how to reach us for media inquiries." if articles.length else "How to reach us for media inquiries." %}
+{%- set heroKicker = "Press" %}
+{%- set heroTitle = "Latest News & Insights from VOW" if articles.length else "Press" %}
+{%- set heroLede = "Stay updated on industry trends, product updates, success stories, and expert guides that power the future of event and guest experience technology." if articles.length else "How to reach us for media inquiries." %}
 {% include "page-hero.njk" %}
 
 {%- if articles.length %}
@@ -18,16 +20,14 @@ motion: [reveal, hover, cta]
     <ul class="press-list">
       {%- for item in articles %}
       <li class="press-row" data-reveal>
-        <p class="press-date">{{ item.date | dateLong }}</p>
+        <div class="press-thumb">
+          {%- if item.image %}<img src="{{ item.image }}" alt="" width="496" height="446" loading="lazy" decoding="async">{% endif -%}
+        </div>
         <div>
-          <p class="press-outlet">{{ item.outlet }}</p>
-          <h2 class="press-title">{{ item.title }}</h2>
+          <p class="press-meta"><span class="press-outlet">{{ item.outlet }}</span> <time datetime="{{ item.date }}">{{ item.date | dateLong }}</time></p>
+          <h2 class="press-title"><a href="{{ item.url }}" rel="noopener">{{ item.title }}</a></h2>
         </div>
-        <div class="press-aside">
-          {%- if item.url %}
-          <a class="link" href="{{ item.url }}" rel="noopener">Read article <svg aria-hidden="true"><use href="#arrow-ne"/></svg></a>
-          {%- endif %}
-        </div>
+        <svg class="press-arrow" aria-hidden="true"><use href="#arrow-ne"/></svg>
       </li>
       {%- endfor %}
     </ul>
