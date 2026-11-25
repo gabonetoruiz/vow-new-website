@@ -3,8 +3,8 @@
     "slug": "media",
     "name": "Media",
     "kicker": "Premieres and press",
-    "headline": ["The list", "moves with the room."],
-    "statement": "The room changes by the hour. The list changes with it.",
+    "headline": ["The List", "Moves with the Room."],
+    "statement": "The Room Changes by the Hour. The List Changes with It.",
     "scene": {
       "label": "Live floor",
       "title": "Premiere, 7:40pm",
@@ -28,17 +28,17 @@
     "imageW": 1920,
     "imageH": 1433,
     "points": [
-      { "title": "One list for talent, press and partners", "text": "Manage guests, groups and hosts together, with RSVPs and registrations feeding the same live record." },
-      { "title": "Credentials that update instantly", "text": "Issue digital passes and change access in real time, without reprinting or resending anything." },
-      { "title": "Changes reach everyone at once", "text": "Use the real-time communications hub and alerts to tell the right people the moment a schedule or arrival changes." }
+      { "title": "One List for Talent, Press and Partners", "text": "Manage guests, groups and hosts together, with RSVPs and registrations feeding the same live record." },
+      { "title": "Credentials That Update Instantly", "text": "Issue digital passes and change access in real time, without reprinting or resending anything." },
+      { "title": "Changes Reach Everyone at Once", "text": "Use the real-time communications hub and alerts to tell the right people the moment a schedule or arrival changes." }
     ]
   },
   {
     "slug": "entertainment",
     "name": "Entertainment",
     "kicker": "Awards, tours, festivals",
-    "headline": ["Every group,", "a different night."],
-    "statement": "One building. A different plan for every group inside it.",
+    "headline": ["Every Group,", "a Different Night."],
+    "statement": "One Building. A Different Plan for Every Group Inside It.",
     "scene": {
       "label": "Live floor",
       "title": "Arena, doors at 6",
@@ -62,17 +62,17 @@
     "imageW": 1920,
     "imageH": 1433,
     "points": [
-      { "title": "Every group, one platform", "text": "Manage artists, crew, sponsors and VIP guests as separate groups, each with their own schedule and access." },
-      { "title": "A personal schedule for each guest", "text": "VOW GO puts each guest’s details, passes and updates in their pocket, on web or mobile." },
-      { "title": "Support on the night", "text": "Dedicated help for your team before and during the event, and a concierge for guests when plans change." }
+      { "title": "Every Group, One Platform", "text": "Manage artists, crew, sponsors and VIP guests as separate groups, each with their own schedule and access." },
+      { "title": "A Personal Schedule for Each Guest", "text": "VOW GO puts each guest’s details, passes and updates in their pocket, on web or mobile." },
+      { "title": "Support on the Night", "text": "Dedicated help for your team before and during the event, and a concierge for guests when plans change." }
     ]
   },
   {
     "slug": "philanthropy",
     "name": "Philanthropy",
     "kicker": "Galas and donors",
-    "headline": ["Known by name", "before they arrive."],
-    "statement": "From the car door to the last goodbye, every donor is expected.",
+    "headline": ["Known by Name", "before They Arrive."],
+    "statement": "From the Car Door to the Last Goodbye, Every Donor Is Expected.",
     "scene": {
       "label": "Live floor",
       "title": "Gala, first seating",
@@ -96,17 +96,17 @@
     "imageW": 1920,
     "imageH": 1433,
     "points": [
-      { "title": "Know every guest", "text": "Keep guest, group and host details together, from the first RSVP to the last goodbye." },
-      { "title": "Arrival, check-in and departure", "text": "Coordinate cars, doors and departures so every donor’s arrival feels expected." },
-      { "title": "Payments in the same experience", "text": "Take payments and handle purchases inside the guest experience, not in a separate system." }
+      { "title": "Know Every Guest", "text": "Keep guest, group and host details together, from the first RSVP to the last goodbye." },
+      { "title": "Arrival, Check-In and Departure", "text": "Coordinate cars, doors and departures so every donor’s arrival feels expected." },
+      { "title": "Payments in the Same Experience", "text": "Take payments and handle purchases inside the guest experience, not in a separate system." }
     ]
   },
   {
     "slug": "sports",
     "name": "Sports",
     "kicker": "Suites and matchdays",
-    "headline": ["A new list", "every matchday."],
-    "statement": "The suite stays. The guest list does not.",
+    "headline": ["A New List", "Every Matchday."],
+    "statement": "The Suite Stays. The Guest List Does Not.",
     "scene": {
       "label": "Live floor",
       "title": "Matchday, gate open",
@@ -130,18 +130,18 @@
     "imageW": 1920,
     "imageH": 1433,
     "points": [
-      { "title": "Hospitality that scales across a season", "text": "Reuse groups and hosts from event to event while keeping each matchday’s list current." },
-      { "title": "Sponsors and partners in view", "text": "Manage sponsors, speakers and VIP groups in the same place as your general guest list." },
-      { "title": "Digital tickets and access", "text": "Issue and update tickets and access passes in real time, right up to the gate." }
+      { "title": "Hospitality That Scales across a Season", "text": "Reuse groups and hosts from event to event while keeping each matchday’s list current." },
+      { "title": "Sponsors and Partners in View", "text": "Manage sponsors, speakers and VIP groups in the same place as your general guest list." },
+      { "title": "Digital Tickets and Access", "text": "Issue and update tickets and access passes in real time, right up to the gate." }
     ],
-    "related": { "label": "See the Team USA concept", "url": "/#cases" }
+    "related": { "label": "See the Team USA Concept", "url": "/#cases" }
   },
   {
     "slug": "olympics",
     "name": "Olympics",
     "kicker": "Delegations and partners",
-    "headline": ["Many venues.", "One record."],
-    "statement": "Weeks of venues, and one record that keeps up.",
+    "headline": ["Many Venues.", "One Record."],
+    "statement": "Weeks of Venues, and One Record That Keeps Up.",
     "scene": {
       "label": "Live floor",
       "title": "Day 4, three venues",
@@ -165,17 +165,17 @@
     "imageW": 1920,
     "imageH": 1433,
     "points": [
-      { "title": "Weeks-long programs, one record", "text": "Keep schedules, groups and guests organised across every day of competition." },
-      { "title": "Real-time updates across venues", "text": "Alerts and notifications reach the right people when plans shift, wherever they are." },
-      { "title": "A shared view for large teams", "text": "Give everyone running the program the same view of every guest and every detail." }
+      { "title": "Weeks-Long Programs, One Record", "text": "Keep schedules, groups and guests organised across every day of competition." },
+      { "title": "Real-Time Updates across Venues", "text": "Alerts and notifications reach the right people when plans shift, wherever they are." },
+      { "title": "A Shared View for Large Teams", "text": "Give everyone running the program the same view of every guest and every detail." }
     ]
   },
   {
     "slug": "grandscale",
     "name": "Grandscale",
     "kicker": "Multi-venue productions",
-    "headline": ["Thousands of parts.", "One place to look."],
-    "statement": "The spreadsheet stack becomes one live view.",
+    "headline": ["Thousands of Parts.", "One Place to Look."],
+    "statement": "The Spreadsheet Stack Becomes One Live View.",
     "scene": {
       "label": "Live floor",
       "title": "Campus, night two",
@@ -199,9 +199,9 @@
     "imageW": 1920,
     "imageH": 1433,
     "points": [
-      { "title": "Replace the spreadsheet stack", "text": "Streamline complex spreadsheets and connect work across the apps and legacy systems you already use." },
-      { "title": "Automate the repetitive work", "text": "Let the platform handle manual, repetitive tasks so your staff can focus on guests." },
-      { "title": "One guest experience across venues", "text": "Give each guest a single, connected schedule, pass and support line across every venue." }
+      { "title": "Replace the Spreadsheet Stack", "text": "Streamline complex spreadsheets and connect work across the apps and legacy systems you already use." },
+      { "title": "Automate the Repetitive Work", "text": "Let the platform handle manual, repetitive tasks so your staff can focus on guests." },
+      { "title": "One Guest Experience across Venues", "text": "Give each guest a single, connected schedule, pass and support line across every venue." }
     ]
   }
 ]

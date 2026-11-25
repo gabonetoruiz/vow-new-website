@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
 title: Press
-description: "Latest news and insights from VOW, and how to reach our team for media inquiries."
+description: "Latest news and insights from VOW, and how to reach the VOW team for media inquiries."
 styles: [inner]
 scripts: [cards]
 motion: [reveal, hover, cta]
@@ -11,7 +11,7 @@ motion: [reveal, hover, cta]
 {%- set articles = press.items | rejectattr("sample") %}
 {%- set heroKicker = "Press" %}
 {%- set heroTitle = "Latest News & Insights from VOW" if articles.length else "Press" %}
-{%- set heroLede = "Stay updated on industry trends, product updates, success stories, and expert guides that power the future of event and guest experience technology." if articles.length else "How to reach us for media inquiries." %}
+{%- set heroLede = "Stay updated on industry trends, product updates, success stories, and expert guides that power the future of event and guest experience technology." if articles.length else "How to reach the VOW team for media inquiries." %}
 {% include "page-hero.njk" %}
 
 {%- if articles.length %}
@@ -38,10 +38,10 @@ motion: [reveal, hover, cta]
 <section class="section tight{% if not articles.length %} flush-top{% endif %}" aria-labelledby="inquiries-title">
   <div class="wrap press-contact">
     <div class="copy">
-      <h2 class="h2" id="inquiries-title" data-reveal>Media inquiries</h2>
-      <p class="lede" data-reveal>For interviews, images or information about VOW, get in touch with our team.</p>
+      <h2 class="h2" id="inquiries-title" data-reveal>Media Inquiries</h2>
+      <p class="lede" data-reveal>For interviews, images or information about VOW, get in touch with the VOW team.</p>
     </div>
-    <div class="act" data-reveal><a class="btn btn-primary" href="/contact/">Contact the team</a></div>
+    <div class="act" data-reveal><a class="btn btn-primary" href="/contact/">Contact the Team</a></div>
   </div>
 </section>
 

@@ -54,7 +54,7 @@
     button.disabled = sending;
     button.classList.toggle('is-sending', sending);
     button.setAttribute('aria-busy', String(sending));
-    label.textContent = sending ? 'Sending…' : 'Request a demo';
+    label.textContent = sending ? 'Sending…' : 'Request a Demo';
   };
 
   const showThanks = () => {
@@ -107,7 +107,7 @@
       else throw new Error(result.message || response.status);
     } catch (error) {
       console.error('Demo form:', error);
-      status.textContent = 'We couldn’t send your request. Please try again, or email us at the address above.';
+      status.textContent = 'Your request couldn’t be sent. Please try again, or email the address above.';
     } finally {
       setSending(false);
     }

@@ -4,63 +4,63 @@
     "items": [
       {
         "id": "what-is-vow",
-        "q": "What is VOW?",
+        "q": "What Is VOW?",
         "a": "VOW is B2B2VIP technology for premium events: one platform that connects the teams behind an event with the VIP guests attending it, in real time and in every detail."
       },
       {
         "id": "what-is-b2b2vip",
-        "q": "What does B2B2VIP mean?",
-        "a": "It describes how VOW works. We serve the organizations that run events (business to business) so that they can give their VIP guests a better, more personal experience."
+        "q": "What Does B2B2VIP Mean?",
+        "a": "It describes how VOW works. VOW serves the organizations that run events (business to business) so that they can give their VIP guests a better, more personal experience."
       },
       {
         "id": "which-events",
-        "q": "Which kinds of events does VOW support?",
+        "q": "Which Kinds of Events Does VOW Support?",
         "a": "VOW is built for premium, VIP and high-stakes events across six sectors: Media, Entertainment, Philanthropy, Sports, Olympics and Grandscale. Open the Sectors menu to see how VOW fits each one."
       }
     ]
   },
   {
-    "group": "For event teams",
+    "group": "For Event Teams",
     "items": [
       {
         "id": "what-is-vow-pro",
-        "q": "What can my team do with VOW PRO?",
+        "q": "What Can Your Team Do with VOW PRO?",
         "a": "VOW PRO is for the people making the event happen. It covers guest, group and host management; RSVP, signup and registration; a real-time communications hub; alerts and notifications; and speakers, sponsors and more, all in a shared view of every detail."
       },
       {
         "id": "existing-tools",
-        "q": "Can VOW work with the tools we already use?",
-        "a": "Yes. VOW is designed to connect work across the apps and legacy systems your team already uses, and to replace complex spreadsheets and repetitive manual tasks. Tell us what you use today when you get in touch."
+        "q": "Can VOW Work with Your Current Tools?",
+        "a": "Yes. VOW is designed to connect work across the apps and legacy systems your team already uses, and to replace complex spreadsheets and repetitive manual tasks. Mention what you use today when you get in touch."
       },
       {
         "id": "support",
-        "q": "Is support available during the event?",
+        "q": "Is Support Available During the Event?",
         "a": "Yes. VOW includes white glove support: dedicated help for your team before and during the event, and for your guests on the night."
       }
     ]
   },
   {
-    "group": "For guests",
+    "group": "For Guests",
     "items": [
       {
         "id": "what-is-vow-go",
-        "q": "What do guests get with VOW GO?",
+        "q": "What Do Guests Get with VOW GO?",
         "a": "VOW GO is for the people experiencing the event. Each guest gets their event details, personal schedule, digital passes, live updates and a concierge, close at hand."
       },
       {
         "id": "web-and-mobile",
-        "q": "Does VOW GO work on web and mobile?",
+        "q": "Does VOW GO Work on Web and Mobile?",
         "a": "Yes. The guest experience is available on the web and on mobile, so guests can use whichever is most convenient."
       }
     ]
   },
   {
-    "group": "Working with us",
+    "group": "Working with VOW",
     "items": [
       {
         "id": "get-started",
-        "q": "How do I get started?",
-        "a": "Use the Connect with VOW button and tell us about the event and the guests you’re planning for. We’ll take it from there."
+        "q": "How Do You Get Started?",
+        "a": "Use the Connect with VOW button and share the event and the guests you’re planning for. The VOW team takes it from there."
       }
     ]
   }

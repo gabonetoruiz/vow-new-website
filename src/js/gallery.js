@@ -129,7 +129,7 @@
   // ---- pointer: drag, throw, press-hold zoom, click
   stage.addEventListener('pointerdown', (e) => {
     if (open || e.button > 0) return;
-    if (e.target.closest('.g-hint')) return;
+    if (e.target.closest('.g-hint, .g-pan')) return;
     down = true; moved = 0; sx0 = lx = e.clientX; sy0 = ly = e.clientY; lt = performance.now(); vx = vy = 0;
     try { stage.setPointerCapture(e.pointerId); } catch (_) { /* synthetic pointer */ }
     stage.classList.add('is-down');
@@ -167,14 +167,18 @@
   stage.addEventListener('pointerleave', () => { if (!down) { mx = my = null; schedule(); } });
 
   // ---- keyboard: arrows pan, Enter opens the card nearest the centre
+  const STEPS = { ArrowLeft: [1, 0], ArrowRight: [-1, 0], ArrowUp: [0, 1], ArrowDown: [0, -1] };
+  const pan = (k) => {
+    stage.classList.add('has-moved');
+    if (reduce.matches) { ox += k[0] * 140; oy += k[1] * 140; render(); }   // step, no glide
+    else { vx = k[0] * 14; vy = k[1] * 14; schedule(); }
+  };
+  stage.querySelectorAll('[data-pan]').forEach((b) => b.addEventListener('click', () => pan(STEPS[b.dataset.pan])));
   stage.addEventListener('keydown', (e) => {
     if (open) return;
-    const k = { ArrowLeft: [1, 0], ArrowRight: [-1, 0], ArrowUp: [0, 1], ArrowDown: [0, -1] }[e.key];
-    if (k) {
-      e.preventDefault(); stage.classList.add('has-moved');
-      if (reduce.matches) { ox += k[0] * 140; oy += k[1] * 140; render(); }   // step, no glide
-      else { vx = k[0] * 14; vy = k[1] * 14; schedule(); }
-    }
+    const k = STEPS[e.key];
+    if (k) { e.preventDefault(); pan(k); }
+    else if (e.target !== stage) return;   // Enter or Space on an arrow button presses that button
     else if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault();
       let best = null, bd = Infinity;
@@ -188,7 +192,7 @@
   });
 
   // ---- focused photo (FLIP from the card to the centre)
-  let typer = 0, flip = null;
+  let typer = 0, flip = null, armed = false;
   const type = (lines) => {
     clearInterval(typer);
     const els = [tT, tM, tD]; els.forEach((el) => { el.textContent = ''; el.classList.remove('is-typing'); });
@@ -213,6 +217,7 @@
     const p = card._p, from = card.getBoundingClientRect();
     focusImg.getAnimations().forEach((a) => a.cancel());
     open = { card, p, opener: document.activeElement };
+    armed = false;
     vx = vy = 0; zoomTarget = 1;
     stage.classList.add('is-open');
     focusImg.src = p.src; focusImg.alt = p.alt;
@@ -262,7 +267,10 @@
       flip.onfinish = finish;
     } else finish();
   };
-  focusEl.addEventListener('click', closeCard);
+  // Close only on a press that began on the open photo. On touch screens, the tap that opens a photo also sends a click
+  // to the viewer that has just appeared under the finger, which would close it at once.
+  focusEl.addEventListener('pointerdown', () => { armed = true; });
+  focusEl.addEventListener('click', (e) => { if (armed || e.detail === 0) closeCard(); });   // detail 0: keyboard
   document.addEventListener('keydown', (e) => {
     if (!open) return;
     if (e.key === 'Escape') { e.preventDefault(); closeCard(); }

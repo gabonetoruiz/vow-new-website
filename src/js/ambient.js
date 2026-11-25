@@ -17,7 +17,7 @@
   if (!hasLoops || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
   const sync = () => buttons.forEach((b) => {
-    const label = paused ? 'Play motion' : 'Pause motion';
+    const label = paused ? 'Play Motion' : 'Pause Motion';
     b.classList.toggle('is-paused', paused);
     if (b.dataset.motionToggle === 'icon') b.setAttribute('aria-label', label);
     else b.textContent = label;

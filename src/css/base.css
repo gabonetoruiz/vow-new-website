@@ -3,6 +3,9 @@
 /* ---------- reset & helpers ---------- */
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 8px);-webkit-text-size-adjust:100%}
+/* No rubber-band bounce with a mouse or trackpad. Vertical only, so swiping back and forward still works, and touch
+   screens keep pull-to-refresh. */
+@media (pointer:fine){html{overscroll-behavior-y:none}}
 body{background:var(--ink);color:var(--paper);font:400 16px/1.65 var(--font-body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a,button,summary{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
 a{color:inherit;text-decoration:none}

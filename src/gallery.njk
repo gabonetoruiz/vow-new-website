@@ -23,9 +23,16 @@ motion: [reveal, cta]
 
   {# Infinite stage. The list below is the data source (and the text alternative); script.js builds the cards from it. #}
   <div class="g-stage" id="gStage" tabindex="0" role="group" aria-roledescription="infinite photo canvas"
-       aria-label="Photo gallery. Drag to explore, press Enter to open the centred photo, arrow keys to move.">
+       aria-label="Photo gallery. Drag or use the arrow buttons to explore, press Enter to open the centred photo, arrow keys to move.">
     <div class="g-world" id="gWorld"></div>
     <p class="g-hint" id="gHint" aria-hidden="true"><span class="g-hint-dot"></span>Drag to explore · Click a photo to open</p>
+    {# Arrow buttons: the same movement as the arrow keys, for anyone who can't or would rather not drag #}
+    <div class="g-pan" role="group" aria-label="Move around the gallery">
+      <button type="button" data-pan="ArrowLeft" aria-label="Move left"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3 5 8l5 5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
+      <button type="button" data-pan="ArrowUp" aria-label="Move up"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 10l5-5 5 5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
+      <button type="button" data-pan="ArrowDown" aria-label="Move down"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m3 6 5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
+      <button type="button" data-pan="ArrowRight" aria-label="Move right"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
+    </div>
     <div class="g-focus" id="gFocus" role="dialog" aria-modal="true" aria-label="Photo" hidden>
       <button type="button" class="g-focus-close" aria-label="Close photo"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
       <div class="g-focus-tilt" id="gTilt">

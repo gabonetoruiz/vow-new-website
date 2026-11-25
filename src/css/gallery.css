@@ -30,6 +30,21 @@
 .g-hint-dot{width:6px;height:6px;border-radius:50%;background:var(--iris)}
 .g-stage.has-moved .g-hint{opacity:0}
 
+/* Arrow buttons */
+.g-pan{position:absolute;right:16px;bottom:16px;z-index:4;display:flex;gap:8px}
+.g-pan button{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;border:1px solid rgba(207,224,255,.32);
+  background:rgba(15,10,78,.75);color:var(--paper);cursor:pointer;transition:background-color .2s,border-color .2s}
+.g-pan button:active{background:var(--royal)}
+.g-pan svg{width:16px;height:16px}
+.g-stage.is-open .g-pan{display:none}
+@media (hover:hover){.g-pan button:hover{border-color:var(--ice);background:var(--royal)}}
+
+/* Touch screens: an up or down swipe scrolls the page, so the canvas never traps the reader. A sideways swipe
+   moves the photos, and the arrow buttons move them up and down. */
+@media (pointer:coarse){
+  .g-stage{touch-action:pan-y pinch-zoom;height:clamp(420px,68svh,880px)}
+}
+
 /* ---------- focused photo ---------- */
 .g-focus{position:absolute;inset:0;z-index:6;display:grid;place-items:center;padding:20px;cursor:zoom-out;
   background:rgba(11,7,60,.84);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);opacity:0;transition:opacity .35s var(--ease)}
@@ -57,7 +72,8 @@
 .g-static figcaption{padding:8px 2px;color:var(--faint);font-size:14px}
 
 @media (max-width:600px){
-  .g-hint{left:12px;bottom:12px;font-size:11px}
+  .g-hint{left:12px;top:12px;bottom:auto;font-size:11px}
+  .g-pan{right:12px;bottom:12px}
   .g-focus{padding:14px}
 }
 @media (prefers-reduced-motion:reduce){
