@@ -51,9 +51,9 @@
 .cs-frame{position:relative;margin:0;border-radius:var(--r-panel);overflow:hidden;border:1px solid var(--rule);background:var(--midnight)}
 .cs-frame img{display:block;width:100%;height:auto;will-change:transform}
 .cs-full .cs-frame img{aspect-ratio:16/9;object-fit:cover}
-.cs-pair{display:grid;grid-template-columns:1fr 1fr;gap:clamp(14px,2vw,24px);align-items:start}
-.cs-pair .cs-frame:nth-child(2){margin-top:clamp(40px,8vw,120px)}
-.cs-pair .cs-frame img{aspect-ratio:4/5;object-fit:cover}
+.cs-duo{display:grid;grid-template-columns:1fr 1fr;gap:clamp(14px,2vw,24px);align-items:start}
+.cs-duo .cs-frame:nth-child(2){margin-top:clamp(40px,8vw,120px)}
+.cs-duo .cs-frame img{aspect-ratio:4/5;object-fit:cover}
 /* Product stage: tinted photo with the real screen on top */
 .cs-stage{aspect-ratio:16/9;isolation:isolate}
 .cs-stage img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.5) saturate(.9)}
@@ -81,6 +81,6 @@
   .cs-stage img.fg{max-width:92%}
 }
 @media (max-width:600px){
-  .cs-pair{grid-template-columns:1fr}
-  .cs-pair .cs-frame:nth-child(2){margin-top:0}
+  .cs-duo{grid-template-columns:1fr}
+  .cs-duo .cs-frame:nth-child(2){margin-top:0}
 }

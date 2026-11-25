@@ -84,7 +84,7 @@ motion: [reveal, hover, case, cta]
         <picture><source srcset="{{ m.src }}.avif" type="image/avif"><img class="fg" src="{{ m.src }}.webp" alt="{{ m.alt }}" width="{{ m.w }}" height="{{ m.h }}" loading="lazy" decoding="async"></picture>
       </figure>
       {%- elif m.type == "pair" %}
-      <div class="cs-pair">
+      <div class="cs-duo">
         {%- for im in m.images %}
         <figure class="cs-frame" data-cs="frame">
           <img src="{{ im.src }}" alt="{{ im.alt }}" width="{{ im.w }}" height="{{ im.h }}" loading="lazy" decoding="async">
