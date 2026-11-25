@@ -12,7 +12,13 @@
 
   // Keep trigger positions accurate once fonts and images settle
   if (document.fonts) document.fonts.ready.then(() => ScrollTrigger.refresh());
-  addEventListener('load', () => ScrollTrigger.refresh());
+  // Refreshing can cancel the browser's own (smooth) jump to a link such as /contact/#demo, so make it again afterwards
+  addEventListener('load', () => {
+    ScrollTrigger.refresh();
+    const arrived = performance.getEntriesByType('navigation')[0]?.type === 'navigate';
+    const target = arrived && location.hash && document.getElementById(location.hash.slice(1));
+    if (target) requestAnimationFrame(() => target.scrollIntoView({ behavior: 'instant' }));
+  });
 
   // Clean teardown: revert every tween, ScrollTrigger and listener
   window.vowMotion = { destroy: () => mm.revert() };

@@ -1,0 +1,15 @@
+{
+  "email": "CustomerSupport@vow.app",
+  "hubspot": { "portalId": "20951011", "formId": "dcd2c9a0-1d72-4ca8-9ed1-bee4d0f0adda" },
+  "meetingsUrl": "https://meetings.hubspot.com/jennifer-brisman",
+  "industries": ["Sports", "Media", "Entertainment", "Awards Shows", "Corporate", "Philanthropy / Giving", "Government", "Educational / Learning", "Association", "Social - General"],
+  "apps": [
+    { "label": "Download on the App Store", "url": "https://apps.apple.com/us/app/vow-go/id1635222802" },
+    { "label": "Get it on Google Play", "url": "https://play.google.com/store/apps/details?id=app.vow.go" }
+  ],
+  "social": [
+    { "label": "Instagram", "url": "https://www.instagram.com/vownetwork/" },
+    { "label": "X", "url": "https://twitter.com/vownetwork/" },
+    { "label": "Facebook", "url": "https://www.facebook.com/vownetworkhq" }
+  ]
+}

@@ -1,0 +1,99 @@
+/* Contact page: big title beside the intro and contact options, a wide photo, the demo form and the guest band. */
+.ct{overflow-x:clip}
+.ct-split{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;row-gap:36px;align-items:start}
+.ct-side{grid-column:7 / 13}
+
+/* ---------- header ---------- */
+.ct-hero{position:relative;isolation:isolate;padding:calc(var(--nav-h) + clamp(48px,7vw,104px)) 0 clamp(28px,4vw,48px)}
+.ct-hero::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:radial-gradient(48% 70% at 80% 0%,rgba(45,76,215,.34),transparent 70%),radial-gradient(38% 50% at 10% 25%,rgba(149,164,255,.14),transparent 70%)}
+.ct-title{grid-column:1 / 7;font-weight:400;font-size:clamp(64px,8.8vw,134px);line-height:.95;letter-spacing:-.055em;white-space:nowrap}
+/* word masks for the title animation, padded so tight letter-spacing never shaves a letter */
+.ct .m{display:inline-block;overflow:hidden;vertical-align:top;padding:0 .08em .1em;margin:0 -.08em -.1em}
+.ct .m > span{display:inline-block;will-change:transform}
+.ct-intro{font-family:var(--font-display);font-size:clamp(24px,2.7vw,40px);line-height:1.22;letter-spacing:-.025em;text-wrap:balance}
+.ct-intro a{color:var(--iris);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:6px;text-decoration-color:transparent;transition:text-decoration-color .3s,color .3s}
+.ct-options{list-style:none;margin-top:clamp(36px,5vw,64px)}
+.ct-options li{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:4px 24px;align-items:center;min-height:64px;padding:10px 0;border-top:1px solid var(--rule)}
+.ct-options span{color:var(--faint);font-size:15px}
+.ct-options a{justify-self:start;display:inline-flex;align-items:center;min-height:44px;font-weight:500;overflow-wrap:anywhere;border-bottom:0;
+  background:linear-gradient(var(--ice),var(--ice)) left calc(100% - 8px) / 0 1px no-repeat;transition:background-size .4s var(--ease)}
+.ct-social{list-style:none;display:flex;flex-wrap:wrap;justify-content:flex-end;gap:0 32px;margin-top:clamp(40px,6vw,88px);border-top:1px solid var(--rule);padding-top:12px}
+.ct-social a{display:inline-flex;align-items:center;gap:8px;min-height:44px;color:var(--mist);font-size:15px;transition:color .25s}
+.ct-social svg{width:11px;height:11px}
+
+/* ---------- photo ---------- */
+.ct-photo-wrap{padding:0 clamp(10px,1.6vw,28px)}
+.ct-photo{position:relative;margin:0;height:min(86vh,52vw + 160px);border-radius:var(--r-panel);overflow:hidden;border:1px solid var(--rule);background:var(--midnight)}
+.ct-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;will-change:transform}
+
+/* ---------- demo form ---------- */
+.ct-demo{padding:clamp(80px,11vw,160px) 0;scroll-margin-top:0}
+.ct-demo-head{grid-column:1 / 6}
+.ct-demo-head .lede{margin-top:22px;max-width:40ch}
+.ct-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 20px}
+.ct-form[hidden]{display:none}
+.ct-form .wide{grid-column:1 / -1}
+.ct-required{grid-column:1 / -1;color:var(--faint);font-size:14px}
+.field{display:flex;flex-direction:column;justify-content:flex-end;gap:8px}
+.ct-form label,.ct-form legend{font-size:14px;color:var(--mist)}
+.field input{width:100%;min-width:0;min-height:52px;padding:0 2px;background:transparent;border:0;border-bottom:1px solid rgba(207,224,255,.32);border-radius:0;
+  color:var(--paper);font:400 17px/1.4 var(--font-body);color-scheme:dark;transition:border-color .25s,box-shadow .25s}
+.field input[type="date"]{-webkit-appearance:none;appearance:none}
+.field input:focus{outline:none;border-bottom-color:var(--ice);box-shadow:0 1px 0 var(--ice)}
+.ct-form fieldset{border:0;min-width:0}
+.ct-form legend{margin-bottom:14px}
+.choices{display:flex;flex-wrap:wrap;gap:10px}
+.choice{position:relative;cursor:pointer}
+.choice input{position:absolute;opacity:0;width:1px;height:1px}
+.choice span{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:999px;border:1px solid rgba(207,224,255,.24);color:var(--paper);font-size:15px;
+  transition:background-color .25s var(--ease),border-color .25s var(--ease)}
+.choice input:checked + span{background:var(--royal);border-color:var(--royal)}
+.choice input:focus-visible + span{outline:2px solid var(--ice);outline-offset:3px}
+.field.invalid input,.ct-form fieldset.invalid .choice span{border-color:#ff9db0}
+.ct-form .error{color:#ffb3c1;font-size:13px}
+.ct-form .error:empty{display:none}
+.ct-form fieldset .error{margin-top:12px}
+.trap{position:absolute;left:-9999px}
+.ct-submit{display:flex;flex-wrap:wrap;align-items:center;gap:16px 28px;margin-top:8px}
+.ct-submit .btn{min-height:56px;padding:0 34px;font-size:16px;border:0}
+.ct-submit .btn[disabled]{opacity:.6;cursor:progress}
+.ct-privacy{color:var(--faint);font-size:14px;max-width:36ch}
+.ct-privacy a,.ct-status a{color:var(--iris);text-decoration:underline;text-underline-offset:3px}
+.ct-status{color:#ffb3c1;font-size:15px}
+.ct-status:empty{display:none}
+.ct-thanks{padding:clamp(28px,4vw,48px);border:1px solid var(--rule);border-radius:var(--r-panel);background:var(--surface)}
+.ct-thanks h3{font-weight:400;font-size:clamp(26px,3vw,40px);line-height:1.15;letter-spacing:-.03em}
+.ct-thanks p{margin:16px 0 28px;color:var(--mist)}
+
+/* ---------- guest band ---------- */
+.ct-band{position:relative;isolation:isolate;overflow:hidden;padding:clamp(72px,10vw,150px) 0;border-top:1px solid var(--rule);scroll-margin-top:var(--nav-h)}
+.ct-band::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(60% 80% at 75% 100%,rgba(45,76,215,.38),transparent 70%)}
+.ct-band-copy{grid-column:1 / 6}
+.ct-band-copy p{font-family:var(--font-display);font-size:clamp(24px,2.7vw,40px);line-height:1.22;letter-spacing:-.025em}
+.ct-band-copy em{font-style:normal;color:var(--iris)}
+.ct-band-copy ul{list-style:none;display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.ct-band-title{grid-column:7 / 13;position:relative;padding:clamp(28px,4vw,56px) 0 clamp(28px,4vw,56px) 24px}
+.ct-line{position:absolute;left:0;top:0;bottom:0;width:1px;background:linear-gradient(180deg,transparent,var(--ice) 25%,var(--ice) 75%,transparent);transform-origin:top}
+.ct-band-title h2{font-weight:400;font-size:clamp(44px,6.8vw,104px);line-height:1;letter-spacing:-.05em}
+.ct-band-title h2 > span{display:block}
+
+@media (hover:hover){
+  .ct-intro a:hover{color:var(--ice);text-decoration-color:currentColor}
+  .ct-options a:hover{background-size:100% 1px}
+  .ct-social a:hover{color:var(--paper)}
+  .choice:hover span{border-color:var(--ice)}
+}
+/* Hidden until GSAP reveals them, so there is no flash */
+@media (prefers-reduced-motion:no-preference){
+  .js [data-ct]{visibility:hidden}
+}
+@media (max-width:900px){
+  .ct-title,.ct-side,.ct-demo-head,.ct-band-copy,.ct-band-title{grid-column:1 / -1}
+  .ct-social{justify-content:flex-start}
+  .ct-photo{height:min(70vh,125vw)}
+}
+@media (max-width:600px){
+  .ct-form{grid-template-columns:1fr}
+  .ct-options li{grid-template-columns:1fr;gap:0}
+}

@@ -45,6 +45,11 @@ src/
 | The testimonial | `src/_data/testimonial.json` (used on the home and Clients pages) |
 | Colours, fonts, spacing | `src/css/tokens.css` |
 
+## Contact page
+`src/contact.njk` (styles `contact.css`, scripts `contact.js` and `motion-contact.js`). Addresses, app links, social links and the
+form settings are in `src/_data/contact.json`. The demo form posts to the existing HubSpot form (portal and form ID in that file),
+so its field names and options must stay in step with HubSpot. Every "Connect", "Contact" and demo link points here.
+
 ## Legal pages
 `src/privacy-policy.html` and `src/terms-of-service-vow.html` hold the wording copied from the vow.app pages (same addresses, so existing links keep working).
 Edit the text there and update `updated` in the front matter. Each `<h2 id="...">` appears in the "On this page" list.

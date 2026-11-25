@@ -23,7 +23,7 @@
         <li class="nav-item" style="--i:{{ loop.index }}" data-hero="nav"><a class="nav-link" href="{{ l.url }}"{% if page.url == l.url %} aria-current="page"{% endif %}>{{ l.label }}</a></li>
         {%- endfor %}
       </ul>
-      <a href="#contact" class="btn btn-primary nav-cta" data-hero="nav">{{ nav.ctaLabel }}</a>
+      <a href="{{ site.connectUrl }}" class="btn btn-primary nav-cta"{% if page.url == site.connectUrl %} aria-current="page"{% endif %} data-hero="nav">{{ nav.ctaLabel }}</a>
     </nav>
   </div>
 </header>

@@ -1,0 +1,98 @@
+---
+layout: layouts/base.njk
+title: Contact
+description: "Book a VOW demo, ask a question or get the VOW GO app for guests."
+styles: [contact]
+scripts: [contact]
+motion: [reveal, hover, contact]
+---
+<div class="ct">
+  <header class="ct-hero" aria-labelledby="ct-title">
+    <div class="wrap ct-split">
+      <h1 class="ct-title" id="ct-title" data-ct="title">Let’s talk</h1>
+      <div class="ct-side">
+        <p class="ct-intro" data-ct="intro">Write us a line or two. Whether you want to <a href="#demo">book a demo</a>, have a <a href="#options">question</a> about VOW, or you’re attending an event <a href="#guests">as a guest</a>, we’d love to hear from you.</p>
+        <ul class="ct-options" id="options">
+          <li data-ct="option"><span>Book a demo</span><a href="#demo">Tell us about your event</a></li>
+          <li data-ct="option"><span>Questions and support</span><a href="mailto:{{ contact.email }}?subject=I%20have%20a%20question">{{ contact.email }}</a></li>
+          <li data-ct="option"><span>Press and media</span><a href="mailto:{{ contact.email }}?subject=Press%20inquiry">{{ contact.email }}</a></li>
+          <li data-ct="option"><span>For guests</span><a href="#guests">Get the VOW GO app</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap">
+      <ul class="ct-social" aria-label="VOW on social media" data-ct="social">
+        {%- for s in contact.social %}
+        <li><a href="{{ s.url }}" rel="noopener">{{ s.label }} <svg aria-hidden="true"><use href="#arrow-ne"/></svg></a></li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </header>
+
+  <div class="ct-photo-wrap">
+    <figure class="ct-photo" data-ct="photo">
+      <img src="/assets/img/sector-grandscale.jpg" alt="Aerial night view of an illuminated multi-venue event campus" width="1920" height="1433" decoding="async">
+    </figure>
+  </div>
+
+  <section class="ct-demo" id="demo" aria-labelledby="demo-title">
+    <div class="wrap ct-split">
+      <div class="ct-demo-head">
+        <h2 class="h2" id="demo-title" data-reveal>Book a demo</h2>
+        <p class="lede" data-reveal>Tell us about the event and the guests you’re planning for. Then pick a time to see VOW with our CEO.</p>
+      </div>
+      <div class="ct-side" data-reveal>
+        <form class="ct-form" id="demoForm" novalidate
+              data-portal="{{ contact.hubspot.portalId }}" data-form="{{ contact.hubspot.formId }}">
+          <p class="ct-required">All fields are required.</p>
+          <div class="field"><label for="f-first">First name</label><input id="f-first" name="firstname" data-object="0-1" autocomplete="given-name" required></div>
+          <div class="field"><label for="f-last">Last name</label><input id="f-last" name="lastname" data-object="0-1" autocomplete="family-name" required></div>
+          <div class="field"><label for="f-email">Work email</label><input id="f-email" name="email" type="email" data-object="0-1" autocomplete="email" required></div>
+          <div class="field"><label for="f-company">Company name</label><input id="f-company" name="company" data-object="0-1" autocomplete="organization" required></div>
+          <div class="field wide"><label for="f-event">Date of your next live event or experience</label><input id="f-event" name="date_of_next_first_upcoming_event" type="date" data-object="0-2" required></div>
+          <fieldset class="wide" id="industries" aria-describedby="industries-error">
+            <legend>Industry or type of events (choose at least one)</legend>
+            <div class="choices">
+              {%- for i in contact.industries %}
+              <label class="choice"><input type="checkbox" name="type_of_events___experiences" data-object="0-2" value="{{ i }}"><span>{{ i }}</span></label>
+              {%- endfor %}
+            </div>
+            <p class="error" id="industries-error"></p>
+          </fieldset>
+          <div class="field"><label for="f-demo1">Preferred date for a Zoom demo</label><input id="f-demo1" name="your_preferred_date_and_time_for_zoom_demo" type="date" data-object="0-1" data-future required></div>
+          <div class="field"><label for="f-demo2">Second preferred date</label><input id="f-demo2" name="your_second___2__preferred_date_for_zoom_demo" type="date" data-object="0-1" data-future required></div>
+          {#- Honeypot: hidden from people, filled in by simple bots #}
+          <div class="trap" aria-hidden="true"><label>Leave this empty<input name="website" tabindex="-1" autocomplete="off"></label></div>
+          <div class="wide ct-submit">
+            <button type="submit" class="btn btn-primary">Request a demo <svg aria-hidden="true"><use href="#arrow-ne"/></svg></button>
+            <p class="ct-privacy">We use these details to arrange your demo. See our <a href="/privacy-policy/">Privacy Policy</a>.</p>
+          </div>
+          <p class="wide ct-status" id="formStatus" role="alert"></p>
+        </form>
+        <div class="ct-thanks" id="formThanks" tabindex="-1" hidden>
+          <h3>Thank you for your interest in VOW.</h3>
+          <p>One more step: choose a time for your personalized demo with our CEO.</p>
+          <a class="btn btn-primary" href="{{ contact.meetingsUrl }}" rel="noopener">Schedule your demo <svg aria-hidden="true"><use href="#arrow-ne"/></svg></a>
+        </div>
+        <noscript><p class="ct-privacy">The form needs JavaScript. You can also email <a href="mailto:{{ contact.email }}">{{ contact.email }}</a>.</p></noscript>
+      </div>
+    </div>
+  </section>
+
+  <section class="ct-band" id="guests" aria-labelledby="guests-title">
+    <div class="wrap ct-split">
+      <div class="ct-band-copy">
+        <p data-reveal>Attending an event?<br><em>Get VOW GO for guests.</em></p>
+        <ul data-reveal>
+          {%- for a in contact.apps %}
+          <li><a class="btn btn-ghost" href="{{ a.url }}" rel="noopener">{{ a.label }} <svg aria-hidden="true"><use href="#arrow-ne"/></svg></a></li>
+          {%- endfor %}
+        </ul>
+      </div>
+      <div class="ct-band-title">
+        <i class="ct-line" aria-hidden="true"></i>
+        <h2 id="guests-title" data-ct="big"><span>Your night,</span> <span>in your pocket.</span></h2>
+      </div>
+    </div>
+  </section>
+</div>
