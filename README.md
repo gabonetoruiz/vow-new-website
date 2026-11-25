@@ -41,7 +41,7 @@ src/
 | Gallery photos and captions | `src/_data/gallery.json` (images go in `src/assets/img/gallery/`; each entry has `title`, `meta`, `desc`, `alt` and an optional `sector` tag) |
 | FAQs | `src/_data/faqs.json` (the page and its search-engine markup both come from it) |
 | Client logos | `src/_data/clients.json` (the home page marquee is still written by hand in `index.njk`) |
-| Press items | `src/_data/press.json` (remove `"sample": true` on real entries) |
+| Press items | `src/_data/press.json` (entries with `"sample": true` are hidden; see "Content still to replace") |
 | The testimonial | `src/_data/testimonial.json` (used on the home and Clients pages) |
 | Colours, fonts, spacing | `src/css/tokens.css` |
 
@@ -62,7 +62,7 @@ Every page carries `<meta name="robots" content="noindex, nofollow">` (in `layou
 
 ## Content still to replace
 
-- Press items are placeholders (marked "Placeholder" on the page).
+- Press items are placeholders and are not shown. Press is also left out of the navbar and footer: once there are real entries (without `"sample": true`), add `{ "label": "Press", "url": "/press/" }` back to `links` in `src/_data/nav.json`.
 - Sector, FAQ and other page copy is draft text written from the existing site content.
 - Gallery photos are real event photos supplied by the client (an infinite draggable canvas, `src/js/gallery.js`). Captions come only from visible signage; sector tags are editable in `gallery.json`. Confirm usage rights before the repo or site goes public beyond review.
 - Privacy and Terms links in the footer, and the Team USA demo link.

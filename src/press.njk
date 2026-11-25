@@ -1,21 +1,24 @@
 ---
 layout: layouts/base.njk
 title: Press
-description: "VOW in the press, and how to reach our team for media inquiries."
+description: "How to reach the VOW team for media inquiries."
 styles: [inner]
 scripts: [cards]
 motion: [reveal, hover, cta]
 ---
 {% set heroTitle = "Press" %}
-{% set heroLede = "VOW in the news, and how to reach us for media inquiries." %}
+{#- Entries marked "sample" in press.json are never shown. With no real entries the page holds only the media contact. #}
+{%- set articles = press.items | rejectattr("sample") %}
+{%- set heroLede = "VOW in the news, and how to reach us for media inquiries." if articles.length else "How to reach us for media inquiries." %}
 {% include "page-hero.njk" %}
 
+{%- if articles.length %}
 <section class="section tight flush-top" aria-label="Press coverage">
   <div class="wrap">
     <ul class="press-list">
-      {%- for item in press.items %}
+      {%- for item in articles %}
       <li class="press-row" data-reveal>
-        <p class="press-date">{% if item.sample %}[Date]{% else %}{{ item.date | dateLong }}{% endif %}</p>
+        <p class="press-date">{{ item.date | dateLong }}</p>
         <div>
           <p class="press-outlet">{{ item.outlet }}</p>
           <h2 class="press-title">{{ item.title }}</h2>
@@ -30,8 +33,9 @@ motion: [reveal, hover, cta]
     </ul>
   </div>
 </section>
+{%- endif %}
 
-<section class="section tight" aria-labelledby="inquiries-title">
+<section class="section tight{% if not articles.length %} flush-top{% endif %}" aria-labelledby="inquiries-title">
   <div class="wrap press-contact">
     <div class="copy">
       <h2 class="h2" id="inquiries-title" data-reveal>Media inquiries</h2>
