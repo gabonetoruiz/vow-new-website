@@ -56,7 +56,7 @@ footer{border-top:1px solid var(--rule);padding:36px 0 28px;font-size:14px}
 .foot-links a,.legal a{display:inline-flex;align-items:center;min-height:44px;padding:0 10px}
 .foot-links a:hover,.legal a:hover{color:var(--paper)}
 .foot-base{display:flex;justify-content:space-between;align-items:center;gap:8px 24px;flex-wrap:wrap;margin-top:20px;padding-top:12px;border-top:1px solid var(--rule);color:var(--faint)}
-.legal{display:flex;align-items:center;gap:4px}
+.legal{display:flex;flex-wrap:wrap;align-items:center;gap:0 4px;white-space:nowrap}
 .legal span{padding-left:10px}
 .foot-sectors{display:flex;flex-wrap:wrap;align-items:center;gap:0 4px;list-style:none;margin-top:12px;color:var(--faint)}
 .foot-sectors a{display:inline-flex;align-items:center;min-height:44px;padding:0 10px}
