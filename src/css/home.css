@@ -19,6 +19,8 @@
 .hero-body{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding-top:clamp(96px,14vh,150px);padding-bottom:clamp(8px,2vh,24px)}
 .eyebrow{font-size:15px;color:var(--ice);margin-bottom:30px;display:inline-flex;align-items:center;gap:12px}
 .eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--ice);box-shadow:0 0 12px 2px rgba(207,224,255,.8)}
+/* Sized so each headline line stays on one line on desktop */
+.hero .display{font-size:clamp(44px,6.8vw,92px)}
 .hero h1 span{display:block}
 .hero h1 .word{display:inline-block}
 .hero .lede{margin:30px auto 0;max-width:48ch;text-align:center}
