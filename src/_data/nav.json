@@ -4,8 +4,7 @@
     { "label": "Gallery", "url": "/gallery/" },
     { "label": "Press", "url": "/press/" },
     { "label": "FAQs", "url": "/faq/" },
-    { "label": "Clients", "url": "/clients/" },
-    { "label": "Team", "url": "/team/" }
+    { "label": "Clients", "url": "/clients/" }
   ],
   "ctaLabel": "Connect with VOW"
 }

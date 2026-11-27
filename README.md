@@ -42,7 +42,7 @@ src/
 | FAQs | `src/_data/faqs.json` (the page and its search-engine markup both come from it) |
 | Client logos | `src/_data/clients.json` (the home page marquee is still written by hand in `index.njk`) |
 | Press items | `src/_data/press.json` (`date`, `outlet`, `title`, `url`, `image`; thumbnails in `src/assets/img/press/`; newest first) |
-| Team bios | `src/_data/team.json` (page: `src/team.njk`) |
+| Team bios | `src/_data/team.json` (page: `src/team.njk`, currently unpublished) |
 | An ecosystem diagram | `src/_data/ecosystem.json` (key `home`, or a sector slug to end that sector page with it) |
 | The testimonial | `src/_data/testimonial.json` (used on the home and Clients pages) |
 | Colours, fonts, spacing | `src/css/tokens.css` |
