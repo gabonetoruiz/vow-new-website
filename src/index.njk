@@ -3,7 +3,7 @@ layout: layouts/base.njk
 pageTitle: "VOW — Premium event & guest technology"
 description: "B2B2VIP technology connecting the teams behind extraordinary events with the guests at the heart of them."
 styles: [home, ecosystem]
-scripts: [hero-gradient, sectors, cards, reel, ecosystem]
+scripts: [hero-gradient, segments, sectors, cards, reel, ecosystem]
 motion: [hero, reveal, hover, depth, marquee, cta, ecosystem]
 ---
 
@@ -14,15 +14,15 @@ motion: [hero, reveal, hover, depth, marquee, cta, ecosystem]
   </div>
   <div class="wrap hero-body">
     <div class="stage">
-      <p class="eyebrow" data-hero="eyebrow">B2B2VIP. Real-time. Scalable.</p>
+      <p class="eyebrow" data-hero="eyebrow">B2B2VIP</p>
       <h1 class="display" id="hero-title">
-        <span data-hero="line">Event and Guest Technology</span>
-        <span data-hero="line">for Premium Live Experiences</span>
+        <span data-hero="line">The Operating System for</span>
+        <span data-hero="line">Premium Live Experiences.</span>
       </h1>
     </div>
-    <p class="lede" data-hero="sub">Unify your team, stakeholders, groups and guests, alongside relationships, data, workflows and platforms, all in one place.</p>
+    <p class="lede" data-hero="sub">One connected platform to orchestrate high-stakes events, personalize every journey and strengthen every relationship.</p>
     <div class="ctas">
-      <a href="/contact/#demo" class="btn btn-primary" data-hero="cta">Book Demo</a>
+      <a href="/contact/#demo" class="btn btn-primary" data-hero="cta">Book DEMO</a>
       <a href="#platform" class="btn btn-ghost" data-hero="cta">Meet VOW</a>
     </div>
   </div>
@@ -45,16 +45,22 @@ motion: [hero, reveal, hover, depth, marquee, cta, ecosystem]
     <svg class="i-play" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3.5 12.5 8 5 12.5Z" fill="currentColor"/></svg>
   </button>
   <div class="hero-foot" data-hero="foot">
-    <a href="#perspective" class="cue"><span>In real time. In every detail.</span><b aria-hidden="true"></b></a>
+    <a href="#perspective" class="cue" aria-label="Scroll down"><b aria-hidden="true"></b></a>
   </div>
 </section>
 
-<!-- Market segments -->
+<!-- Market segments: a rotating row; the second list only closes the loop -->
+{%- set markets = ["Media", "Entertainment", "Philanthropy", "Corporate", "Sports", "Olympics", "Grand Scale"] %}
 <section class="segments" aria-label="Markets we serve">
-  <div class="wrap">
+  <div class="seg-track">
     <ul>
-      {%- for s in sectors %}
-      <li>{{ s.name }}</li>
+      {%- for m in markets %}
+      <li>{{ m }}</li>
+      {%- endfor %}
+    </ul>
+    <ul aria-hidden="true">
+      {%- for m in markets %}
+      <li>{{ m }}</li>
       {%- endfor %}
     </ul>
   </div>
@@ -150,7 +156,8 @@ motion: [hero, reveal, hover, depth, marquee, cta, ecosystem]
 <section class="section sectors" id="sectors" aria-labelledby="sectors-title">
   <div class="wrap grid">
     <div class="intro">
-      <h2 class="h2" id="sectors-title"><span>Five worlds.</span> <span>One standard.</span> <span class="accent">Unified solution.</span></h2>
+      <p class="eyebrow">WHO WE SERVE</p>
+      <h2 class="h2" id="sectors-title"><span>Five worlds, one standard.</span> <span class="accent">A unified solution.</span></h2>
       <p class="lede">Explore each ecosystem using the eye icon.</p>
       <figure class="sector-frame" id="sectorFrame" aria-hidden="true">
         {%- for s in sectors %}
