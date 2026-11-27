@@ -33,12 +33,12 @@
   document.documentElement.classList.add('js');
   setTimeout(function(){ if(!document.documentElement.classList.contains('gsap-ready')) document.documentElement.classList.remove('js'); }, 3000);
 </script>
-<link rel="stylesheet" href="/css/tokens.css">
-<link rel="stylesheet" href="/css/base.css">
-<link rel="stylesheet" href="/css/components.css">
-<link rel="stylesheet" href="/css/nav.css">
+<link rel="stylesheet" href="/css/tokens.css?v={{ build }}">
+<link rel="stylesheet" href="/css/base.css?v={{ build }}">
+<link rel="stylesheet" href="/css/components.css?v={{ build }}">
+<link rel="stylesheet" href="/css/nav.css?v={{ build }}">
 {%- for name in styles %}
-<link rel="stylesheet" href="/css/{{ name }}.css">
+<link rel="stylesheet" href="/css/{{ name }}.css?v={{ build }}">
 {%- endfor %}
 </head>
 <body>
@@ -58,18 +58,18 @@
 {% include "consent.njk" %}
 
 <!-- Scripts: classic scripts in dependency order (the 'js' flag above stays inline so first paint is never flashed) -->
-<script src="/js/nav.js"></script>
-<script src="/js/ambient.js"></script>
-<script src="/js/consent.js"></script>
+<script src="/js/nav.js?v={{ build }}"></script>
+<script src="/js/ambient.js?v={{ build }}"></script>
+<script src="/js/consent.js?v={{ build }}"></script>
 {%- for name in scripts %}
-<script src="/js/{{ name }}.js"></script>
+<script src="/js/{{ name }}.js?v={{ build }}"></script>
 {%- endfor %}
 {%- if motion %}
 
 <!-- GSAP motion layer -->
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
-<script src="/js/motion-core.js"></script>
+<script src="/js/motion-core.js?v={{ build }}"></script>
 {%- for name in motion %}
 <script src="/js/motion-{{ name }}.js"></script>
 {%- endfor %}
