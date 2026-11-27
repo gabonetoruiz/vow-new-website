@@ -8,8 +8,8 @@ permalink: "/sectors/{{ sector.slug }}/"
 eleventyComputed:
   title: "{{ sector.name }}"
   description: "{{ sector.intro }}"
-styles: [inner]
-scripts: [cards]
+styles: [inner, ecosystem, ecosystem-iso]
+scripts: [cards, ecosystem-iso]
 motion: [reveal, hover, sector]
 ---
 <section class="sector-hero" aria-labelledby="sector-title">
@@ -102,5 +102,11 @@ motion: [reveal, hover, sector]
     </ul>
   </div>
 </section>
+
+{#- Sectors with an entry in _data/ecosystem.json end on their ecosystem diagram #}
+{%- set eco = ecosystem[sector.slug] %}
+{%- if eco %}
+{% include "ecosystem-iso.njk" %}
+{%- endif %}
 
 {% include "cta.njk" %}

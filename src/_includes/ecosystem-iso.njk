@@ -1,0 +1,33 @@
+{#- Ecosystem, option B: isometric tiles that settle around the hub (js/ecosystem-iso.js).
+    Same copy and surrounding styles as ecosystem.njk. #}
+<section class="section ecosystem" aria-labelledby="eco-b-title">
+  <div class="wrap">
+    <div class="eco-head">
+      <p class="eyebrow" data-reveal>{{ eco.eyebrow }}</p>
+      <h2 class="h2" id="eco-b-title" data-reveal>{% for line in eco.title %}<span>{{ line }}</span> {% endfor %}</h2>
+    </div>
+    {%- if eco.ring %}
+    <div class="iso is-grand" data-eco-iso data-config="{{ eco | json }}" tabindex="0" role="img"
+      aria-label="{{ eco.center }} at the centre, ringed by {{ eco.ring | join(', ') }}, and connected to the groups listed below and to {{ eco.integrations | join(', ') }}."></div>
+    {#- Read by screen readers everywhere, and shown on phones, where subtitles do not fit on the tiles #}
+    <dl class="iso-legend">
+      {%- for n in eco.nodes %}
+      <div><dt>{{ n.title }}</dt><dd>{{ n.sub }}</dd></div>
+      {%- endfor %}
+    </dl>
+    {%- else %}
+    <div class="iso" data-eco-iso data-config="{{ eco | json }}" tabindex="0" role="img"
+      aria-label="{{ eco.center }} at the centre, connected to {{ eco.nodes | join(', ') }}."></div>
+    {%- endif %}
+    <p class="eco-closing" data-reveal>{{ eco.closing }}</p>
+  </div>
+  <div class="eco-tags" data-reveal>
+    <div class="wrap">
+      <ul style="--cols:{{ eco.tags.length }}">
+        {%- for t in eco.tags %}
+        <li>{{ t }}</li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </div>
+</section>

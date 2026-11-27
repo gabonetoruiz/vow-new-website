@@ -1,0 +1,15 @@
+---
+layout: layouts/base.njk
+title: "Ecosystem Options"
+description: "Two directions for the ecosystem section, side by side for review."
+permalink: /ecosystem-options/
+styles: [home, ecosystem, ecosystem-iso]
+scripts: [ecosystem, ecosystem-iso]
+motion: [reveal, ecosystem]
+---
+{#- Review page only: delete it (and the option not chosen) before launch. #}
+{% set eco = ecosystem.home %}
+<div class="option-label option-first"><div class="wrap"><h1>Option A</h1><p>Orbit in 3D</p></div></div>
+{% include "ecosystem.njk" %}
+<div class="option-label"><div class="wrap"><h1>Option B</h1><p>Isometric tiles that assemble</p></div></div>
+{% include "ecosystem-iso.njk" %}

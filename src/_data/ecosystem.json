@@ -1,0 +1,311 @@
+{
+  "home": {
+    "eyebrow": "CONNECTED BY DESIGN. REAL-TIME BY NATURE.",
+    "title": [
+      "An entire ecosystem.",
+      "One intelligent platform."
+    ],
+    "center": "VOW",
+    "nodes": [
+      "Your Event Team",
+      "Collaborators",
+      "Groups",
+      "Guests",
+      "Hosts",
+      "Stakeholders"
+    ],
+    "tags": [
+      "People",
+      "Relationships",
+      "Data",
+      "Workflows",
+      "Intelligence"
+    ],
+    "closing": "A change in one place is a change everywhere."
+  },
+  "olympics": {
+    "eyebrow": "CONNECTED BY DESIGN. REAL-TIME BY NATURE.",
+    "title": [
+      "An entire ecosystem.",
+      "One intelligent platform."
+    ],
+    "center": "VOW",
+    "ring": [
+      "INVENTORY",
+      "ENTITLEMENTS",
+      "ALLOCATIONS",
+      "BENEFITS"
+    ],
+    "nodes": [
+      {
+        "title": "Planning & Operations",
+        "sub": "Internal & External Event Teams"
+      },
+      {
+        "title": "Collaborators",
+        "sub": "Venues, Vendors & Service Providers"
+      },
+      {
+        "title": "Groups",
+        "sub": "Partners, Sponsors & Delegations"
+      },
+      {
+        "title": "Guests",
+        "sub": "Primaries & Plus-Ones"
+      },
+      {
+        "title": "Hosts",
+        "sub": "Relationship Owners & Managers"
+      },
+      {
+        "title": "Stakeholders",
+        "sub": "Departments, Leadership & Rights Holders"
+      }
+    ],
+    "integrations": [
+      "CRM",
+      "BI",
+      "APIs",
+      "Ticketing",
+      "Hospitality",
+      "Payments"
+    ],
+    "tags": [
+      "Events",
+      "People",
+      "Relationships",
+      "Data",
+      "Workflows",
+      "Intelligence"
+    ],
+    "closing": "A change in one place is a change everywhere."
+  },
+  "sports": {
+    "eyebrow": "CONNECTED BY DESIGN. REAL-TIME BY NATURE.",
+    "title": [
+      "An entire ecosystem.",
+      "One intelligent platform."
+    ],
+    "center": "VOW",
+    "ring": [
+      "INVENTORY",
+      "MEMBERSHIPS",
+      "PARTNERSHIPS",
+      "BENEFITS"
+    ],
+    "nodes": [
+      {
+        "title": "Hospitality Teams",
+        "sub": "Premium & Ticketing Teams"
+      },
+      {
+        "title": "Collaborators",
+        "sub": "Venues, Vendors & Service Providers"
+      },
+      {
+        "title": "Groups",
+        "sub": "Partners, Sponsors & Suite Holders"
+      },
+      {
+        "title": "Guests",
+        "sub": "VIPs & Plus-Ones"
+      },
+      {
+        "title": "Hosts",
+        "sub": "Relationship Owners & Managers"
+      },
+      {
+        "title": "Stakeholders",
+        "sub": "Leadership & Rights Holders"
+      }
+    ],
+    "integrations": [
+      "CRM",
+      "BI",
+      "APIs",
+      "Ticketing",
+      "Hospitality",
+      "Payments"
+    ],
+    "tags": [
+      "Events",
+      "People",
+      "Relationships",
+      "Data",
+      "Workflows",
+      "Intelligence"
+    ],
+    "closing": "A change in one place is a change everywhere."
+  },
+  "media-entertainment": {
+    "eyebrow": "CONNECTED BY DESIGN. REAL-TIME BY NATURE.",
+    "title": [
+      "An entire ecosystem.",
+      "One intelligent platform."
+    ],
+    "center": "VOW",
+    "ring": [
+      "CREDENTIALS",
+      "ARRIVALS",
+      "SCHEDULES",
+      "SEATING"
+    ],
+    "nodes": [
+      {
+        "title": "Production Teams",
+        "sub": "Internal & External Event Teams"
+      },
+      {
+        "title": "Talent & Press",
+        "sub": "Publicists, Press & Handlers"
+      },
+      {
+        "title": "Groups",
+        "sub": "Sponsors & Corporate Partners"
+      },
+      {
+        "title": "Guests",
+        "sub": "VIPs & Plus-Ones"
+      },
+      {
+        "title": "Hosts",
+        "sub": "Relationship Owners & Managers"
+      },
+      {
+        "title": "Collaborators",
+        "sub": "Venues, Security & Vendors"
+      }
+    ],
+    "integrations": [
+      "CRM",
+      "BI",
+      "APIs",
+      "Ticketing",
+      "Travel",
+      "Payments"
+    ],
+    "tags": [
+      "Events",
+      "People",
+      "Relationships",
+      "Data",
+      "Workflows",
+      "Intelligence"
+    ],
+    "closing": "A change in one place is a change everywhere."
+  },
+  "philanthropy": {
+    "eyebrow": "CONNECTED BY DESIGN. REAL-TIME BY NATURE.",
+    "title": [
+      "An entire ecosystem.",
+      "One intelligent platform."
+    ],
+    "center": "VOW",
+    "ring": [
+      "INVITATIONS",
+      "SEATING",
+      "GIVING",
+      "STEWARDSHIP"
+    ],
+    "nodes": [
+      {
+        "title": "Development & Events",
+        "sub": "Internal & External Event Teams"
+      },
+      {
+        "title": "Boards & Committees",
+        "sub": "Trustees & Chairs"
+      },
+      {
+        "title": "Groups",
+        "sub": "Sponsors & Corporate Partners"
+      },
+      {
+        "title": "Guests",
+        "sub": "Donors & Plus-Ones"
+      },
+      {
+        "title": "Hosts",
+        "sub": "Table Hosts & Relationship Owners"
+      },
+      {
+        "title": "Collaborators",
+        "sub": "Venues, Vendors & Service Providers"
+      }
+    ],
+    "integrations": [
+      "CRM",
+      "BI",
+      "APIs",
+      "Ticketing",
+      "Auctions",
+      "Payments"
+    ],
+    "tags": [
+      "Events",
+      "People",
+      "Relationships",
+      "Data",
+      "Workflows",
+      "Intelligence"
+    ],
+    "closing": "A change in one place is a change everywhere."
+  },
+  "corporate-finance": {
+    "eyebrow": "CONNECTED BY DESIGN. REAL-TIME BY NATURE.",
+    "title": [
+      "An entire ecosystem.",
+      "One intelligent platform."
+    ],
+    "center": "VOW",
+    "ring": [
+      "INVITATIONS",
+      "ACCESS",
+      "HOSPITALITY",
+      "FOLLOW-UP"
+    ],
+    "nodes": [
+      {
+        "title": "Event Teams",
+        "sub": "Internal & External Event Teams"
+      },
+      {
+        "title": "Business Units",
+        "sub": "Departments & Corporate Partners"
+      },
+      {
+        "title": "Groups",
+        "sub": "Clients, Investors & Members"
+      },
+      {
+        "title": "Guests",
+        "sub": "VIP Guests & Plus-Ones"
+      },
+      {
+        "title": "Hosts",
+        "sub": "Relationship Owners & Executives"
+      },
+      {
+        "title": "Collaborators",
+        "sub": "Venues, Vendors & Service Providers"
+      }
+    ],
+    "integrations": [
+      "CRM",
+      "BI",
+      "APIs",
+      "Calendars",
+      "Travel",
+      "Payments"
+    ],
+    "tags": [
+      "Events",
+      "People",
+      "Relationships",
+      "Data",
+      "Workflows",
+      "Intelligence"
+    ],
+    "closing": "A change in one place is a change everywhere."
+  }
+}

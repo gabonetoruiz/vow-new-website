@@ -1,126 +1,55 @@
 [
   {
-    "slug": "media",
-    "name": "Media",
-    "kicker": "Premieres and press",
-    "headline": ["The List", "Moves with the Room."],
-    "statement": "The Room Changes by the Hour. The List Changes with It.",
-    "scene": {
-      "label": "Live floor",
-      "title": "Premiere, 7:40pm",
-      "rows": [
-        { "label": "Talent checked in", "value": "86", "fill": 0.72 },
-        { "label": "Press on the riser", "value": "42", "fill": 0.48 },
-        { "label": "Partners in the room", "value": "18", "fill": 0.28 }
-      ]
-    },
-    "figures": [
-      { "value": 420, "suffix": "", "label": "Guests on the list" },
-      { "value": 18, "suffix": "", "label": "Hosts in the room" },
-      { "value": 6, "suffix": "", "label": "Spaces in use" },
-      { "value": 12, "suffix": "", "label": "Alerts this hour" }
-    ],
-    "blurb": "Premieres and press events",
-    "short": "Premieres, upfronts and press events, with talent and press lists in sync.",
-    "intro": "Premieres, upfronts and press days run on lists that change by the hour. VOW keeps talent, press and partners in one live view, so the people running the room can focus on the room.",
-    "image": "/assets/img/sector-media.jpg",
-    "imageAlt": "A broadcast camera operator at a press riser facing a lit stage",
-    "imageW": 1920,
-    "imageH": 1433,
-    "points": [
-      { "title": "One List for Talent, Press and Partners", "text": "Manage guests, groups and hosts together, with RSVPs and registrations feeding the same live record." },
-      { "title": "Credentials That Update Instantly", "text": "Issue digital passes and change access in real time, without reprinting or resending anything." },
-      { "title": "Changes Reach Everyone at Once", "text": "Use the real-time communications hub and alerts to tell the right people the moment a schedule or arrival changes." }
-    ]
-  },
-  {
-    "slug": "entertainment",
-    "name": "Entertainment",
-    "kicker": "Awards, tours, festivals",
-    "headline": ["Every Group,", "a Different Night."],
-    "statement": "One Building. A Different Plan for Every Group Inside It.",
-    "scene": {
-      "label": "Live floor",
-      "title": "Arena, doors at 6",
-      "rows": [
-        { "label": "Artists in house", "value": "24", "fill": 0.4 },
-        { "label": "Crew on radios", "value": "140", "fill": 0.78 },
-        { "label": "VIP fans seated", "value": "310", "fill": 0.62 }
-      ]
-    },
-    "figures": [
-      { "value": 1800, "suffix": "", "label": "Guests across groups" },
-      { "value": 4, "suffix": "", "label": "Schedules running" },
-      { "value": 36, "suffix": "", "label": "Passes updated" },
-      { "value": 9, "suffix": "", "label": "Calls to concierge" }
-    ],
-    "blurb": "Awards, tours and festivals",
-    "short": "Award shows, tours and festivals, from artist hospitality to fan VIP.",
-    "intro": "Award shows, tours and festivals bring artists, crews, sponsors and VIP fans into the same building. VOW gives each group the right schedule and access, with one team coordinating all of them.",
-    "image": "/assets/img/sector-entertainment.jpg",
-    "imageAlt": "Guests watching an arena concert from a VIP platform",
-    "imageW": 1920,
-    "imageH": 1433,
-    "points": [
-      { "title": "Every Group, One Platform", "text": "Manage artists, crew, sponsors and VIP guests as separate groups, each with their own schedule and access." },
-      { "title": "A Personal Schedule for Each Guest", "text": "VOW GO puts each guest’s details, passes and updates in their pocket, on web or mobile." },
-      { "title": "Support on the Night", "text": "Dedicated help for your team before and during the event, and a concierge for guests when plans change." }
-    ]
-  },
-  {
-    "slug": "philanthropy",
-    "name": "Philanthropy",
-    "kicker": "Galas and donors",
-    "headline": ["Known by Name", "before They Arrive."],
-    "statement": "From the Car Door to the Last Goodbye, Every Donor Is Expected.",
-    "scene": {
-      "label": "Live floor",
-      "title": "Gala, first seating",
-      "rows": [
-        { "label": "Donors arrived", "value": "164", "fill": 0.66 },
-        { "label": "Tables seated", "value": "22", "fill": 0.84 },
-        { "label": "Cars on the way", "value": "11", "fill": 0.22 }
-      ]
-    },
-    "figures": [
-      { "value": 240, "suffix": "", "label": "Guests expected" },
-      { "value": 22, "suffix": "", "label": "Host tables" },
-      { "value": 48, "suffix": "", "label": "Arrivals this hour" },
-      { "value": 3, "suffix": "", "label": "Departures staged" }
-    ],
-    "blurb": "Galas and donor events",
-    "short": "Galas, auctions and donor events where every guest is known by name.",
-    "intro": "A gala works when donors feel recognised. VOW helps your team know every guest, manage hosts and tables, and make arrival, seating and departure feel effortless.",
-    "image": "/assets/img/sector-philanthropy.jpg",
-    "imageAlt": "A guest placing a card into an envelope on a candlelit gala table",
-    "imageW": 1920,
-    "imageH": 1433,
-    "points": [
-      { "title": "Know Every Guest", "text": "Keep guest, group and host details together, from the first RSVP to the last goodbye." },
-      { "title": "Arrival, Check-In and Departure", "text": "Coordinate cars, doors and departures so every donor’s arrival feels expected." },
-      { "title": "Payments in the Same Experience", "text": "Take payments and handle purchases inside the guest experience, not in a separate system." }
-    ]
-  },
-  {
     "slug": "sports",
     "name": "Sports",
     "kicker": "Suites and matchdays",
-    "headline": ["A New List", "Every Matchday."],
+    "headline": [
+      "A New List",
+      "Every Matchday."
+    ],
     "statement": "The Suite Stays. The Guest List Does Not.",
     "scene": {
       "label": "Live floor",
       "title": "Matchday, gate open",
       "rows": [
-        { "label": "Suite guests in", "value": "96", "fill": 0.6 },
-        { "label": "Sponsors hosted", "value": "14", "fill": 0.7 },
-        { "label": "Passes scanned", "value": "210", "fill": 0.8 }
+        {
+          "label": "Suite guests in",
+          "value": "96",
+          "fill": 0.6
+        },
+        {
+          "label": "Sponsors hosted",
+          "value": "14",
+          "fill": 0.7
+        },
+        {
+          "label": "Passes scanned",
+          "value": "210",
+          "fill": 0.8
+        }
       ]
     },
     "figures": [
-      { "value": 320, "suffix": "", "label": "Guests this match" },
-      { "value": 12, "suffix": "", "label": "Suites open" },
-      { "value": 8, "suffix": "", "label": "Sponsor groups" },
-      { "value": 19, "suffix": "", "label": "Season events left" }
+      {
+        "value": 320,
+        "suffix": "",
+        "label": "Guests this match"
+      },
+      {
+        "value": 12,
+        "suffix": "",
+        "label": "Suites open"
+      },
+      {
+        "value": 8,
+        "suffix": "",
+        "label": "Sponsor groups"
+      },
+      {
+        "value": 19,
+        "suffix": "",
+        "label": "Season events left"
+      }
     ],
     "blurb": "Suites, sponsors, matchdays",
     "short": "Suites, sponsor hospitality and matchdays across a full season.",
@@ -130,78 +59,328 @@
     "imageW": 1920,
     "imageH": 1433,
     "points": [
-      { "title": "Hospitality That Scales across a Season", "text": "Reuse groups and hosts from event to event while keeping each matchday’s list current." },
-      { "title": "Sponsors and Partners in View", "text": "Manage sponsors, speakers and VIP groups in the same place as your general guest list." },
-      { "title": "Digital Tickets and Access", "text": "Issue and update tickets and access passes in real time, right up to the gate." }
+      {
+        "title": "Hospitality That Scales across a Season",
+        "text": "Reuse groups and hosts from event to event while keeping each matchday’s list current."
+      },
+      {
+        "title": "Sponsors and Partners in View",
+        "text": "Manage sponsors, speakers and VIP groups in the same place as your general guest list."
+      },
+      {
+        "title": "Digital Tickets and Access",
+        "text": "Issue and update tickets and access passes in real time, right up to the gate."
+      }
     ],
-    "related": { "label": "See the Team USA Concept", "url": "/#cases" }
+    "related": {
+      "label": "See the Team USA Concept",
+      "url": "/#cases"
+    },
+    "line": "Premium Hospitality. Partner Programs. Season Ticket Memberships. VIP Experiences.",
+    "description": "Connecting premium hospitality, partnerships and season ticket membership programs with the teams, hosts, groups and guests behind them to elevate experiences, strengthen relationships and drive loyalty, retention and revenue."
+  },
+  {
+    "slug": "media-entertainment",
+    "name": "Media & Entertainment",
+    "kicker": "Premieres, awards, tours",
+    "headline": [
+      "Every Group,",
+      "a Different Night."
+    ],
+    "statement": "One Building. A Different Plan for Every Group Inside It.",
+    "scene": {
+      "label": "Live floor",
+      "title": "Arena, doors at 6",
+      "rows": [
+        {
+          "label": "Artists in house",
+          "value": "24",
+          "fill": 0.4
+        },
+        {
+          "label": "Crew on radios",
+          "value": "140",
+          "fill": 0.78
+        },
+        {
+          "label": "VIP fans seated",
+          "value": "310",
+          "fill": 0.62
+        }
+      ]
+    },
+    "figures": [
+      {
+        "value": 1800,
+        "suffix": "",
+        "label": "Guests across groups"
+      },
+      {
+        "value": 4,
+        "suffix": "",
+        "label": "Schedules running"
+      },
+      {
+        "value": 36,
+        "suffix": "",
+        "label": "Passes updated"
+      },
+      {
+        "value": 9,
+        "suffix": "",
+        "label": "Calls to concierge"
+      }
+    ],
+    "blurb": "Premieres, awards and tours",
+    "short": "Award shows, premieres, upfronts and tours, with every list in sync.",
+    "intro": "Premieres, award shows, upfronts and tours bring talent, press, sponsors and VIP guests into the same room, on lists that change by the hour. VOW keeps every group in one live view, each with the right schedule and access.",
+    "image": "/assets/img/sector-entertainment.jpg",
+    "imageAlt": "Guests watching an arena concert from a VIP platform",
+    "imageW": 1920,
+    "imageH": 1433,
+    "points": [
+      {
+        "title": "One List for Talent, Press and Partners",
+        "text": "Manage guests, groups and hosts together, with RSVPs and registrations feeding the same live record."
+      },
+      {
+        "title": "A Personal Schedule for Each Guest",
+        "text": "VOW GO puts each guest’s details, passes and updates in their pocket, on web or mobile."
+      },
+      {
+        "title": "Changes Reach Everyone at Once",
+        "text": "Use the real-time communications hub and alerts to tell the right people the moment a schedule or arrival changes."
+      }
+    ],
+    "line": "Award Shows. Premieres. Upfronts. Opening Nights. Live Productions. Tours.",
+    "description": "Connecting guests, groups, hosts, sponsors and corporate partners with production, talent, publicity, press, handlers and security to orchestrate exceptional guest experiences across high-stakes, ever-changing environments, from red carpet moments to live productions."
+  },
+  {
+    "slug": "philanthropy",
+    "name": "Philanthropy & Nonprofits",
+    "kicker": "Galas and donors",
+    "headline": [
+      "Known by Name",
+      "before They Arrive."
+    ],
+    "statement": "From the Car Door to the Last Goodbye, Every Donor Is Expected.",
+    "scene": {
+      "label": "Live floor",
+      "title": "Gala, first seating",
+      "rows": [
+        {
+          "label": "Donors arrived",
+          "value": "164",
+          "fill": 0.66
+        },
+        {
+          "label": "Tables seated",
+          "value": "22",
+          "fill": 0.84
+        },
+        {
+          "label": "Cars on the way",
+          "value": "11",
+          "fill": 0.22
+        }
+      ]
+    },
+    "figures": [
+      {
+        "value": 240,
+        "suffix": "",
+        "label": "Guests expected"
+      },
+      {
+        "value": 22,
+        "suffix": "",
+        "label": "Host tables"
+      },
+      {
+        "value": 48,
+        "suffix": "",
+        "label": "Arrivals this hour"
+      },
+      {
+        "value": 3,
+        "suffix": "",
+        "label": "Departures staged"
+      }
+    ],
+    "blurb": "Galas and donor events",
+    "short": "Galas, auctions and donor events where every guest is known by name.",
+    "intro": "A gala works when donors feel recognised. VOW helps your team know every guest, manage hosts and tables, and make arrival, seating and departure feel effortless.",
+    "image": "/assets/img/sector-philanthropy.jpg",
+    "imageAlt": "A guest placing a card into an envelope on a candlelit gala table",
+    "imageW": 1920,
+    "imageH": 1433,
+    "points": [
+      {
+        "title": "Know Every Guest",
+        "text": "Keep guest, group and host details together, from the first RSVP to the last goodbye."
+      },
+      {
+        "title": "Arrival, Check-In and Departure",
+        "text": "Coordinate cars, doors and departures so every donor’s arrival feels expected."
+      },
+      {
+        "title": "Payments in the Same Experience",
+        "text": "Take payments and handle purchases inside the guest experience, not in a separate system."
+      }
+    ],
+    "line": "Galas. Benefits. Giving Programs. Donor Cultivation & Stewardship Events.",
+    "description": "Connecting development and event teams, boards, committees and hosts with donors, sponsors, corporate partners, groups and guests to elevate fundraising experiences, deepen donor relationships and advance stewardship."
+  },
+  {
+    "slug": "corporate-finance",
+    "name": "Corporate & Finance",
+    "kicker": "Clients, investors, members",
+    "headline": [
+      "Every Relationship,",
+      "in View."
+    ],
+    "statement": "Every Client Arrives to a Team That Already Knows the Plan.",
+    "scene": {
+      "label": "Live floor",
+      "title": "Client evening, 6:30pm",
+      "rows": [
+        {
+          "label": "Clients arrived",
+          "value": "74",
+          "fill": 0.62
+        },
+        {
+          "label": "Relationship owners",
+          "value": "16",
+          "fill": 0.8
+        },
+        {
+          "label": "Business units",
+          "value": "5",
+          "fill": 0.5
+        }
+      ]
+    },
+    "figures": [
+      {
+        "value": 180,
+        "suffix": "",
+        "label": "Guests expected"
+      },
+      {
+        "value": 16,
+        "suffix": "",
+        "label": "Relationship owners"
+      },
+      {
+        "value": 5,
+        "suffix": "",
+        "label": "Business units"
+      },
+      {
+        "value": 9,
+        "suffix": "",
+        "label": "Updates this hour"
+      }
+    ],
+    "line": "Brand Experiences. Executive Hospitality. Client & Investor Events. Membership Experiences.",
+    "blurb": "Brand and executive hospitality",
+    "short": "Brand experiences and executive hospitality for clients, investors and members.",
+    "intro": "Brand experiences and executive hospitality involve several business units and many relationship owners. VOW keeps clients, investors, members and VIP guests in one live view, so every team knows who is coming and who is looking after them.",
+    "image": "/assets/img/gallery/saatva-ribbon-cutting.jpg",
+    "imageAlt": "A group gathers outside a storefront with a gold ribbon stretched across the entrance",
+    "imageW": 1100,
+    "imageH": 1047,
+    "points": [
+      {
+        "title": "One View across Business Units",
+        "text": "Manage guests, groups and hosts from every team in the same place."
+      },
+      {
+        "title": "Hosts Matched to Guests",
+        "text": "Give each relationship owner the schedule and details of the people they are hosting."
+      },
+      {
+        "title": "Work with the Systems You Have",
+        "text": "Connect work across the apps and legacy systems your teams already use."
+      }
+    ],
+    "description": "Connecting event teams, business units, corporate partners and relationship owners with clients, investors, members and VIP guests across brand experiences and executive hospitality to strengthen business relationships and create opportunities for growth."
   },
   {
     "slug": "olympics",
-    "name": "Olympics",
-    "kicker": "Delegations and partners",
-    "headline": ["Many Venues.", "One Record."],
+    "name": "Olympics & Grand Scale",
+    "kicker": "Delegations and multi-venue programs",
+    "headline": [
+      "Many Venues.",
+      "One Record."
+    ],
     "statement": "Weeks of Venues, and One Record That Keeps Up.",
     "scene": {
       "label": "Live floor",
       "title": "Day 4, three venues",
       "rows": [
-        { "label": "Delegation on site", "value": "58", "fill": 0.58 },
-        { "label": "Family guests", "value": "120", "fill": 0.5 },
-        { "label": "Credential changes", "value": "17", "fill": 0.34 }
+        {
+          "label": "Delegation on site",
+          "value": "58",
+          "fill": 0.58
+        },
+        {
+          "label": "Family guests",
+          "value": "120",
+          "fill": 0.5
+        },
+        {
+          "label": "Credential changes",
+          "value": "17",
+          "fill": 0.34
+        }
       ]
     },
     "figures": [
-      { "value": 640, "suffix": "", "label": "People in program" },
-      { "value": 3, "suffix": "", "label": "Venues today" },
-      { "value": 14, "suffix": "", "label": "Days remaining" },
-      { "value": 27, "suffix": "", "label": "Updates sent" }
+      {
+        "value": 640,
+        "suffix": "",
+        "label": "People in program"
+      },
+      {
+        "value": 3,
+        "suffix": "",
+        "label": "Venues today"
+      },
+      {
+        "value": 14,
+        "suffix": "",
+        "label": "Days remaining"
+      },
+      {
+        "value": 27,
+        "suffix": "",
+        "label": "Updates sent"
+      }
     ],
-    "blurb": "Delegations and partners",
-    "short": "Delegations, families and partners across weeks of competition.",
-    "intro": "The Olympics bring delegations, families, partners and press together for weeks, across many venues. VOW keeps every group informed and every credential current while the schedule moves.",
+    "blurb": "Delegations and multi-venue programs",
+    "short": "Delegations, partners and multi-venue programs across weeks.",
+    "intro": "The Olympics and other large-scale programs bring delegations, families, partners and press together for weeks, across many venues. VOW puts the people running them on one real-time platform, keeping every group informed and every credential current.",
     "image": "/assets/img/sector-olympics.jpg",
     "imageAlt": "A ceremonial flame above a packed stadium at night",
     "imageW": 1920,
     "imageH": 1433,
     "points": [
-      { "title": "Weeks-Long Programs, One Record", "text": "Keep schedules, groups and guests organised across every day of competition." },
-      { "title": "Real-Time Updates across Venues", "text": "Alerts and notifications reach the right people when plans shift, wherever they are." },
-      { "title": "A Shared View for Large Teams", "text": "Give everyone running the program the same view of every guest and every detail." }
-    ]
-  },
-  {
-    "slug": "grandscale",
-    "name": "Grandscale",
-    "kicker": "Multi-venue productions",
-    "headline": ["Thousands of Parts.", "One Place to Look."],
-    "statement": "The Spreadsheet Stack Becomes One Live View.",
-    "scene": {
-      "label": "Live floor",
-      "title": "Campus, night two",
-      "rows": [
-        { "label": "Crew assigned", "value": "480", "fill": 0.76 },
-        { "label": "Guests in transit", "value": "90", "fill": 0.36 },
-        { "label": "Venues live", "value": "5", "fill": 0.62 }
-      ]
-    },
-    "figures": [
-      { "value": 2400, "suffix": "", "label": "People on the plan" },
-      { "value": 5, "suffix": "", "label": "Venues tonight" },
-      { "value": 3, "suffix": "", "label": "Days in the run" },
-      { "value": 64, "suffix": "", "label": "Tasks closed today" }
+      {
+        "title": "Weeks-Long Programs, One Record",
+        "text": "Keep schedules, groups and guests organised across every day of competition."
+      },
+      {
+        "title": "Real-Time Updates across Venues",
+        "text": "Alerts and notifications reach the right people when plans shift, wherever they are."
+      },
+      {
+        "title": "Replace the Spreadsheet Stack",
+        "text": "Streamline complex spreadsheets and connect work across the apps and legacy systems you already use."
+      }
     ],
-    "blurb": "Multi-venue productions",
-    "short": "Multi-day, multi-venue productions with thousands of moving parts.",
-    "intro": "Multi-day, multi-venue productions have thousands of moving parts and hundreds of people responsible for them. VOW puts those people on one real-time platform instead of a stack of spreadsheets.",
-    "image": "/assets/img/sector-grandscale.jpg",
-    "imageAlt": "Aerial night view of an illuminated multi-venue event campus",
-    "imageW": 1920,
-    "imageH": 1433,
-    "points": [
-      { "title": "Replace the Spreadsheet Stack", "text": "Streamline complex spreadsheets and connect work across the apps and legacy systems you already use." },
-      { "title": "Automate the Repetitive Work", "text": "Let the platform handle manual, repetitive tasks so your staff can focus on guests." },
-      { "title": "One Guest Experience across Venues", "text": "Give each guest a single, connected schedule, pass and support line across every venue." }
-    ]
+    "line": "Premium Hospitality. Multi-Wave Programs. Multi-Day & Multi-Venue Events. Global Programs.",
+    "description": "Connecting sales, planning and operations teams, stakeholders and collaborators with groups, hosts and guests, alongside key platforms and hospitality partners, to orchestrate inventory, allocations, entitlements and benefits at immense scale."
   }
 ]

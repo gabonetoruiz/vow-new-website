@@ -31,13 +31,13 @@
 .glow-on .prod::after,.glow-on .tile::after,.glow-on .case::after,.glow-on .glow::after{opacity:1}
 
 /* final CTA */
-.cta{text-align:center;overflow:hidden;isolation:isolate}
+.cta{overflow:hidden;isolation:isolate}
 .cta-glow{position:absolute;z-index:-1;left:0;right:0;margin-inline:auto;border-radius:50%;pointer-events:none;will-change:transform,opacity}
 .cta-glow.g1{bottom:-55%;width:min(1400px,160vw);aspect-ratio:2/1;
      background:radial-gradient(closest-side,rgba(45,76,215,.55),rgba(149,164,255,.18) 55%,transparent 75%)}
 .cta-glow.g2{bottom:-38%;width:min(760px,95vw);aspect-ratio:2/1;opacity:.7;
      background:radial-gradient(closest-side,rgba(149,164,255,.32),rgba(45,76,215,.12) 60%,transparent 78%)}
 .cta::after{content:"";position:absolute;z-index:-1;left:50%;bottom:0;width:min(900px,100vw);height:1px;transform:translateX(-50%);background:linear-gradient(90deg,transparent,var(--ice),transparent);opacity:.5}
-.cta h2{max-width:16ch;margin:0 auto;font-size:clamp(44px,6.4vw,96px)}
-.cta .lede{margin:28px auto 0;text-align:center}
+.cta h2{max-width:16ch;font-size:clamp(44px,6.4vw,96px)}
+.cta .lede{margin-top:28px}
 .cta .btn{margin-top:44px;min-height:56px;padding:0 34px;font-size:16px}

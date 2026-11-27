@@ -1,0 +1,14 @@
+[
+  {
+    "from": "media",
+    "to": "media-entertainment"
+  },
+  {
+    "from": "entertainment",
+    "to": "media-entertainment"
+  },
+  {
+    "from": "grandscale",
+    "to": "olympics"
+  }
+]

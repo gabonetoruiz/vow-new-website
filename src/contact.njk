@@ -14,6 +14,7 @@ motion: [reveal, hover, contact]
         <p class="ct-intro" data-ct="intro">Send a line or two. Whether you want to <a href="#demo">book a demo</a>, have a <a href="#options">question</a> about VOW, or you’re attending an event <a href="#guests">as a guest</a>, this is the place to start.</p>
         <ul class="ct-options" id="options">
           <li data-ct="option"><span>Book Demo</span><a href="#demo">Share your event details</a></li>
+          <li data-ct="option"><span>Custom Sales Deck</span><a href="#deck">Request a deck</a></li>
           <li data-ct="option"><span>Questions and support</span><a translate="no" href="mailto:{{ contact.email }}?subject=I%20have%20a%20question">{{ contact.email }}</a></li>
           <li data-ct="option"><span>Press and media</span><a translate="no" href="mailto:{{ contact.email }}?subject=Press%20inquiry">{{ contact.email }}</a></li>
           <li data-ct="option"><span>For guests</span><a href="#guests">Get the VOW GO app</a></li>
@@ -73,6 +74,50 @@ motion: [reveal, hover, contact]
           <h3>Thank You for Your Interest in VOW.</h3>
           <p>One more step: choose a time for your personalized demo with VOW’s CEO.</p>
           <a class="btn btn-primary" href="{{ contact.meetingsUrl }}" rel="noopener">Schedule Your Demo <svg aria-hidden="true"><use href="#arrow-ne"/></svg></a>
+        </div>
+        <noscript><p class="ct-privacy">The form needs JavaScript. You can also email <a href="mailto:{{ contact.email }}">{{ contact.email }}</a>.</p></noscript>
+      </div>
+    </div>
+  </section>
+
+  <section class="ct-demo ct-deck" id="deck" aria-labelledby="deck-title">
+    <div class="wrap ct-split">
+      <div class="ct-demo-head">
+        <h2 class="h2" id="deck-title" data-reveal>Custom Sales Deck</h2>
+        <p class="lede" data-reveal>VOW provides custom Product and Sales Decks to verified potential customers within 3 business days.</p>
+        <p class="lede" data-reveal>To request a Custom VOW Product and Sales Deck, enter information here:</p>
+      </div>
+      <div class="ct-side" data-reveal>
+        {#- deckFormId in _data/contact.json: the HubSpot form for these requests. While it is empty, the form offers email instead. #}
+        <form class="ct-form" id="deckForm" novalidate data-hs-do-not-collect="true"
+              data-portal="{{ contact.hubspot.portalId }}" data-form="{{ contact.hubspot.deckFormId }}" data-email="{{ contact.email }}">
+          <p class="ct-required">All fields are required.</p>
+          <div class="field"><label for="d-first">First name</label><input id="d-first" name="firstname" data-object="0-1" autocomplete="given-name" required></div>
+          <div class="field"><label for="d-last">Last name</label><input id="d-last" name="lastname" data-object="0-1" autocomplete="family-name" required></div>
+          <div class="field"><label for="d-email">Work email</label><input id="d-email" name="email" data-object="0-1" type="email" inputmode="email" spellcheck="false" autocapitalize="off" autocomplete="email" required></div>
+          <div class="field"><label for="d-company">Company name</label><input id="d-company" name="company" data-object="0-1" autocomplete="organization" required></div>
+          <div class="field"><label for="d-domain">Company domain</label><input id="d-domain" name="company_domain" data-object="0-1" inputmode="url" spellcheck="false" autocapitalize="off" placeholder="company.com" required></div>
+          <div class="field"><label for="d-requesting">Requesting</label><input id="d-requesting" name="deck_requesting" data-object="0-1"  required></div>
+          <div class="field"><label for="d-sector">Sector</label>
+            <select id="d-sector" name="deck_sector" data-object="0-1" required>
+              <option value="">Choose a sector</option>
+              {%- for s in sectors %}
+              <option>{{ s.name }}</option>
+              {%- endfor %}
+            </select>
+          </div>
+          <div class="field"><label for="d-usecase">Primary use case</label><input id="d-usecase" name="deck_primary_use_case" data-object="0-1"  required></div>
+          <div class="field wide"><label for="d-volume">Annual number of events and experiences</label><input id="d-volume" name="deck_annual_events" data-object="0-1" inputmode="numeric" required></div>
+          <div class="trap" aria-hidden="true"><label>Leave this empty<input name="website" tabindex="-1" autocomplete="off"></label></div>
+          <div class="wide ct-submit">
+            <button type="submit" class="btn btn-primary"><span class="ct-spinner" aria-hidden="true"></span><span class="ct-label">Request a Deck</span> <svg aria-hidden="true"><use href="#arrow-ne"/></svg></button>
+            <p class="ct-privacy">VOW uses these details to verify and answer your request{% if contact.hubspot.deckFormId %}, and HubSpot processes them on its behalf{% endif %}. See the <a href="/privacy-policy/">Privacy Policy</a>.</p>
+          </div>
+          <p class="wide ct-status" id="deckStatus" role="alert"></p>
+        </form>
+        <div class="ct-thanks" id="deckThanks" tabindex="-1" hidden>
+          <h3>Thank You for Your Request.</h3>
+          <p>VOW provides custom decks to verified potential customers within 3 business days.</p>
         </div>
         <noscript><p class="ct-privacy">The form needs JavaScript. You can also email <a href="mailto:{{ contact.email }}">{{ contact.email }}</a>.</p></noscript>
       </div>

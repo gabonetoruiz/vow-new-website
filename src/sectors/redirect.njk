@@ -1,0 +1,20 @@
+---
+pagination:
+  data: redirects
+  size: 1
+  alias: move
+permalink: "/sectors/{{ move.from }}/"
+eleventyExcludeFromCollections: true
+---
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<meta http-equiv="refresh" content="0; url={{ ('/sectors/' + move.to + '/') | url }}">
+<title>Page moved — VOW</title>
+</head>
+<body>
+<p>This page has moved. <a href="/sectors/{{ move.to }}/">Continue</a>.</p>
+</body>
+</html>

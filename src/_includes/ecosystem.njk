@@ -1,0 +1,38 @@
+{#- Ecosystem diagram. Set `eco` to an entry of _data/ecosystem.json before including.
+   js/ecosystem.js places the nodes on a tilted, rotating orbit; without it they show as a plain row. #}
+<section class="section ecosystem" aria-labelledby="eco-title">
+  <div class="wrap">
+    <div class="eco-head">
+      <p class="eyebrow" data-reveal>{{ eco.eyebrow }}</p>
+      <h2 class="h2" id="eco-title" data-reveal>{% for line in eco.title %}<span>{{ line }}</span> {% endfor %}</h2>
+    </div>
+    <div class="eco" data-eco>
+      <div class="eco-stage">
+        <span class="eco-floor" aria-hidden="true"></span>
+        <svg class="eco-space" aria-hidden="true">
+          <ellipse class="eco-orbit o1"/><ellipse class="eco-orbit o2"/><ellipse class="eco-orbit o3"/>
+          {%- for n in eco.nodes %}
+          <line data-link="{{ loop.index0 }}"/><circle data-pulse="{{ loop.index0 }}" r="3.5"/>
+          {%- endfor %}
+        </svg>
+        <div class="eco-hub"><span translate="no">{{ eco.center }}</span></div>
+        <ul class="eco-nodes">
+          {%- for n in eco.nodes %}
+          <li><button type="button" class="eco-node" data-node="{{ loop.index0 }}" aria-pressed="false">{{ n }}</button></li>
+          {%- endfor %}
+        </ul>
+      </div>
+    </div>
+    <p class="eco-closing" data-reveal>{{ eco.closing }}</p>
+  </div>
+  {#- Outside .wrap so the rules run edge to edge, like the segments row under the hero #}
+  <div class="eco-tags" data-reveal>
+    <div class="wrap">
+      <ul style="--cols:{{ eco.tags.length }}">
+        {%- for t in eco.tags %}
+        <li>{{ t }}</li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </div>
+</section>

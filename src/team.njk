@@ -1,0 +1,41 @@
+---
+layout: layouts/base.njk
+title: Team
+description: "The VOW executive team and the advisors who guide it."
+styles: [inner]
+motion: [reveal, cta]
+---
+{% set heroTitle = "Team" %}
+{% set heroLede = "The VOW executive team and the advisors who guide it." %}
+{% include "page-hero.njk" %}
+
+{%- for group in team %}
+<section class="section tight flush-top team" aria-labelledby="team-group-{{ loop.index }}">
+  <div class="wrap">
+    <h2 class="h2" id="team-group-{{ loop.index }}" data-reveal>{{ group.name }}</h2>
+    <ul class="people">
+      {%- for p in group.people %}
+      <li class="person" data-reveal>
+        <div class="person-id">
+          <h3>{{ p.name }}</h3>
+          <p class="person-role">{{ p.role }}</p>
+          {%- if p.focus %}
+          <p class="person-focus">{{ p.focus }}</p>
+          {%- endif %}
+        </div>
+        <div class="person-bio">
+          {%- for para in p.bio %}
+          <p>{{ para }}</p>
+          {%- endfor %}
+          {%- if p.url %}
+          <a class="link" href="{{ p.url }}" rel="noopener">{% if "linkedin" in p.url %}LinkedIn{% else %}Profile{% endif %}<span class="sr-only">: {{ p.name }}</span> <svg aria-hidden="true"><use href="#arrow-ne"/></svg></a>
+          {%- endif %}
+        </div>
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+{%- endfor %}
+
+{% include "cta.njk" %}

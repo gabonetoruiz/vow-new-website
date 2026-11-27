@@ -1,5 +1,5 @@
 {
-  "_note": "Articles from https://www.vow.app/press, newest first. date is YYYY-MM-DD, url the article link, image a 496x446 thumbnail. Entries marked \"sample\": true are not shown.",
+  "_note": "Articles from https://www.vow.app/press and coverage Jennifer sent on 2026-11-26, newest first. date is YYYY-MM-DD, url the article link, image a 496x446 thumbnail. Entries marked \"sample\": true are not shown.",
   "items": [
     {
       "date": "2025-12-11",
@@ -84,6 +84,62 @@
       "title": "Ryder Cup Logistics Were Already Human Tetris. Now Add A Trump Visit.",
       "url": "https://www.forbes.com/sites/mikedojc/2025/09/25/ryder-cup-logistics-were-already-human-tetris-now-add-a-trump-visit/",
       "image": "/assets/img/press/2025-09-25-forbes.webp"
+    },
+    {
+      "date": "2025-08-07",
+      "outlet": "PR Newswire",
+      "title": "VOW Closes Seed Round led by KB Partners to Revolutionize Live Events and Premium Experiences with AI",
+      "url": "https://www.prnewswire.com/news-releases/vow-closes-seed-round-led-by-kb-partners-to-revolutionize-live-events-and-premium-experiences-with-ai-302523891.html",
+      "image": "/assets/img/press/2025-08-07-pr-newswire.webp"
+    },
+    {
+      "date": "2024-10-04",
+      "outlet": "The Ticketing Business",
+      "title": "Tech Stack: accelerator programmes, digital ticketing and more…",
+      "url": "https://www.theticketingbusiness.com/2024/10/tech-stack-accelerator-programmes-digital-ticketing-and-more/",
+      "image": "/assets/img/press/2024-10-04-the-ticketing-business.webp"
+    },
+    {
+      "date": "2024-09-24",
+      "outlet": "PR Newswire",
+      "title": "VOW Selected to Join the 2024 Techstars Sports Accelerator",
+      "url": "https://www.prnewswire.com/news-releases/vow-selected-to-join-the-2024-techstars-sports-accelerator-302255745.html",
+      "image": "/assets/img/press/2024-09-24-pr-newswire.webp"
+    },
+    {
+      "date": "2024-09-10",
+      "outlet": "Techstars",
+      "title": "Introducing the Starting Lineup for the 2024 Techstars Sports Accelerator Powered By Indy",
+      "url": "https://www.techstars.com/blog/program-news/introducing-the-starting-lineup-for-the-2024-techstars-sports-accelerator",
+      "image": "/assets/img/press/2024-09-10-techstars.webp"
+    },
+    {
+      "date": "2024-07-24",
+      "outlet": "Everywhere Ventures",
+      "title": "Founders Everywhere: Jennifer Brisman",
+      "url": "https://ideas.everywhere.vc/p/vow-jennifer-brisman-founders-everywhere",
+      "image": "/assets/img/press/2024-07-24-everywhere-ventures.webp"
+    },
+    {
+      "date": "2024-03-21",
+      "outlet": "BizBash",
+      "title": "Tired of Complicated Seating Maps? Try This Guest Management Platform",
+      "url": "https://www.bizbash.com/event-tech-virtual/event-tech-tools/article/22890037/tired-of-complicated-seating-maps-try-vow-a-guest-management-platform",
+      "image": "/assets/img/press/2024-03-21-bizbash.webp"
+    },
+    {
+      "date": "2023-07-17",
+      "outlet": "BizBash",
+      "title": "Innovation at Its Finest: All-in-One Guest Management for Galas, Receptions, and Fundraisers",
+      "url": "https://www.bizbash.com/industry-insiders/article/22867505/innovation-at-its-finest-allinone-guest-management-for-galas-receptions-and-fundraisers",
+      "image": "/assets/img/press/2023-07-17-bizbash.webp"
+    },
+    {
+      "date": "2021-06-08",
+      "outlet": "BizBash",
+      "title": "This COVID-19 Health Safety Platform Was Created Specifically for Event Pros",
+      "url": "https://www.bizbash.com/event-tech-virtual/event-tech-tools/article/21485435/this-covid19-health-safety-platform-was-created-specifically-for-event-pros",
+      "image": "/assets/img/press/2021-06-08-bizbash.webp"
     }
   ]
 }

@@ -1,0 +1,48 @@
+/* Ecosystem, option B: hairline isometric tiles. Geometry is drawn by js/ecosystem-iso.js. */
+.iso{position:relative;max-width:1100px;margin:0 auto;border-radius:var(--r-panel);touch-action:pan-y}
+.iso svg{display:block;width:100%;height:auto;max-height:78vh;overflow:visible}
+.iso-side{fill:#0B0740;stroke:rgba(149,164,255,.6);stroke-width:1;vector-effect:non-scaling-stroke}
+.iso-top{fill:#1A1A69;stroke:rgba(149,164,255,.6);stroke-width:1;vector-effect:non-scaling-stroke}
+.iso-inset{fill:none;stroke:rgba(149,164,255,.24);stroke-width:1;vector-effect:non-scaling-stroke}
+.iso-hub .iso-side{stroke:var(--ice)}
+.iso-hub .iso-top{fill:var(--royal);stroke:var(--ice)}
+.iso-hub .iso-inset{stroke:rgba(207,224,255,.5)}
+.iso text{fill:var(--paper);font-family:var(--font-display);font-weight:500;font-size:9.6px;letter-spacing:-.02em;text-anchor:middle;dominant-baseline:central}
+.iso .iso-hub text{font-size:29px;letter-spacing:-.045em}
+.iso-link{fill:none;stroke:var(--iris);stroke-width:1.5;stroke-dasharray:6 7;vector-effect:non-scaling-stroke}
+.iso-shadow{fill:#05032A;opacity:0;pointer-events:none}
+.iso-tile .iso-top,.iso-tile .iso-side{transition:fill .25s,stroke .25s}
+.iso-tile.is-lit .iso-body{filter:var(--iso-glow)}
+.iso-tile.is-lit .iso-top{fill:#2B2F8E;stroke:var(--ice)}
+.iso-tile.is-lit .iso-side{stroke:var(--ice)}
+.iso.is-grand .iso-hub text{font-size:30px}
+.iso.is-grand .iso-sub{font-size:9.2px;font-family:var(--font-body);font-weight:400;letter-spacing:0;fill:rgba(245,245,248,.82)}
+.iso.is-grand .iso-tile text{font-size:12px}   /* one title size for groups and integrations */
+.iso-ring .iso-top{fill:#262674}
+.iso-ring .iso-side{stroke:rgba(149,164,255,.6)}
+.iso .iso-ring-word{font-size:10.5px;letter-spacing:.2em}
+.iso-tile.is-minor .iso-top{fill:#15135A}
+.iso-link.is-minor{stroke-width:1.25;stroke-dasharray:2 5;animation-name:iso-flow-minor}
+/* each tile's subtitle, as a list: visually hidden on wide screens, shown on phones */
+.iso-legend{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+@media (prefers-reduced-motion:no-preference){
+  .iso-link{animation:iso-flow .9s linear infinite}
+  .iso.is-paused .iso-link{animation-play-state:paused}
+}
+@keyframes iso-flow{to{stroke-dashoffset:-13}}
+@keyframes iso-flow-minor{to{stroke-dashoffset:-7}}
+@media (max-width:600px){
+  .iso svg{max-height:none}
+  .iso.is-grand .iso-tile text{font-size:11.5px}
+  .iso.is-grand .iso-ring-word{font-size:9px;letter-spacing:.14em}
+  .iso-legend{position:static;width:auto;height:auto;overflow:visible;clip-path:none;white-space:normal;margin-top:28px;border-top:1px solid var(--rule)}
+  .iso-legend div{padding:14px 0;border-bottom:1px solid var(--rule)}
+  .iso-legend dt{font-family:var(--font-display);font-weight:500;font-size:17px;letter-spacing:-.02em}
+  .iso-legend dd{color:var(--mist);font-size:15px}
+}
+
+/* labels on the review page (/ecosystem-options/) */
+.option-label{padding:28px 0;background:var(--midnight);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.option-label.option-first{padding-top:calc(var(--nav-h) + 28px)}
+.option-label h1{font-family:var(--font-display);font-weight:500;font-size:28px;letter-spacing:-.02em}
+.option-label p{color:var(--mist);font-size:15px}

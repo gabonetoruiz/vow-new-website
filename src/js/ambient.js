@@ -13,7 +13,7 @@
   };
 
   const buttons = document.querySelectorAll('[data-motion-toggle]');
-  const hasLoops = document.querySelector('#heroCanvas, .logo-marquee, .cta, .cs-glows, .live-dot');
+  const hasLoops = document.querySelector('#heroCanvas, .logo-marquee, .cta, .cs-glows, .live-dot, [data-eco], [data-eco-iso]');
   if (!hasLoops || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
   const sync = () => buttons.forEach((b) => {

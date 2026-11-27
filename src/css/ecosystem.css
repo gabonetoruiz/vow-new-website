@@ -1,0 +1,70 @@
+/* Ecosystem: a lit sphere with the audiences orbiting it. Positions and depth are set by js/ecosystem.js. */
+.ecosystem{overflow:hidden}
+.eco-head{margin-bottom:clamp(24px,4vw,48px)}
+.eco-head h2 span{display:block}
+.eco-head .eyebrow::before{content:none}
+
+.eco{perspective:1400px}
+.eco-stage{position:relative;isolation:isolate;max-width:1100px;margin:0 auto;transform-style:preserve-3d;
+  transform:rotateX(var(--tilt-x,0deg)) rotateY(var(--tilt-y,0deg));transition:transform .6s var(--ease)}
+.eco-space,.eco-floor{display:none}
+
+/* hub: a sphere lit from the upper left */
+.eco-hub{display:grid;place-items:center;width:clamp(128px,26vw,290px);aspect-ratio:1;margin:0 auto;border-radius:50%;
+  font-family:var(--font-display);font-weight:500;font-size:clamp(34px,6vw,72px);letter-spacing:-.045em;
+  background:
+    radial-gradient(circle at 32% 24%,rgba(255,255,255,.55),transparent 24%),
+    radial-gradient(circle at 36% 30%,#8195FF,var(--royal-hi) 28%,var(--royal) 52%,#1B2478 80%,#120D5C);
+  box-shadow:inset -18px -26px 54px rgba(5,3,40,.65),inset 10px 12px 28px rgba(207,224,255,.3),
+    0 36px 70px -18px rgba(5,3,40,.85),0 0 90px 6px rgba(76,102,240,.42);
+  transition:box-shadow .5s var(--ease)}
+.eco-hub span{text-shadow:0 3px 18px rgba(5,3,40,.55)}
+.eco.is-active .eco-hub{box-shadow:inset -18px -26px 54px rgba(5,3,40,.55),inset 10px 12px 30px rgba(207,224,255,.45),
+    0 36px 70px -18px rgba(5,3,40,.85),0 0 130px 22px rgba(76,102,240,.68)}
+
+.eco-nodes{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:32px}
+.eco-node{display:flex;align-items:center;justify-content:center;min-height:60px;padding:0 30px;border-radius:999px;cursor:pointer;white-space:nowrap;
+  font:500 clamp(15px,1.7vw,21px)/1.2 var(--font-display);letter-spacing:-.02em;color:var(--paper);
+  border:1px solid rgba(207,224,255,.24);
+  background:linear-gradient(165deg,#4B55B4,#242269 46%,#16135A);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.22),inset 0 -10px 20px rgba(5,3,40,.35),0 22px 34px -14px rgba(5,3,40,.9);
+  transition:border-color .25s,box-shadow .25s,background-color .25s}
+.eco-node.is-lit,.eco-node:focus-visible{border-color:var(--ice);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.35),0 0 0 4px rgba(149,164,255,.2),0 0 44px 4px rgba(76,102,240,.7)}
+
+/* orbit layout */
+.eco.is-3d .eco-stage{height:clamp(430px,52vw,620px)}
+.eco.is-3d .eco-space{display:block;position:absolute;inset:0;width:100%;height:100%;overflow:visible;z-index:0}
+.eco.is-3d .eco-floor{display:block;position:absolute;left:50%;top:76%;width:62%;height:22%;translate:-50% -50%;border-radius:50%;
+  background:radial-gradient(closest-side,rgba(76,102,240,.34),rgba(45,76,215,.1) 60%,transparent)}
+.eco.is-3d .eco-hub{position:absolute;left:50%;top:48%;translate:-50% -50%;margin:0;z-index:50}
+.eco.is-3d .eco-nodes{display:block;margin:0}
+.eco.is-3d .eco-nodes li{position:absolute;left:0;top:0;will-change:transform}
+
+.eco-orbit{fill:none;stroke:var(--iris);stroke-width:1}
+.eco-orbit.o1{opacity:.45}
+.eco-orbit.o2{opacity:.22;stroke-dasharray:2 9}
+.eco-orbit.o3{opacity:.12}
+.eco-space line{stroke:var(--iris);stroke-width:1.5;transition:stroke .3s,stroke-width .3s}
+.eco-space line.is-lit{stroke:var(--ice);stroke-width:3}
+.eco-space circle{fill:var(--ice);filter:drop-shadow(0 0 6px var(--iris))}
+
+/* closing line, then a full-width ruled row matching the home segments */
+.eco-closing{margin-top:clamp(32px,4vw,56px);text-align:center;white-space:nowrap;font-family:var(--font-display);font-weight:400;font-size:clamp(23px,3.2vw,44px);line-height:1.15;letter-spacing:-.035em}
+.eco-tags{margin-top:clamp(40px,5vw,72px);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.eco-tags ul{list-style:none;display:grid;grid-template-columns:repeat(var(--cols,5),1fr)}
+.eco-tags li{padding:26px 8px;text-align:center;font-size:clamp(15px,1.3vw,18px);color:var(--mist);letter-spacing:.02em}
+.eco-tags li + li{border-left:1px solid var(--rule)}
+
+@media (max-width:700px){
+  .eco-closing{white-space:normal;text-wrap:balance}
+}
+@media (max-width:600px){
+  .eco-tags ul{grid-template-columns:repeat(2,1fr)}
+  .eco-tags li:nth-child(n){border-left:0}
+  .eco-tags li:nth-child(even){border-left:1px solid var(--rule)}
+  .eco-tags li:nth-child(n+3){border-top:1px solid var(--rule)}
+  .eco-tags li:last-child:nth-child(odd){grid-column:1/-1}
+  .eco-node{min-height:44px;padding:0 12px;font-size:13px}
+  .eco.is-3d .eco-stage{height:440px}
+}

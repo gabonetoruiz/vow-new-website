@@ -145,6 +145,19 @@
 .client p{color:var(--faint);font-size:14px}
 .testimonial{padding-top:clamp(64px,8vw,104px);border-top:1px solid var(--rule)}
 
+/* ---------- team ---------- */
+.people{list-style:none;margin-top:clamp(28px,4vw,48px);border-top:1px solid var(--rule)}
+.person{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;row-gap:16px;padding:clamp(28px,4vw,48px) 0;border-bottom:1px solid var(--rule)}
+.person-id{grid-column:1/5}
+.person-id h3{font-weight:400;font-size:clamp(26px,3vw,38px);line-height:1.1;letter-spacing:-.035em}
+.person-role{margin-top:10px;color:var(--iris);font-size:15px}
+.person-focus{margin-top:4px;color:var(--faint);font-size:14px}
+.person-bio{grid-column:6/13}
+.person-bio p{color:var(--mist);max-width:68ch}
+.person-bio p + p{margin-top:14px}
+.person-bio .link{margin-top:10px}
+@media (max-width:760px){ .person-id,.person-bio{grid-column:1/-1} }
+
 /* ---------- responsive ---------- */
 @media (max-width:960px){
   .sector-hero-grid{grid-template-columns:1fr}

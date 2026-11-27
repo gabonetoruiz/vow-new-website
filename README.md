@@ -42,6 +42,8 @@ src/
 | FAQs | `src/_data/faqs.json` (the page and its search-engine markup both come from it) |
 | Client logos | `src/_data/clients.json` (the home page marquee is still written by hand in `index.njk`) |
 | Press items | `src/_data/press.json` (`date`, `outlet`, `title`, `url`, `image`; thumbnails in `src/assets/img/press/`; newest first) |
+| Team bios | `src/_data/team.json` (page: `src/team.njk`) |
+| An ecosystem diagram | `src/_data/ecosystem.json` (key `home`, or a sector slug to end that sector page with it) |
 | The testimonial | `src/_data/testimonial.json` (used on the home and Clients pages) |
 | Colours, fonts, spacing | `src/css/tokens.css` |
 
@@ -49,6 +51,10 @@ src/
 `src/contact.njk` (styles `contact.css`, scripts `contact.js` and `motion-contact.js`). Addresses, app links, social links and the
 form settings are in `src/_data/contact.json`. The demo form posts to the existing HubSpot form (portal and form ID in that file),
 so its field names and options must stay in step with HubSpot. Every "Connect", "Contact" and demo link points here.
+
+The Custom Sales Deck form on the same page posts to `hubspot.deckFormId` (empty for now: it offers email instead). That HubSpot
+form needs the properties `firstname`, `lastname`, `email`, `company`, `company_domain`, `deck_requesting`, `deck_sector`,
+`deck_primary_use_case` and `deck_annual_events`, with these names.
 
 ## Motion control
 `src/js/ambient.js` powers "Pause motion" (hero and footer). A new animation that loops on its own should read `window.vowAmbient`.

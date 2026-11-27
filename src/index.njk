@@ -2,9 +2,9 @@
 layout: layouts/base.njk
 pageTitle: "VOW — Premium event & guest technology"
 description: "B2B2VIP technology connecting the teams behind extraordinary events with the guests at the heart of them."
-styles: [home]
-scripts: [hero-gradient, sectors, cards, reel]
-motion: [hero, reveal, hover, depth, marquee, cta]
+styles: [home, ecosystem]
+scripts: [hero-gradient, sectors, cards, reel, ecosystem]
+motion: [hero, reveal, hover, depth, marquee, cta, ecosystem]
 ---
 
 <!-- Hero -->
@@ -53,7 +53,9 @@ motion: [hero, reveal, hover, depth, marquee, cta]
 <section class="segments" aria-label="Markets we serve">
   <div class="wrap">
     <ul>
-      <li>Media</li><li>Entertainment</li><li>Philanthropy</li><li>Sports</li><li>Olympics</li><li>Grandscale</li>
+      {%- for s in sectors %}
+      <li>{{ s.name }}</li>
+      {%- endfor %}
     </ul>
   </div>
 </section>
@@ -148,24 +150,29 @@ motion: [hero, reveal, hover, depth, marquee, cta]
 <section class="section sectors" id="sectors" aria-labelledby="sectors-title">
   <div class="wrap grid">
     <div class="intro">
-      <h2 class="h2" id="sectors-title">Six Sectors. Distinct Needs. A Premium Standard.</h2>
-      <p class="lede">Different people, priorities and possibilities. Technology that supports the way your world works.</p>
+      <h2 class="h2" id="sectors-title"><span>Five worlds.</span> <span>One standard.</span> <span class="accent">Unified solution.</span></h2>
+      <p class="lede">Explore each ecosystem using the eye icon.</p>
       <figure class="sector-frame" id="sectorFrame" aria-hidden="true">
-        <img class="on" data-key="media" src="/assets/img/sector-media.jpg" alt="" width="1920" height="1440" loading="lazy" decoding="async">
-        <img data-key="entertainment" src="/assets/img/sector-entertainment.jpg" alt="" width="1920" height="1440" loading="lazy" decoding="async">
-        <img data-key="philanthropy" src="/assets/img/sector-philanthropy.jpg" alt="" width="1920" height="1440" loading="lazy" decoding="async">
-        <img data-key="sports" src="/assets/img/sector-sports.jpg" alt="" width="1920" height="1440" loading="lazy" decoding="async">
-        <img data-key="olympics" src="/assets/img/sector-olympics.jpg" alt="" width="1920" height="1440" loading="lazy" decoding="async">
-        <img data-key="grandscale" src="/assets/img/sector-grandscale.jpg" alt="" width="1920" height="1440" loading="lazy" decoding="async">
+        {%- for s in sectors %}
+        <img{% if loop.first %} class="on"{% endif %} data-key="{{ s.slug }}" src="{{ s.image }}" alt="" width="{{ s.imageW }}" height="{{ s.imageH }}" loading="lazy" decoding="async">
+        {%- endfor %}
       </figure>
     </div>
     <ul class="sector-list">
-      <li><a class="sector on" href="/sectors/media/" data-key="media"><img class="thumb" src="/assets/img/sector-media.jpg" alt="" width="128" height="128" loading="lazy" decoding="async"><span class="name">Media</span><span class="desc">Premieres, upfronts and press events, with talent and press lists in sync.</span></a></li>
-      <li><a class="sector" href="/sectors/entertainment/" data-key="entertainment"><img class="thumb" src="/assets/img/sector-entertainment.jpg" alt="" width="128" height="128" loading="lazy" decoding="async"><span class="name">Entertainment</span><span class="desc">Award shows, tours and festivals, from artist hospitality to fan VIP.</span></a></li>
-      <li><a class="sector" href="/sectors/philanthropy/" data-key="philanthropy"><img class="thumb" src="/assets/img/sector-philanthropy.jpg" alt="" width="128" height="128" loading="lazy" decoding="async"><span class="name">Philanthropy</span><span class="desc">Galas, auctions and donor events where every guest is known by name.</span></a></li>
-      <li><a class="sector" href="/sectors/sports/" data-key="sports"><img class="thumb" src="/assets/img/sector-sports.jpg" alt="" width="128" height="128" loading="lazy" decoding="async"><span class="name">Sports</span><span class="desc">Suites, sponsor hospitality and matchday guests across a full season.</span></a></li>
-      <li><a class="sector" href="/sectors/olympics/" data-key="olympics"><img class="thumb" src="/assets/img/sector-olympics.jpg" alt="" width="128" height="128" loading="lazy" decoding="async"><span class="name">Olympics</span><span class="desc">Delegations, families and partners across weeks of competition.</span></a></li>
-      <li><a class="sector" href="/sectors/grandscale/" data-key="grandscale"><img class="thumb" src="/assets/img/sector-grandscale.jpg" alt="" width="128" height="128" loading="lazy" decoding="async"><span class="name">Grandscale</span><span class="desc">Multi-day, multi-venue productions with thousands of moving parts.</span></a></li>
+      {%- for s in sectors %}
+      <li class="sector{% if loop.first %} on{% endif %}" data-key="{{ s.slug }}">
+        <img class="thumb" src="{{ s.image }}" alt="" width="128" height="128" loading="lazy" decoding="async">
+        <h3 class="name"><a href="/sectors/{{ s.slug }}/">{{ s.name }}</a></h3>
+        <p class="desc">{{ s.line }}</p>
+        <div class="peek">
+          <button type="button" class="eye" aria-expanded="false" aria-controls="peek-{{ s.slug }}" aria-label="About {{ s.name }}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg></button>
+          <div class="pop" id="peek-{{ s.slug }}">
+            <p class="pop-title">{{ s.name }}</p>
+            <p>{{ s.description }}</p>
+          </div>
+        </div>
+      </li>
+      {%- endfor %}
     </ul>
   </div>
 </section>
@@ -200,11 +207,14 @@ motion: [hero, reveal, hover, depth, marquee, cta]
         </div>
       </div>
     </article>
-    <article class="case soon"><div class="field"><img src="/assets/img/case-entertainment.jpg" alt="" width="1920" height="1080" loading="lazy" decoding="async"><span class="badge">Coming soon</span></div><div class="info"><h3>Entertainment</h3><p>A case study from the world of premieres and award shows.</p></div></article>
-    <article class="case soon"><div class="field"><img src="/assets/img/case-philanthropy.jpg" alt="" width="1920" height="1080" loading="lazy" decoding="async"><span class="badge">Coming soon</span></div><div class="info"><h3>Philanthropy</h3><p>A case study from the world of galas and donor events.</p></div></article>
-    <article class="case soon"><div class="field"><img src="/assets/img/case-media.jpg" alt="" width="1920" height="1080" loading="lazy" decoding="async"><span class="badge">Coming soon</span></div><div class="info"><h3>Media</h3><p>A case study from the world of upfronts and press events.</p></div></article>
+    <article class="case soon"><div class="field"><img src="/assets/img/case-entertainment.jpg" alt="" width="1920" height="1080" loading="lazy" decoding="async"><span class="badge">Coming soon</span></div><div class="info"><h3>Media &amp; Entertainment</h3><p>A case study from the world of premieres, upfronts and award shows.</p></div></article>
+    <article class="case soon"><div class="field"><img src="/assets/img/case-philanthropy.jpg" alt="" width="1920" height="1080" loading="lazy" decoding="async"><span class="badge">Coming soon</span></div><div class="info"><h3>Philanthropy &amp; Nonprofits</h3><p>A case study from the world of galas and donor events.</p></div></article>
   </div>
 </section>
+
+<!-- Ecosystem -->
+{% set eco = ecosystem.home %}
+{% include "ecosystem.njk" %}
 
 <!-- Final CTA -->
 
